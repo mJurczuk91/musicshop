@@ -1,6 +1,6 @@
 import CategoryMenuItem from "./category-menu-item"
 
-export default function CategoryMenu(){
+export default function CategoryMenu() {
     const categories = [
         {
             name: 'guitars',
@@ -27,7 +27,9 @@ export default function CategoryMenu(){
             ]
         },
     ]
-    return <div>
-        {categories.map( category => <CategoryMenuItem key={category.name} name={category.name} subitems={category.subcategories}/>)}
+    return <div className="w-full flex justify-center">
+        <div className=" max-w-6xl w-full p-4 flex justify-center">
+            {categories.map(category => <CategoryMenuItem key={category.name} name={category.name} subitems={category.subcategories} />)}
+        </div>
     </div>
 }

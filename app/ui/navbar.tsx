@@ -5,7 +5,7 @@ import CategoryMenu from "./category-menu";
 
 export default function Navbar() {
     return <>
-        <nav className="flex flex-col items-center min-w-full justify-center shadow-sm bg-red-500">
+        <nav className="flex flex-col items-center min-w-full justify-center shadow-sm">
             <div className="w-full p-4 max-w-6xl flex justify-between items-center">
                 <Logo />
                 <Searchbar />
