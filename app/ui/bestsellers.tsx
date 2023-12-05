@@ -32,7 +32,7 @@ export default function Bestsellers() {
             price: 222.99,
         }
     ]
-    return <div className="w-full flex justify-center">
+    return <div className="w-full mt-4 flex justify-center">
         <div className="max-w-6xl">
             <h2 className=" text-2xl uppercase font-bold text-center">Bestsellers</h2>
 
