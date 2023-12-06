@@ -11,7 +11,7 @@ export default function Searchbar() {
             type="text" placeholder="Search our catalogue" onChange={(e: React.ChangeEvent) => {
                 if (e.target.nodeValue) setInput(e.target.nodeValue.toString());
             }} />
-            <button className=" border p-2 rounded-r-md border-gray-300 border-solid bg-white hover:bg-gray-100">SEARCH</button>
+            <button className="border p-2 rounded-r-md border-gray-300 border-solid bg-white hover:bg-gray-100">SEARCH</button>
         </form>
     </div>
 }

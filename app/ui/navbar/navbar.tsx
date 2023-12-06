@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./logo";
 import Searchbar from "./searchbar";
-import CategoryMenu from "./category-menu";
+import CategoryMenu from "./categoryMenu";
 
 export default function Navbar() {
     return <>

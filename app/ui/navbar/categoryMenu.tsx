@@ -1,4 +1,4 @@
-import CategoryMenuItem from "./category-menu-item"
+import CategoryMenuItem from "./categoryMenuItem"
 
 export default function CategoryMenu() {
     const categories = [
