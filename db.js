@@ -56,7 +56,7 @@ module.exports = () => {
                     price: faker.finance.amount(10, 1000),
                     amount: faker.number.int(10),
                     description: faker.lorem.paragraph(),
-                    img: `/${category.name}.jpg`,
+                    image_url: `/${category.name}.jpg`,
                 }
                 data.products.push(product);
             }      
