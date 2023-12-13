@@ -9,6 +9,6 @@ export default function CategoryGridElement({name, subcategories} : {name:string
                 return <Link className="tracking-tight" href={`/category/${name}/${item}`}>{item}</Link>
             })}
         </div>
-        <img src={`/${name}.svg`} alt={name} className="hidden lg:block h-auto w-16" />
+        <img src={`/svg/${name}.svg`} alt={name} className="hidden lg:block h-auto w-16" />
     </div>
 }  
