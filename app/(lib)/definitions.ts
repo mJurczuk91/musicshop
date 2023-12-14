@@ -7,3 +7,8 @@ export type Product = {
     description: string,
     image_url: string,
 }
+
+export type Category = {
+    name: string,
+    subcategories: string[],
+}

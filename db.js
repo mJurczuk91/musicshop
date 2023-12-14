@@ -1,3 +1,5 @@
+// json-server --port=3001 --watch db.js
+
 const {faker} = require('@faker-js/faker');
 
 module.exports = () => {
