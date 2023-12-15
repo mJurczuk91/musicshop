@@ -1,4 +1,4 @@
-import ProductMiniature from "./product-miniature"
+import ProductMiniature from "./productMiniature"
 import { Product } from "../(lib)/definitions"
 
 export default function Bestsellers() {
