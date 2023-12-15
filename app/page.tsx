@@ -1,4 +1,5 @@
 import Bestsellers from "./ui/bestsellers";
+import BlogArticleStubs from "./ui/blogArticleStubs";
 import CategoryGrid from "./ui/categoryGrid";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <CategoryGrid />
       <Bestsellers />
+      <BlogArticleStubs />
     </main>
   )
 }
