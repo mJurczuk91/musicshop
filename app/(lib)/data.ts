@@ -1,12 +1,15 @@
+import api from "./api";
 import { Product } from "./definitions";
-import { unstable_noStore as no_store } from "next/cache";
+
+const ROUTES = {
+    CATEGORIES: 'http://localhost:3000/categories',
+    PRODUCTS: 'http://localhost:3000/products',
+}
 
 export async function fetchProducts(): Promise<Product[]> {
-    no_store();
-    if (!process.env.PRODUCTS) throw new Error('Products env var not found');
     let resp;
     try {
-        resp = await fetch(process.env.PRODUCTS);
+        resp = await api.get(ROUTES.PRODUCTS);
     } catch {
         throw new Error("Couldn't fetch product list");
     }
