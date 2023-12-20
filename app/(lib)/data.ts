@@ -1,8 +1,19 @@
+import api from "./api";
 import { Category } from "./definitions";
 
+const ROUTES = {
+    CATEGORIES: 'http://localhost:3000/categories',
+    PRODUCTS: 'http://localhost:3000/products',
+}
+
 export async function fetchCategories() : Promise<Category[]>{
-    if(!process.env.CATEGORIES) throw new Error('Categories env resource not found');
-    const res = await fetch(process.env.CATEGORIES);
-    if(!res.ok) throw new Error("Categories not found");
-    return res.json();
+    let resp;
+    try{
+        resp = await api.get(ROUTES.CATEGORIES);
+    }
+    catch(err){
+        if(err instanceof Error) throw new Error(err.message);
+        else throw new Error('Something went wrong');
+    }
+    return resp.json();
 }
