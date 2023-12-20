@@ -1,10 +1,15 @@
+import api from "./api";
 import { BlogArticleStub } from "./definitions";
+
+const ROUTES = {
+    CATEGORIES: 'http://localhost:3000/categories',
+    PRODUCTS: 'http://localhost:3000/products',
+    ARTICLES: 'http://localhost:3000/articles',
+}
 
 export async function fetchBlogArticleStubs():Promise<BlogArticleStub[]>{
     try{
-        if(!process.env.ARTICLES) throw new Error("Articles resource env variable not set");
-        const resp = await fetch(process.env.ARTICLES);
-        if(!resp.ok) throw new Error("Fetching article stubs failed");
+        const resp = await api.get(ROUTES.CATEGORIES);
         return resp.json();
     } catch {
         throw new Error ("Fetching article stubs failed")
