@@ -1,7 +1,12 @@
 import { Product } from "../(lib)/definitions";
 import ProductMiniature from "./productMiniature";
 
-export default function ResponsiveProductGrid({ sectionTitle, products }: { sectionTitle: string, products: Product[] }) {
+type Props = {
+    sectionTitle: string,
+    products: Product[],
+}
+
+export default function ResponsiveProductGrid({ sectionTitle, products }:Props) {
     return <div className="w-full mt-4 flex justify-center">
     <div className="max-w-6xl">
         <h2 className=" text-2xl uppercase font-bold text-center">{sectionTitle}</h2>
