@@ -10,7 +10,7 @@ export default function ProductMiniature({ name, description, image_url, price }
                     <img className="h-auto w-[16rem] max-w-full" src={`${image_url}`} />
             </Link>
             <Link href={`/product/${name}`}>
-                    <h4 className="text-lg font-bold">{name}</h4>
+                    <span className="text-lg font-bold">{name}</span>
             </Link>
         </div>
         <div className="w-full mt-2 text-center">
