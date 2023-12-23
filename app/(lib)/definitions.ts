@@ -8,9 +8,15 @@ export type Product = {
     image_url: string,
 }
 
+<<<<<<< HEAD
 export type BlogArticleStub = {
     title: string,
     image_url: string,
     link: string,
     synopsis: string,
+=======
+export type Category = {
+    name: string,
+    subcategories: string[],
+>>>>>>> main
 }
