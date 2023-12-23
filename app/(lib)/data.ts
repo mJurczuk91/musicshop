@@ -1,5 +1,6 @@
 import api from "./api";
 import { Product } from "./definitions";
+import { Category } from "./definitions";
 
 const ROUTES = {
     CATEGORIES: 'http://localhost:3000/categories',
@@ -10,8 +11,21 @@ export async function fetchProducts(): Promise<Product[]> {
     let resp;
     try {
         resp = await api.get(ROUTES.PRODUCTS);
-    } catch {
-        throw new Error("Couldn't fetch product list");
+    } catch(err) {
+        if(err instanceof Error) throw new Error(err.message);
+        else throw new Error('Something went wrong');
+    }
+    return resp.json();
+}
+
+export async function fetchCategories() : Promise<Category[]>{
+    let resp;
+    try{
+        resp = await api.get(ROUTES.CATEGORIES);
+    }
+    catch(err){
+        if(err instanceof Error) throw new Error(err.message);
+        else throw new Error('Something went wrong');
     }
     return resp.json();
 }

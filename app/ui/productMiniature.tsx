@@ -2,7 +2,7 @@ import { Product } from "../(lib)/definitions";
 import Link from "next/link";
 
 export default function ProductMiniature({ name, description, image_url, price }: Product) {
-    const description_short = description.length > 30 ? description.slice(0, 29) : description;
+    const description_short = description.slice(0, 29);
 
     return <div className="bg-white p-4 m-4 shadow-md">
         <Link href={`/product/${name}`}>
