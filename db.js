@@ -44,7 +44,10 @@ module.exports = () => {
             }
         ],
         products: [],
+        articles: [],
     }
+
+    // create products
     for(let category of data.categories){
         for(let subcategory of category.subcategories){
             const amount = faker.number.int(10);
@@ -63,5 +66,15 @@ module.exports = () => {
         }
     }
 
+    // create articles
+    for(let i = 0; i < 3; i++){
+        const article = {
+            title: faker.lorem.sentence(),
+            image_url: `/guitars.jpg`,
+            link: '/#',
+            synopsis: faker.lorem.paragraph()
+        };
+        data.articles.push(article);
+    }
     return data;
 }
