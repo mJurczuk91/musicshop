@@ -6,7 +6,7 @@ export default function CategoryGridElement({name, subcategories} : {name:string
             <Link href={`/category/${name}`} className=" font-bold tracking-tight">{name}</Link>
             {subcategories.map(item => {
                 item[0].toUpperCase();
-                return <Link className="tracking-tight" href={`/category/${name}/${item}`}>{item}</Link>
+                return <Link key={item} className="tracking-tight" href={`/category/${name}/${item}`}>{item}</Link>
             })}
         </div>
         <img src={`/svg/${name}.svg`} alt={name} className="hidden lg:block h-auto w-16" />
