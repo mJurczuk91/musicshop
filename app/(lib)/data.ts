@@ -38,6 +38,7 @@ export async function fetchCategories() : Promise<Category[]>{
 }
 
 function _handleError(error:any):Error {
+    console.log(error);
     if(error instanceof Error) return new Error(error.message);
     else return new Error('Something went wrong');
 }
