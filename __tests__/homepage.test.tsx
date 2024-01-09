@@ -3,14 +3,14 @@ import '@testing-library/jest-dom'
 import userEvent from "@testing-library/user-event"
 import { render, screen } from '@testing-library/react'
 import Bestsellers from '../app/(ui)/bestsellers'
-import { products } from '../mocks/mockData.js'
+import BlogArticleStubs from '../app/(ui)/blogArticleStubs'
+import { products, blogArticles } from '../mocks/mockData.js'
 
 describe('bestsellers section', () => {
     const renderBestsellers = async () => {
         const bestsellers = await Bestsellers();
         render(bestsellers);
     }
-
     it('displays product names', async () => {
         await renderBestsellers();
         for(let p of products){
@@ -34,3 +34,27 @@ describe('bestsellers section', () => {
         expect(product).toBeInTheDocument();
     }
 });
+
+describe('blog articles section', () => {
+    const renderArticles = async () => {
+        const articles = await BlogArticleStubs();
+        render(articles);
+    };
+    it('displays article titles', async () => {
+        await renderArticles();
+        for(let article of blogArticles){
+            const title = screen.getByText(article.title);
+            expect(title).toBeInTheDocument();
+        }
+    });
+    it('displays correct image', async () => {
+        await renderArticles();
+        const images = screen.getAllByAltText("article image") as HTMLImageElement[];
+        const imageSrcs = images.map(img=>img.src);
+        console.log(imageSrcs);
+        // ?? nie podoba mi się
+        for(let article of blogArticles){  
+            expect(imageSrcs).toContain(`http://localhost:3000${article.image_url}`);
+        }
+    })
+})

@@ -36,3 +36,24 @@ export const products = [
         image_url: "/drums.jpg"
       },
 ];
+
+export const blogArticles = [
+  {
+    title: "title1",
+    image_url: '/guitars.jpg',
+    link: '/#',
+    synopsis: 'synopsis1'
+  },
+  {
+    title: "title2",
+    image_url: '/guitars.jpg',
+    link: '/#',
+    synopsis: 'synopsis2'
+  },
+  {
+    title: "title3",
+    image_url: '/guitars.jpg',
+    link: '/#',
+    synopsis: 'synopsis3'
+  },
+]
