@@ -1,36 +1,24 @@
-import { expect, test, describe } from 'vitest'
+import { expect, test, describe, it } from 'vitest'
 import '@testing-library/jest-dom'
 import userEvent from "@testing-library/user-event"
 import { render, screen } from '@testing-library/react'
 import Bestsellers from '../app/(ui)/bestsellers'
 import { products } from '../mocks/mockData.js'
-import {server} from "../mocks/mswServer.js"
 
-
-/* test('bestsellers', async () => {
-
-    for(let p of products){
-        const item = screen.getByText(p.name);
-        expect(item).toBeInTheDocument();
-        const itemDescription = screen.getByText(p.description);
-        expect(itemDescription).toBeInTheDocument();
-    }
-}) */
-
-describe('bestsellers', () => {
+describe('bestsellers section', () => {
     const renderBestsellers = async () => {
         const bestsellers = await Bestsellers();
         render(bestsellers);
     }
 
-    test('bestsellers section displays product names', async () => {
+    it('displays product names', async () => {
         await renderBestsellers();
         for(let p of products){
             const productName = screen.getByText(p.name);
             expect(productName).toBeInTheDocument();
         };
     });
-    test('bestsellers section displays products descriptions', async () => {
+    it('displays products descriptions', async () => {
         await renderBestsellers();
         for(let p of products){
             const productDescription = screen.getByText(p.description);
@@ -45,4 +33,4 @@ describe('bestsellers', () => {
         const product = screen.getByText('PRODUCT');
         expect(product).toBeInTheDocument();
     }
-})
+});
