@@ -8,7 +8,7 @@ type Props = {
 export default function CategoryMenuItem({category:{ name, subcategories }}:Props) {
     return <div className="group">
         <Link className="mx-4" href={`category`}>
-            <span className="capitalize">{name}</span>
+            {name}
         </Link>
         <div className="invisible absolute flex flex-col p-6 bg-white shadow-md group-hover:visible">
             {subcategories.map((item) => {

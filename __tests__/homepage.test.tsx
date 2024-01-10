@@ -1,11 +1,14 @@
-import { expect, test, describe, it } from 'vitest'
-import '@testing-library/jest-dom'
-import userEvent from "@testing-library/user-event"
-import { render, screen } from '@testing-library/react'
-import Bestsellers from '../app/(ui)/bestsellers'
-import BlogArticleStubs from '../app/(ui)/blogArticleStubs'
-import { products, blogArticles } from '../mocks/mockData.js'
-import ProductMiniature from '../app/(ui)/productMiniature'
+import { expect, test, describe, it } from 'vitest';
+import '@testing-library/jest-dom';
+import userEvent from "@testing-library/user-event";
+import { render, screen } from '@testing-library/react';
+import Bestsellers from '../app/(ui)/bestsellers';
+import BlogArticleStubs from '../app/(ui)/blogArticleStubs';
+import { products, blogArticles, categories } from '../mocks/mockData.js';
+import ProductMiniature from '../app/(ui)/productMiniature';
+import CategoryMenuItem from '../app/(ui)/navbar/categoryMenuItem';
+import CategoryMenu from '../app/(ui)/navbar/categoryMenu';
+
 
 describe('product miniature', () => {
     test('displays products name', () => {
@@ -64,6 +67,34 @@ describe('blog articles section', () => {
         console.log(imageSrcs);
         for(let article of blogArticles){  
             expect(imageSrcs).toContain(`http://localhost:3000${article.image_url}`);
+        }
+    })
+})
+
+describe('CategoryMenuItem', () => {
+    test('it displays category name', () => {
+        render(<CategoryMenuItem category={categories[0]}/>)
+        const cat = screen.getByText(categories[0].name);
+        expect(cat).toBeInTheDocument();
+    });
+    test('it displays all subcategories', () => {
+        render(<CategoryMenuItem category={categories[0]}/>);
+        for(let item of categories[0].subcategories){
+            const subcat = screen.getByText(item);
+            expect(subcat).toBeInTheDocument();
+        }
+    });
+});
+
+describe('CategoryMenu', async () => {
+    test('it displays all categories and subcategories', async () => {
+        const categoryMenu = await CategoryMenu();
+        render(categoryMenu);
+        for(let cat of categories){
+            expect(screen.getByText(cat.name)).toBeInTheDocument();
+            for(let subcat of cat.subcategories){
+                expect(screen.getByText(subcat)).toBeInTheDocument();
+            }
         }
     })
 })

@@ -1,5 +1,5 @@
 import { http, HttpResponse } from 'msw'
-import {blogArticles, products} from './mockData.js';
+import {blogArticles, categories, products} from './mockData.js';
 
 export const handlers = [
   http.get("http://localhost:3000/products", () => {
@@ -7,5 +7,8 @@ export const handlers = [
   }),
   http.get("http://localhost:3000/articles", () => {
     return HttpResponse.json(blogArticles);
+  }),
+  http.get("http://localhost:3000/categories", () => {
+    return HttpResponse.json(categories);
   }),
 ];

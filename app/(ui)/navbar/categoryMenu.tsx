@@ -1,4 +1,4 @@
-import { fetchCategories } from "@/app/(lib)/data"
+import { fetchCategories } from "../../(lib)/data"
 import CategoryMenuItem from "./categoryMenuItem"
 
 export default async function CategoryMenu() {
