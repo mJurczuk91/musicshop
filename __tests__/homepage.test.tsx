@@ -1,6 +1,5 @@
 import { expect, test, describe, it } from 'vitest';
 import '@testing-library/jest-dom';
-import userEvent from "@testing-library/user-event";
 import { render, screen } from '@testing-library/react';
 import Bestsellers from '../app/(ui)/bestsellers';
 import BlogArticleStubs from '../app/(ui)/blogArticleStubs';
@@ -8,6 +7,7 @@ import { products, blogArticles, categories } from '../mocks/mockData.js';
 import ProductMiniature from '../app/(ui)/productMiniature';
 import CategoryMenuItem from '../app/(ui)/navbar/categoryMenuItem';
 import CategoryMenu from '../app/(ui)/navbar/categoryMenu';
+import CategoryGrid from '../app/(ui)/categoryGrid';
 
 
 describe('product miniature', () => {
@@ -85,6 +85,19 @@ describe('CategoryMenu', async () => {
         for(let cat of categories){
             expect(screen.getByText(cat.name)).toBeInTheDocument();
             for(let subcat of cat.subcategories){
+                expect(screen.getByText(subcat)).toBeInTheDocument();
+            }
+        }
+    })
+});
+
+describe('categoryGrid', () => {
+    test('it displays 3 subcategories from each of 4 main categories', async () => {
+        const categoryGrid = await CategoryGrid();
+        render(categoryGrid);
+        for(let cat of categories){
+            expect(screen.getByText(cat.name)).toBeInTheDocument();
+            for(let subcat of cat.subcategories.slice(0,3)){
                 expect(screen.getByText(subcat)).toBeInTheDocument();
             }
         }
