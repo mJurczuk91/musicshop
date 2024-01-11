@@ -6,7 +6,7 @@ module.exports = () => {
             {
                 "name": "drums",
                 "subcategories": [
-                    "drums",
+                    "acoustic drums",
                     "e-drums",
                     "cymbals",
                     "drumheads",
@@ -27,7 +27,6 @@ module.exports = () => {
                 "name": "keyboards",
                 "subcategories": [
                     "synthesizers",
-                    "keyboards",
                     "stage pianos",
                     "digital pianos",
                     "keyboard hardware"

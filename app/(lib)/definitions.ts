@@ -2,7 +2,7 @@ export type Product = {
     name: string,
     category: string,
     subcategory: string,
-    price: number,
+    price: string,
     amount: number,
     description: string,
     image_url: string,
@@ -14,6 +14,7 @@ export type BlogArticleStub = {
     link: string,
     synopsis: string,
 }
+
 export type Category = {
     name: string,
     subcategories: string[],

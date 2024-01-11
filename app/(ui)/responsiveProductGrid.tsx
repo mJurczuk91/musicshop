@@ -12,7 +12,7 @@ export default function ResponsiveProductGrid({ sectionTitle, products }:Props) 
         <h2 className=" text-2xl uppercase font-bold text-center">{sectionTitle}</h2>
         <div className="w-full flex flex-col items-center md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 lg:grid-cols-4 lg:grid-rows-1 lg:gap-4">
             {products.map((product, index) => {
-                return <ProductMiniature key={index} {...product} />
+                return <ProductMiniature key={index} product={product} />
             })}
         </div>
     </div>
