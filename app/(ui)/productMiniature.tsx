@@ -6,7 +6,7 @@ type Props = {
 }
 
 export default function ProductMiniature({ product: { name, price, description, image_url } }: Props) {
-    const description_short = description.slice(0, 29);
+    const description_short = description.slice(0, 30).trim();
 
     return <div className="bg-white p-4 m-4 h-96 shadow-md flex flex-col justify-between">
         <div className="text-center flex flex-col basis-2/3 justify-between ">

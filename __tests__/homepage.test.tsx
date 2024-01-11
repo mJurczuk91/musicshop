@@ -8,6 +8,7 @@ import ProductMiniature from '../app/(ui)/productMiniature';
 import CategoryMenuItem from '../app/(ui)/navbar/categoryMenuItem';
 import CategoryMenu from '../app/(ui)/navbar/categoryMenu';
 import CategoryGrid from '../app/(ui)/categoryGrid';
+import OffersOfTheWeek from '../app/(ui)/offersOfTheWeek';
 
 
 describe('product miniature', () => {
@@ -18,7 +19,7 @@ describe('product miniature', () => {
     });
     test('displays first 30 letters of product description', () => {
         render(<ProductMiniature product={products[0]} />);
-        const description = screen.getByText(products[0].description.slice(0,29));
+        const description = screen.getByText(products[0].description.slice(0,30));
         expect(description).toBeInTheDocument();
     });
     test('displays products image', () => {
@@ -32,14 +33,24 @@ describe('bestsellers section', () => {
     test('bestsellers section renders 4 product miniatures', async () => {
         const bestsellers = await Bestsellers();
         render(bestsellers);
-        for(let i = 0; i < 4; i++){
-            const name = screen.getByText(products[i].name);
-            const description = screen.getByText(products[i].description.slice(0,29));
-            expect(name).toBeInTheDocument();
-            expect(description).toBeInTheDocument();
+        for(let product of products.slice(0,4)){
+            expect(screen.getByText(product.name)).toBeInTheDocument();
+            expect(screen.getByText(product.description.slice(0,30).trim())).toBeInTheDocument();
         }
     })
 });
+
+describe('offersOfTheWeek section', () => {
+    test('it displays 8 products', async () => {
+        const offersOfTheWeek = await OffersOfTheWeek();
+        render(offersOfTheWeek);
+        for(let product of products.slice(0,8)){
+            expect(screen.getByText(product.name)).toBeInTheDocument();
+            expect(screen.getByText(product.description.slice(0,30).trim())).toBeInTheDocument();
+        }
+        expect(screen.queryByText(products[8].name)).toBeNull();
+    })
+})
 
 describe('blog articles section', () => {
     const renderArticles = async () => {
