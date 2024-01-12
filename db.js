@@ -47,11 +47,13 @@ module.exports = () => {
     }
 
     // create products
+    let pid = 1001;
     for(let category of data.categories){
         for(let subcategory of category.subcategories){
             const amount = faker.number.int(10);
             for(let i = 0; i < amount; i++){
                 const product = {
+                    id: pid.toString(),
                     name: faker.word.noun() + faker.number.int(1000).toString(),
                     category: category.name,
                     subcategory,
@@ -60,6 +62,7 @@ module.exports = () => {
                     description: faker.lorem.paragraph(),
                     image_url: `/${category.name}.jpg`,
                 }
+                pid++;
                 data.products.push(product);
             }      
         }

@@ -27,6 +27,17 @@ export async function fetchProducts(): Promise<Product[]> {
     }  
 }
 
+export async function fetchProductById(id:string):Promise<Product>{
+    try {
+        const resp = await api.get(ROUTES.PRODUCTS).then(r => r.json()) as Product[];
+        const product = resp.find(prod => prod.id === id);
+        if(!product) throw new Error('product not found');
+        return product;
+    } catch (e) {
+        throw _handleError(e);
+    }
+}
+
 export async function fetchCategories() : Promise<Category[]>{
     try{
         const resp = await api.get(ROUTES.CATEGORIES);
