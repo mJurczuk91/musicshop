@@ -4,9 +4,9 @@ import { Product } from "./definitions";
 import { Category } from "./definitions";
 
 const ROUTES = {
-    CATEGORIES: 'http://localhost:3000/categories',
-    PRODUCTS: 'http://localhost:3000/products',
-    ARTICLES: 'http://localhost:3000/articles',
+    CATEGORIES: 'http://localhost:3001/categories',
+    PRODUCTS: 'http://localhost:3001/products',
+    ARTICLES: 'http://localhost:3001/articles',
 }
 
 export async function fetchBlogArticleStubs():Promise<BlogArticleStub[]>{

@@ -1,6 +1,6 @@
-import { getProductSlug } from "../app/(lib)/helpers";
+import { getProductSlug, getSubcategorySlug } from "../app/(lib)/helpers";
 import { expect, test } from 'vitest';
-import { Product } from "@/app/(lib)/definitions";
+import { Product } from "../app/(lib)/definitions";
 
 test('getProductSlug generates proper slug', () => {
     const product:Product = {
@@ -27,4 +27,10 @@ test('getProductSlug generates proper slug', () => {
     const slug2 = getProductSlug(product2);
     expect(slug).toEqual('1021-magnificient-drums');
     expect(slug2).toEqual('1023-drums');
+});
+
+test('getSubcategorySlug returns a proper slug', () => {
+    const subcategory = 'acoustic drums';
+    const slug = getSubcategorySlug(subcategory);
+    expect(slug).toEqual('acoustic-drums');
 })
