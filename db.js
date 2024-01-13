@@ -1,4 +1,4 @@
-const {faker} = require('@faker-js/faker');
+const { faker } = require('@faker-js/faker');
 
 module.exports = () => {
     const data = {
@@ -46,12 +46,23 @@ module.exports = () => {
         articles: [],
     }
 
+    const shuffleArray = (arr) => {
+        return arr
+            .map(value => ({ value, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ value }) => value)
+    }
+
     // create products
     let pid = 1001;
-    for(let category of data.categories){
-        for(let subcategory of category.subcategories){
+    for (let category of data.categories) {
+        const image_url_array = [];
+        for (let imgno = 1; imgno < 6; imgno++) {
+            image_url_array.push(`/${category.name}${imgno}.jpg`);
+        }
+        for (let subcategory of category.subcategories) {
             const amount = faker.number.int(10);
-            for(let i = 0; i < amount; i++){
+            for (let i = 0; i < amount; i++) {
                 const product = {
                     id: pid.toString(),
                     name: faker.word.noun() + faker.number.int(1000).toString(),
@@ -60,16 +71,16 @@ module.exports = () => {
                     price: faker.finance.amount(10, 1000),
                     amount: faker.number.int(10),
                     description: faker.lorem.paragraph(),
-                    image_url: `/${category.name}.jpg`,
+                    imgUrlArray: shuffleArray(image_url_array),
                 }
                 pid++;
                 data.products.push(product);
-            }      
+            }
         }
     }
 
     // create articles
-    for(let i = 0; i < 3; i++){
+    for (let i = 0; i < 3; i++) {
         const article = {
             title: faker.lorem.sentence(),
             image_url: `/guitars.jpg`,

@@ -10,7 +10,7 @@ test('getProductSlug generates proper slug', () => {
         category: 'drums',
         subcategory: 'acoustic drums',
         description: 'description',
-        image_url: '/drums.jpg',
+        imgUrlArray: ['/drums1.jpg'],
         price: '123.54',
     };
     const product2:Product = {
@@ -20,7 +20,7 @@ test('getProductSlug generates proper slug', () => {
         category: 'drums',
         subcategory: 'acoustic drums',
         description: 'description',
-        image_url: '/drums.jpg',
+        imgUrlArray: ['/drums1.jpg'],
         price: '123.54',
     };
     const slug = getProductSlug(product);

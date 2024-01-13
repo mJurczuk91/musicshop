@@ -24,7 +24,7 @@ export default function ProductBreadcrumbs({ product }: Props) {
 
                 <Link href={`/categories/${product.category}/${getSubcategorySlug(product.subcategory)}`}>
                     <span>
-                        {product.category}
+                        {product.subcategory}
                     </span>
                 </Link>
 

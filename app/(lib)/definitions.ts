@@ -6,7 +6,7 @@ export type Product = {
     price: string,
     amount: number,
     description: string,
-    image_url: string,
+    image_url: string[],
 }
 
 export type BlogArticleStub = {

@@ -25,7 +25,7 @@ describe('product miniature', () => {
     test('displays products image', () => {
         render(<ProductMiniature product={products[0]} />);
         const img = screen.getByAltText('product image') as HTMLImageElement;
-        expect(img.src).toContain(`http://localhost:3000${products[0].image_url}`);
+        expect(img.src).toContain(`http://localhost:3000${products[0].imgUrlArray[0]}`);
     });
 })
 
@@ -68,6 +68,7 @@ describe('blog articles section', () => {
         await renderArticles();
         const images = screen.getAllByAltText("article image") as HTMLImageElement[];
         const imageSrcs = images.map(img=>img.src);
+        console.log(imageSrcs);
         for(let article of blogArticles){  
             expect(imageSrcs).toContain(`http://localhost:3000${article.image_url}`);
         }
