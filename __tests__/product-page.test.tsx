@@ -22,30 +22,33 @@ describe('product page breadcrumbs', () => {
 
 describe('image selector', () => {
     const imgUrlArr = ['/img1', '/img2', '/img3', '/img4', '/img5']
+
     test('by default image selector displays first picture in array as the big one', () => {
         render(<ImageSelector imgUrlArr={imgUrlArr} />);
         const bigPic = screen.getByAltText("product picture big") as HTMLImageElement;
         expect(bigPic.src).toContain(`http://localhost:3000${imgUrlArr[0]}`);
     });
-    test('image miniatures dont contain the one currently displayed as big', () => {
+
+    test('image miniatures contain all images', () => {
         render(<ImageSelector imgUrlArr={imgUrlArr} />);
         const miniatures = screen.queryAllByAltText('product picture small') as HTMLImageElement[];
-        expect(miniatures.find(img => img.src === `http://localhost:3000${imgUrlArr[0]}`)).toBeUndefined();
+        const miniaturesSrc = miniatures.map(el => el.src);
+        imgUrlArr.map(img => {
+            expect(miniaturesSrc.find(min => min === `http://localhost:3000${img}`)).toBeTruthy();
+        })
     });
-    test('clicking on miniature sets it as the big picture and removes it from miniatures', async () => {
+
+    test('clicking on miniature sets it as the big picture', async () => {
         const user = userEvent.setup();
         render(<ImageSelector imgUrlArr={imgUrlArr} />);
 
-        const miniature = screen.getAllByAltText('product picture small')[0] as HTMLImageElement;
+        const miniature = screen.getAllByAltText('product picture small')[1] as HTMLImageElement;
         const bigPic = screen.getByAltText('product picture big') as HTMLImageElement;
 
-        expect(miniature.src).toContain(`http://localhost:3000${imgUrlArr[1]}`);
         expect(bigPic.src).toContain(`http://localhost:3000${imgUrlArr[0]}`);
 
         await user.click(miniature);
 
-        const allMiniatures = screen.getAllByAltText('product picture small') as HTMLImageElement[];
         expect(bigPic.src).toContain(`http://localhost:3000${imgUrlArr[1]}`);
-        expect(allMiniatures.find(img => img.src === `http://localhost:3000${imgUrlArr[1]}`)).toBeUndefined();
     })
 })

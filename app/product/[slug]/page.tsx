@@ -1,5 +1,6 @@
 import { fetchProductById } from "@/app/(lib)/data"
 import ProductBreadcrumbs from "../components/productBreadcrumbs";
+import ImageSelector from "../components/imageSelector";
 
 type Props = {
     params: {
@@ -13,6 +14,7 @@ export default async function Page({ params: { slug } }: Props) {
         <div>
             {slug}
             <ProductBreadcrumbs product={product} />
+            <ImageSelector imgUrlArr={product.imgUrlArray} />
         </div>
     )
 }
