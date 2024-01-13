@@ -44,6 +44,8 @@ module.exports = () => {
         ],
         products: [],
         articles: [],
+        users: [],
+        comments: [],
     }
 
     const shuffleArray = (arr) => {
@@ -51,6 +53,13 @@ module.exports = () => {
             .map(value => ({ value, sort: Math.random() }))
             .sort((a, b) => a.sort - b.sort)
             .map(({ value }) => value)
+    }
+
+    //create users
+    for(let i = 0; i < 20; i++){
+        const name = faker.person.fullName();
+        const id = 1234+i;
+        data.users.push({id: id, name: name})
     }
 
     // create products
@@ -78,6 +87,26 @@ module.exports = () => {
             }
         }
     }
+
+    
+    //create comments
+    let commentId = 1;
+    data.products.map(p => {
+        const amount = Math.floor(Math.random() * 8) + 1;
+        for(let i = 0; i < amount; i++){
+            const user = Math.floor(Math.random() * data.users.length);
+            const comment = {
+                id: commentId,
+                userId: data.users[user].id,
+                userName: data.users[user].name,
+                productId: p.id,
+                message: faker.lorem.sentences(),
+                date: faker.date.past(),
+            }
+            data.comments.push(comment);
+            commentId++;
+        }
+    })
 
     // create articles
     for (let i = 0; i < 3; i++) {
