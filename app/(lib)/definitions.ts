@@ -29,7 +29,8 @@ export type User = {
 export type Comment = {
     id: string,
     userId: string,
+    userName: string,
     productId: string,
     message: string,
-    date: Date,
+    date: string,
 }

@@ -58,7 +58,7 @@ module.exports = () => {
     //create users
     for(let i = 0; i < 20; i++){
         const name = faker.person.fullName();
-        const id = 1234+i;
+        const id = (1234+i).toString();
         data.users.push({id: id, name: name})
     }
 
@@ -96,11 +96,11 @@ module.exports = () => {
         for(let i = 0; i < amount; i++){
             const user = Math.floor(Math.random() * data.users.length);
             const comment = {
-                id: commentId,
+                id: commentId.toString(),
                 userId: data.users[user].id,
                 userName: data.users[user].name,
                 productId: p.id,
-                message: faker.lorem.sentences(),
+                message: faker.lorem.sentences({min: 2, max: 20}),
                 date: faker.date.past(),
             }
             data.comments.push(comment);

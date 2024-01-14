@@ -18,7 +18,8 @@ const config: Config = {
       },
       maxWidth: {
         '400': '400px',
-      }
+      },
+
     },
   },
   plugins: [],

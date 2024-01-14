@@ -1,5 +1,5 @@
 import api from "./api";
-import { BlogArticleStub } from "./definitions";
+import { BlogArticleStub, Comment } from "./definitions";
 import { Product } from "./definitions";
 import { Category } from "./definitions";
 
@@ -7,6 +7,7 @@ const ROUTES = {
     CATEGORIES: 'http://localhost:3001/categories',
     PRODUCTS: 'http://localhost:3001/products',
     ARTICLES: 'http://localhost:3001/articles',
+    COMMENTS: 'http://localhost:3001/comments'
 }
 
 export async function fetchBlogArticleStubs():Promise<BlogArticleStub[]>{
@@ -33,6 +34,16 @@ export async function fetchProductById(id:string):Promise<Product>{
         const product = resp.find(prod => prod.id === id);
         if(!product) throw new Error('product not found');
         return product;
+    } catch (e) {
+        throw _handleError(e);
+    }
+}
+
+export async function fetchCommentsByProductId(id:string):Promise<Comment[]>{
+    try{
+        const resp = await api.get(ROUTES.COMMENTS).then(c => c.json()) as Comment[];
+        const comments = resp.filter(c => c.productId === id );
+        return comments;
     } catch (e) {
         throw _handleError(e);
     }

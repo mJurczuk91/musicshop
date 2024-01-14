@@ -68,7 +68,6 @@ describe('blog articles section', () => {
         await renderArticles();
         const images = screen.getAllByAltText("article image") as HTMLImageElement[];
         const imageSrcs = images.map(img=>img.src);
-        console.log(imageSrcs);
         for(let article of blogArticles){  
             expect(imageSrcs).toContain(`http://localhost:3000${article.image_url}`);
         }

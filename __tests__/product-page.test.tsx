@@ -1,9 +1,11 @@
 import { test, describe, expect } from "vitest";
 import { products } from "../mocks/mockData";
+import {comments} from '../mocks/mockComments'
 import ProductBreadcrumbs from "../app/product/components/productBreadcrumbs";
 import { render, screen } from "@testing-library/react";
 import ImageSelector from "@/app/product/components/imageSelector";
 import userEvent from '@testing-library/user-event';
+import CommentsDisplay from "@/app/product/components/commentsDisplay";
 
 describe('product page breadcrumbs', () => {
     test('breadcrumbs are properly displayed', () => {
@@ -50,5 +52,18 @@ describe('image selector', () => {
         await user.click(miniature);
 
         expect(bigPic.src).toContain(`http://localhost:3000${imgUrlArr[1]}`);
+    })
+})
+
+describe('comment display', () => {
+    const firstProductComments = comments.filter( el => el.productId === products[0].id);
+    test("it displays first 150 chars of every comment for a given product by default", async () => {
+        render(<CommentsDisplay comments={firstProductComments} /> )
+
+        //messages longer than 150 chars have three dots at the end
+        firstProductComments.map(c => {
+            const msgShort = c.message.length > 150 ? c.message.slice(0, 150).concat('...') : c.message;
+            expect(screen.getByText(msgShort)).toBeInTheDocument();
+        })
     })
 })
