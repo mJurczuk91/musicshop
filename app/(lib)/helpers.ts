@@ -7,3 +7,10 @@ export function getProductSlug(product: Product): string {
 export function getSubcategorySlug(subcategory: string): string {
     return subcategory.replaceAll(' ', '-');
 }
+
+export function leftPad(input: string, padWith: string, outputStringLength: number): string {
+    if (outputStringLength < 0 || outputStringLength < input.concat(padWith).length || outputStringLength < input.length) return input;
+    let result = '';
+    while(result.concat(padWith).length < outputStringLength) result+=padWith;
+    return result.concat(input);
+}

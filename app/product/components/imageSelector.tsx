@@ -33,17 +33,18 @@ export default function ImageSelector({ imgUrlArr }: Props) {
                 />
             </div>
             <div className="flex flex-row items-center">
+
                 <button onClick={handleScrollLeft} className="mr-4">
                     <img className="h-12 rotate-180" src="/svg/right-arrow.svg" alt="scroll left" />
                 </button>
+
                 <div
                     className="flex flex-row scroll-smooth overflow-scroll max-w-400 mt-2 mb-4 md:max-w-md no-scrollbar"
-                    ref={container}
-                >
+                    ref={container}>
                     {
                         imgUrlArr.map((img, i) => {
                             return <img
-                                onDrag={(e: React.SyntheticEvent) => {
+                                onDragStart={(e: React.SyntheticEvent) => {
                                     e.preventDefault();
                                 }}
                                 src={img}
@@ -55,6 +56,7 @@ export default function ImageSelector({ imgUrlArr }: Props) {
                         })
                     }
                 </div>
+
                 <button onClick={handleScrollRight} className="ml-4">
                     <img className="h-12" src="/svg/right-arrow.svg" alt="scroll right" />
                 </button>
