@@ -9,6 +9,10 @@ export type Product = {
     imgUrlArray: string[],
 }
 
+export interface Guitar extends Product {
+    
+}
+
 export type BlogArticleStub = {
     title: string,
     image_url: string,
