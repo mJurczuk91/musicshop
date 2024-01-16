@@ -16,8 +16,8 @@ export default function CommentDisplay({ comment, abbreviateCommentsLongerThan }
             <div className="basis-1/5 flex flex-col justify-center text-center">
                 <span>{comment.userName}</span>
                 <span className="mt-4">
-                    {commentDate.getDate()}.
-                    {leftPad(commentDate.getMonth().toString(), '0', 2)}.
+                    {leftPad(commentDate.getDate().toString(), '0', 2)}.
+                    {leftPad((commentDate.getMonth()+1).toString(), '0', 2)}.
                     {commentDate.getFullYear()}
                 </span>
             </div>
