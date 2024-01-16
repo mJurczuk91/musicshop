@@ -6,6 +6,8 @@ import { render, screen } from "@testing-library/react";
 import ImageSelector from "@/app/product/[slug]/components/imageSelector";
 import userEvent from '@testing-library/user-event';
 import ProductCommentSection from "@/app/product/[slug]/components/productCommentsSection";
+import ProductDetails from "@/app/product/[slug]/components/productDetails";
+import CommentDisplay from "@/app/product/[slug]/components/commentDisplay";
 
 describe('product page breadcrumbs', () => {
     test('breadcrumbs are properly displayed', () => {
@@ -27,6 +29,7 @@ describe('image selector', () => {
 
     test('by default image selector displays first picture in array as the big one', () => {
         render(<ImageSelector imgUrlArr={imgUrlArr} />);
+
         const bigPic = screen.getByAltText("product picture big") as HTMLImageElement;
         expect(bigPic.src).toContain(`http://localhost:3000${imgUrlArr[0]}`);
     });
@@ -35,6 +38,7 @@ describe('image selector', () => {
         render(<ImageSelector imgUrlArr={imgUrlArr} />);
         const miniatures = screen.queryAllByAltText('product picture small') as HTMLImageElement[];
         const miniaturesSrc = miniatures.map(el => el.src);
+
         imgUrlArr.map(img => {
             expect(miniaturesSrc.find(min => min === `http://localhost:3000${img}`)).toBeTruthy();
         })
@@ -43,7 +47,6 @@ describe('image selector', () => {
     test('clicking on miniature sets it as the big picture', async () => {
         const user = userEvent.setup();
         render(<ImageSelector imgUrlArr={imgUrlArr} />);
-
         const miniature = screen.getAllByAltText('product picture small')[1] as HTMLImageElement;
         const bigPic = screen.getByAltText('product picture big') as HTMLImageElement;
 
@@ -55,8 +58,42 @@ describe('image selector', () => {
     })
 })
 
+describe('comment display', () => {
+    const commentShort = {
+        id: '1',
+        userId: '1',
+        userName: 'User Name',
+        productId: '1',
+        message: 'message',
+        date: new Date().toISOString()
+    };
+    const commentLong = {
+        id: '1',
+        userId: '1',
+        userName: 'User Name',
+        productId: '1',
+        message: 'messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage messagemessagemessage',
+        date: new Date().toISOString()
+    };
+    const maxCommentLength = 150;
+
+    test('comments longer than max length get abbreviated', () => {
+        render(<CommentDisplay comment={commentLong} abbreviateCommentsLongerThan={maxCommentLength} />)
+
+        const msg = commentLong.message.slice(0, maxCommentLength).trim().concat('...');
+        expect(screen.getByText(msg)).toBeInTheDocument();
+    });
+    test("messages shorter than max length don't display 'show more/less' button", () => {
+        render(<CommentDisplay comment={commentShort} abbreviateCommentsLongerThan={maxCommentLength} />);
+
+        expect(screen.queryByText('Show more')).toBeFalsy();
+        expect(screen.queryByText('Show less')).toBeFalsy();
+    });
+})
+
 describe('comment section', () => {
     const firstProductComments = comments.filter(el => el.productId === products[0].id);
+
     test("it displays first 150 chars of every comment for a given product by default", async () => {
         const productCommentSection = await ProductCommentSection({ productId: products[0].id })
         render(productCommentSection)
@@ -65,6 +102,17 @@ describe('comment section', () => {
         firstProductComments.map(c => {
             const msgShort = c.message.length > 150 ? c.message.slice(0, 150).concat('...') : c.message;
             expect(screen.getByText(msgShort)).toBeInTheDocument();
+        })
+    });
+})
+
+describe('details section', () => {
+    test('it displays all the details for a given product', () => {
+        render(<ProductDetails details={products[0].details} />);
+        
+        products[0].details.map(({ key, value }) => {
+            expect(screen.getByText(key)).toBeInTheDocument();
+            expect(screen.getByText(value)).toBeInTheDocument();
         })
     })
 })
