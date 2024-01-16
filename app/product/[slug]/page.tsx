@@ -3,6 +3,8 @@ import ProductBreadcrumbs from "./components/productBreadcrumbs";
 import ImageSelector from "./components/imageSelector";
 import ProductCommentsSection from "./components/productCommentsSection";
 import ProductDetails from "./components/productDetails";
+import TabMenu from "./components/tabMenu";
+import ProductDescription from "./components/productDescription";
 
 type Props = {
     params: {
@@ -16,9 +18,14 @@ export default async function Page({ params: { slug } }: Props) {
         <div>
             {slug}
             <ProductBreadcrumbs product={product} />
-            <ImageSelector imgUrlArr={product.imgUrlArray} />
-            <ProductCommentsSection productId={id} />
-            <ProductDetails details={product.details} />
+            <div className="w-full shadow-lg">
+                <ImageSelector imgUrlArr={product.imgUrlArray} />
+            </div>
+            <TabMenu elements={[
+                { title: 'details', jsx: <ProductDetails details={product.details} /> },
+                { title: 'comments', jsx: <ProductCommentsSection productId={id} /> },
+                { title: 'description', jsx: <ProductDescription description={product.description} name={product.name} /> },
+            ]} />
         </div>
     )
 }
