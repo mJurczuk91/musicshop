@@ -72,6 +72,13 @@ module.exports = () => {
         for (let subcategory of category.subcategories) {
             const amount = faker.number.int(10);
             for (let i = 0; i < amount; i++) {
+                const details = [];
+                for(let detailCounter = 0; detailCounter < 8; detailCounter++){
+                    details.push({
+                        key: faker.word.noun(),
+                        value: faker.word.adjective(),
+                    });
+                }
                 const product = {
                     id: pid.toString(),
                     name: faker.word.noun() + faker.number.int(1000).toString(),
@@ -81,6 +88,7 @@ module.exports = () => {
                     amount: faker.number.int(10),
                     description: faker.lorem.paragraph(),
                     imgUrlArray: shuffleArray(image_url_array),
+                    details: details,
                 }
                 pid++;
                 data.products.push(product);

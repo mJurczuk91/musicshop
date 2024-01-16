@@ -1,7 +1,7 @@
 import { fetchProductById } from "@/app/(lib)/data"
-import ProductBreadcrumbs from "../components/productBreadcrumbs";
-import ImageSelector from "../components/imageSelector";
-import ProductCommentsSection from "../components/productCommentsSection";
+import ProductBreadcrumbs from "./components/productBreadcrumbs";
+import ImageSelector from "./components/imageSelector";
+import ProductCommentsSection from "./components/productCommentsSection";
 
 type Props = {
     params: {

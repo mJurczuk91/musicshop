@@ -1,6 +1,9 @@
 import { http, HttpResponse } from 'msw'
-import {blogArticles, categories, products, users} from './mockData.js';
-import { comments } from './mockComments.js';
+import { blogArticles } from './data/mockBlogArticles.js';
+import { categories } from './data/mockCategories.js';
+import { products } from './data/mockProducts.js';
+import { users } from './data/mockUsers.js'
+import { comments } from './data/mockComments.js';
 
 export const handlers = [
   http.get("http://localhost:3001/products", () => {

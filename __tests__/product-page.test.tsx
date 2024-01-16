@@ -1,11 +1,11 @@
 import { test, describe, expect } from "vitest";
-import { products } from "../mocks/mockData";
-import {comments} from '../mocks/mockComments'
-import ProductBreadcrumbs from "../app/product/components/productBreadcrumbs";
+import { products } from "../mocks/data/mockProducts";
+import { comments } from '../mocks/data/mockComments'
+import ProductBreadcrumbs from "../app/product/[slug]/components/productBreadcrumbs";
 import { render, screen } from "@testing-library/react";
-import ImageSelector from "@/app/product/components/imageSelector";
+import ImageSelector from "@/app/product/[slug]/components/imageSelector";
 import userEvent from '@testing-library/user-event';
-import ProductCommentSection from "@/app/product/components/productCommentsSection";
+import ProductCommentSection from "@/app/product/[slug]/components/productCommentsSection";
 
 describe('product page breadcrumbs', () => {
     test('breadcrumbs are properly displayed', () => {
@@ -56,10 +56,10 @@ describe('image selector', () => {
 })
 
 describe('comment section', () => {
-    const firstProductComments = comments.filter( el => el.productId === products[0].id);
+    const firstProductComments = comments.filter(el => el.productId === products[0].id);
     test("it displays first 150 chars of every comment for a given product by default", async () => {
-        const productCommentSection = await ProductCommentSection({productId: products[0].id})
-        render( productCommentSection )
+        const productCommentSection = await ProductCommentSection({ productId: products[0].id })
+        render(productCommentSection)
 
         //messages longer than 150 chars have three dots at the end
         firstProductComments.map(c => {

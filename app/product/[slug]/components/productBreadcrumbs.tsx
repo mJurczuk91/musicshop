@@ -15,7 +15,7 @@ export default function ProductBreadcrumbs({ product }: Props) {
                 <span> / </span>
 
                 <Link href={`/categories/${product.category}`}>
-                    <span>
+                    <span className="capitalize">
                         {product.category}
                     </span>
                 </Link>
@@ -23,7 +23,7 @@ export default function ProductBreadcrumbs({ product }: Props) {
                 <span> / </span>
 
                 <Link href={`/categories/${product.category}/${getSubcategorySlug(product.subcategory)}`}>
-                    <span>
+                    <span className="capitalize">
                         {product.subcategory}
                     </span>
                 </Link>
@@ -31,7 +31,7 @@ export default function ProductBreadcrumbs({ product }: Props) {
                 <span> / </span>
 
                 <Link href={`/product/${getProductSlug(product)}`}>
-                    <span>
+                    <span className="capitalize font-bold">
                         {product.name}
                     </span>
                 </Link>

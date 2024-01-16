@@ -7,10 +7,7 @@ export type Product = {
     amount: number,
     description: string,
     imgUrlArray: string[],
-}
-
-export interface Guitar extends Product {
-    
+    details: {key:string, value:string}[],
 }
 
 export type BlogArticleStub = {

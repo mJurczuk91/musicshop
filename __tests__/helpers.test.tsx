@@ -12,6 +12,7 @@ test('getProductSlug generates proper slug', () => {
         description: 'description',
         imgUrlArray: ['/drums1.jpg'],
         price: '123.54',
+        details: [{key: 'key', value: 'value'}],
     };
     const product2:Product = {
         id: "1023",
@@ -22,6 +23,7 @@ test('getProductSlug generates proper slug', () => {
         description: 'description',
         imgUrlArray: ['/drums1.jpg'],
         price: '123.54',
+        details: [{key: 'key', value: 'value'}],
     };
     const slug = getProductSlug(product);
     const slug2 = getProductSlug(product2);
