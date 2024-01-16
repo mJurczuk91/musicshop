@@ -120,7 +120,7 @@ module.exports = () => {
     for (let i = 0; i < 3; i++) {
         const article = {
             title: faker.lorem.sentence(),
-            image_url: `/guitars.jpg`,
+            image_url: `/guitars1.jpg`,
             link: '/#',
             synopsis: faker.lorem.paragraph()
         };

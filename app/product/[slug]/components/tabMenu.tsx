@@ -8,7 +8,7 @@ type Props = {
 export default function TabMenu({ elements }: Props) {
     const [selectedItem, setSelectedItem] = useState<string>(elements[0].title);
     return (
-        <div className="w-full my-6 shadow-lg">
+        <div className="w-full my-6 shadow-lg flex flex-col items-center">
             <div className="w-full max-w-6xl flex justify-center">
                 {elements.map(({ title }) => {
                     return (

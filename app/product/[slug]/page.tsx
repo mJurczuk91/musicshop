@@ -16,7 +16,6 @@ export default async function Page({ params: { slug } }: Props) {
     const product = await fetchProductById(id);
     return (
         <div>
-            {slug}
             <ProductBreadcrumbs product={product} />
             <div className="w-full shadow-lg">
                 <ImageSelector imgUrlArr={product.imgUrlArray} />

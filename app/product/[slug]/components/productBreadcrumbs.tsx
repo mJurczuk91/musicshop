@@ -8,7 +8,7 @@ type Props = {
 
 export default function ProductBreadcrumbs({ product }: Props) {
     return (
-        <div>
+        <div className="w-full py-2 px-4 border-gray-400 border-opacity-25 border-b-2">
             <div>
                 <Link href={'/'}>Home page</Link>
 
