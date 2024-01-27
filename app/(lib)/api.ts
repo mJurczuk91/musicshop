@@ -1,5 +1,5 @@
 const get = async (url: string): Promise<Response> => {
-    const resp = await fetch(url);
+    const resp = await fetch(url, {next: { revalidate: 60 }});
     _handleResponse(resp);
     return resp;
 }
