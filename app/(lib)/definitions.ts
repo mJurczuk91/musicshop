@@ -35,3 +35,12 @@ export type Comment = {
     message: string,
     date: string,
 }
+
+export type PaginatedData<T> = {
+    data: T[],
+    pagination: null|{
+        page: number,
+        pageCount: number,
+        pageSize: number
+    }
+}
