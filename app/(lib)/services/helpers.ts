@@ -10,7 +10,6 @@ const loopOverKeys = (obj: any): any => {
         if(Object.keys(obj[key]).includes('data') && Array.isArray(obj[key]['data'])){
             const any = obj[key]['data'] as any[];
             result[key] = any.map(i => {
-                console.log(i);
                 return loopOverKeys({...i.attributes, id: i.id});
             });
         } else if (Object.keys(obj[key]).includes('data')) {
@@ -19,7 +18,6 @@ const loopOverKeys = (obj: any): any => {
         } else {
             result[key] = loopOverKeys(obj[key]);
         }
-        
     }
     return result;
 }
