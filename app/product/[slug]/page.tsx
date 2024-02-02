@@ -1,4 +1,3 @@
-import { fetchProductById } from "@/app/(lib)/data"
 import ProductBreadcrumbs from "./components/productBreadcrumbs";
 import ImageSelector from "./components/imageSelector";
 import ProductCommentsSection from "./components/productCommentsSection";
@@ -14,8 +13,7 @@ type Props = {
 }
 export default async function Page({ params: { slug } }: Props) {
     const id = slug.split('-')[0];
-    const product = await fetchProductById(id);
-    const p = products.getById('1');
+    const product = await products.getById(id);
     return (
         <div>
             <ProductBreadcrumbs product={product} />

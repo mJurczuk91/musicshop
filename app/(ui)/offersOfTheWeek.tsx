@@ -1,11 +1,10 @@
 import ResponsiveProductGrid from "./responsiveProductGrid";
 import { fetchProducts } from "../(lib)/data";
+import { products as productsService } from "../(lib)/services/products";
 
 export default async function OffersOfTheWeek () {
-    const selectProductsToDisplay = async () => {
-        return (await fetchProducts()).slice(0, 8);
-    };
+    const products = (await productsService.getPage()).data.slice(8,16)
     return (
-        <ResponsiveProductGrid products={await selectProductsToDisplay()} sectionTitle="offers of the week"/>
+        <ResponsiveProductGrid products={products} sectionTitle="offers of the week"/>
     )
 }

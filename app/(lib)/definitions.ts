@@ -41,6 +41,7 @@ export type PaginatedData<T> = {
     pagination: null|{
         page: number,
         pageCount: number,
-        pageSize: number
+        pageSize: number,
+        total: number,
     }
 }
