@@ -31,14 +31,10 @@ async function getPage(page: number = 0, pageSize: number = 20): Promise<Paginat
     const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
     return formatProductFromFlatResponse(flat.product);
   })
+  const flatPagination = flattenStrapiResponse(resp.data.products.meta)
   return {
     data: products,
-    pagination: {
-      page: resp.data.products.meta.pagination.page,
-      pageCount: resp.data.products.meta.pagination.pageCount,
-      pageSize: resp.data.products.meta.pagination.pageSize,
-      total: resp.data.products.meta.pagination.total,
-    },
+    pagination: {...flatPagination},
   }
 }
 

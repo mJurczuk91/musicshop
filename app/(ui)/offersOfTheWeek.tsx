@@ -1,5 +1,4 @@
 import ResponsiveProductGrid from "./responsiveProductGrid";
-import { fetchProducts } from "../(lib)/data";
 import { products as productsService } from "../(lib)/services/products";
 
 export default async function OffersOfTheWeek () {
