@@ -3,7 +3,7 @@ import { getClient } from "../apollo"
 import { gql } from "@apollo/client";
 import { flattenStrapiResponse } from "./helpers";
 
-export const getCommentsByProductId = async (id: string, page = 0, pageSize = 20)/* : Promise<PaginatedData<Comment>> */ => {
+const getByProductId = async (id: string, page = 0, pageSize = 20)/* : Promise<PaginatedData<Comment>> */ => {
     const client = getClient();
     const resp = await client.query({
         query: queryCommentsByProductId,
@@ -24,6 +24,10 @@ export const getCommentsByProductId = async (id: string, page = 0, pageSize = 20
         data: comments,
         pagination: {...flattenStrapiResponse(resp.data.comments.meta)}
     }
+}
+
+export const comments = {
+  getByProductId,
 }
 
 const queryCommentsByProductId = gql`query products($pagination: PaginationArg, $productId: ID) {
