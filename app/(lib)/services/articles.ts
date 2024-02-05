@@ -16,13 +16,11 @@ const getPage = async (page = 0, pageSize = 20):Promise<PaginatedData<BlogArticl
             },
         }
     })
-    console.log(resp.data);
     const dataArr = resp.data.blogArticles.data as any[];
     const articles = dataArr.map(article => {
         const flat = flattenStrapiResponse({ article: { ...article.attributes, id: article.id } });
         return formatArticleFromApiResponse(flat.article);
     });
-    console.log(articles);
     return {
         data: articles,
         pagination: {...flattenStrapiResponse(resp.data.blogArticles.meta)}
