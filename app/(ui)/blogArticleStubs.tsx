@@ -1,9 +1,9 @@
 import { BlogArticleStub } from "../(lib)/definitions"
-import { fetchBlogArticleStubs } from "../(lib)/data"
+import { articles } from "../(lib)/services/articles";
 import Link from "next/link";
 
 export default async function BlogArticleStubs() {
-    const stubs = await fetchBlogArticleStubs();
+    const stubs = (await articles.getPage()).data;
     return <div className="flex mt-4 py-8 w-full justify-center border-t-2 border-b-2 border-t-gray-400 border-b-gray-400 border-opacity-25">
         <div className="max-w-6xl flex flex-col lg:flex-row">
             {stubs.map((stub, index) => <ArticleStub key={index} stub={stub} />)}
