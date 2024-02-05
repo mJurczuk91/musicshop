@@ -1,4 +1,3 @@
-import { fetchCommentsByProductId } from "@/app/(lib)/data";
 import CommentDisplay from "./commentDisplay";
 import { comments } from "@/app/(lib)/services/comments";
 
