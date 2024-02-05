@@ -6,7 +6,7 @@ export default async function CategoryMenu() {
     
     return <div className="w-full flex justify-center">
         <div className=" max-w-6xl w-full p-4 flex justify-center">
-            {cats.map(category => <CategoryMenuItem key={category.name} category={category} />)}
+            {cats.map(category => <CategoryMenuItem key={category.id} category={category} />)}
         </div>
     </div>
 }

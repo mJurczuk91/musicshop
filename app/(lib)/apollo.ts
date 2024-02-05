@@ -8,7 +8,17 @@ import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rs
 
 export const { getClient } = registerApolloClient(() => {
   return new NextSSRApolloClient({
-    cache: new NextSSRInMemoryCache(),
+    cache: new NextSSRInMemoryCache({
+      typePolicies: {
+        CategoryEntity: {
+          fields: {
+            attributes: {
+              merge: true,
+            }
+          }
+        }
+      }
+    }),
     link: new HttpLink({
       uri: "https://m-jurczuk.pl/graphql",
       headers: {

@@ -15,6 +15,29 @@ async function getById(productId: string): Promise<Product> {
   return formatProductFromFlatResponse(flat);
 }
 
+async function getByCategory(categoryId: string, page: number = 0, pageSize: number = 20):Promise<PaginatedData<Product>> {
+  const client = getClient();
+  const resp = await client.query({
+    query: queryProductsByCategory,
+    variables: {
+      pagination: {
+        page,
+        pageSize,
+      },
+      categoryId,
+    }
+  });
+  const dataArr = resp.data.products.data as any[];
+  const products = dataArr.map(product => {
+    const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
+    return formatProductFromFlatResponse(flat.product);
+  });
+  return {
+    data: products,
+    pagination: {...flattenStrapiResponse(resp.data.products.meta)}
+  }
+}
+
 async function getPage(page: number = 0, pageSize: number = 20): Promise<PaginatedData<Product>> {
   const client = getClient();
   const resp = await client.query({
@@ -31,15 +54,14 @@ async function getPage(page: number = 0, pageSize: number = 20): Promise<Paginat
     const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
     return formatProductFromFlatResponse(flat.product);
   })
-  const flatPagination = flattenStrapiResponse(resp.data.products.meta)
   return {
     data: products,
-    pagination: {...flatPagination},
+    pagination: {...flattenStrapiResponse(resp.data.products.meta)},
   }
 }
 
 export const products = {
-  getPage, getById,
+  getPage, getById, getByCategory
 }
 
 const formatProductFromFlatResponse = (flat: any): Product => {
@@ -48,7 +70,9 @@ const formatProductFromFlatResponse = (flat: any): Product => {
     id: flat.id,
     name: flat.name,
     category: flat.category.name,
+    categoryId: flat.category.id,
     subcategory: flat.subcategory.name,
+    subcategoryId: flat.subcategory.id,
     price: flat.price,
     amount: flat.amount,
     description: flat.description,
@@ -79,6 +103,7 @@ const queryProducts = gql`query products($pagination: PaginationArg) {
 
         category {
           data {
+            id,
             attributes {
               name
             }
@@ -87,6 +112,7 @@ const queryProducts = gql`query products($pagination: PaginationArg) {
 
         subcategory {
           data {
+            id,
             attributes {
               name
             }
@@ -127,6 +153,7 @@ const queryProductById = gql`query productById($productId: ID) {
 
         category {
           data {
+            id,
             attributes {
               name
             }
@@ -135,6 +162,7 @@ const queryProductById = gql`query productById($productId: ID) {
 
         subcategory {
           data {
+            id,
             attributes {
               name
             }
@@ -149,6 +177,53 @@ const queryProductById = gql`query productById($productId: ID) {
           }
         }
 
+      }
+    }
+  }
+}`
+
+const queryProductsByCategory = gql`query productByCategory($categoryId: ID, $pagination: PaginationArg) {
+  products(pagination: $pagination, filters: {
+    category: {
+      id: {
+        eq: $categoryId
+      }
+    }
+  }) {
+    data {
+      id,
+      attributes {
+        amount,
+        name,
+        price,
+        description,
+        details,
+
+        category {
+          data {
+            id
+            attributes {
+              name
+            }
+          }
+        },
+
+        subcategory {
+          data {
+            id
+            attributes {
+              name
+            }
+          }
+        },
+
+        imgs {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
       }
     }
   }
