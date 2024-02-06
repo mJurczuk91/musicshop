@@ -4,7 +4,7 @@ export const flattenStrapiResponse = (strapiData: any) => {
 
 const loopOverKeys = (obj: any): any => {
     if (typeof obj !== 'object') return obj;
-    const result = Object.create(null);
+    const result = Object.create({});
     for (let key of Object.keys(obj)) {
         if (key === '__typename') continue;
         if(Object.keys(obj[key]).includes('data')){
