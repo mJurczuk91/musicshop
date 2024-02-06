@@ -4,6 +4,10 @@ import { PaginatedData, Product } from "../definitions";
 import { flattenStrapiResponse } from "./helpers";
 import { HOST } from "./helpers"
 
+export const products = {
+  getPage, getById, getByCategory, getBySubcategory
+}
+
 async function getById(productId: string): Promise<Product> {
   const client = getClient();
   const resp = await client.query({
@@ -25,6 +29,29 @@ async function getByCategory(categoryId: string, page: number = 0, pageSize: num
         pageSize,
       },
       categoryId,
+    }
+  });
+  const dataArr = resp.data.products.data as any[];
+  const products = dataArr.map(product => {
+    const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
+    return formatProductFromFlatResponse(flat.product);
+  });
+  return {
+    data: products,
+    pagination: {...flattenStrapiResponse(resp.data.products.meta)}
+  }
+}
+
+async function getBySubcategory(subcategoryId: string, page: number = 0, pageSize: number = 20):Promise<PaginatedData<Product>> {
+  const client = getClient();
+  const resp = await client.query({
+    query: queryProductsBySubcategory,
+    variables: {
+      pagination: {
+        page,
+        pageSize,
+      },
+      subcategoryId,
     }
   });
   const dataArr = resp.data.products.data as any[];
@@ -60,10 +87,6 @@ async function getPage(page: number = 0, pageSize: number = 20): Promise<Paginat
   }
 }
 
-export const products = {
-  getPage, getById, getByCategory
-}
-
 const formatProductFromFlatResponse = (flat: any): Product => {
   const imgs = flat.imgs as any[];
   return {
@@ -89,6 +112,58 @@ const formatImgUrlArray = (imgs: any[]): string[] => {
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
 }
+
+const queryProductsByCategory = gql`query productsByCategory($categoryId: ID, $pagination: PaginationArg) {
+  products(pagination: $pagination, filters: {
+    category: {
+      id: {
+        eq: $categoryId
+      }
+    }
+  }) {
+    data {
+      id,
+      attributes {
+        amount,
+        name,
+        price,
+        description,
+        details,
+        category {
+          data {
+            id
+            attributes {
+              name
+            }
+          }
+        },
+        subcategory {
+          data {
+            id
+            attributes {
+              name
+            }
+          }
+        },
+        imgs {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+      }
+    }
+    meta {
+      pagination {
+        page,
+        pageCount,
+        pageSize,
+        total,
+      }
+    }
+  }
+}`
 
 const queryProducts = gql`query products($pagination: PaginationArg) {
   products(pagination: $pagination) {
@@ -182,11 +257,11 @@ const queryProductById = gql`query productById($productId: ID) {
   }
 }`
 
-const queryProductsByCategory = gql`query productByCategory($categoryId: ID, $pagination: PaginationArg) {
+const queryProductsBySubcategory = gql`query productsBySubcategory($subcategoryId: ID, $pagination: PaginationArg) {
   products(pagination: $pagination, filters: {
-    category: {
+    subcategory: {
       id: {
-        eq: $categoryId
+        eq: $subcategoryId
       }
     }
   }) {
@@ -198,7 +273,6 @@ const queryProductsByCategory = gql`query productByCategory($categoryId: ID, $pa
         price,
         description,
         details,
-
         category {
           data {
             id
@@ -207,7 +281,6 @@ const queryProductsByCategory = gql`query productByCategory($categoryId: ID, $pa
             }
           }
         },
-
         subcategory {
           data {
             id
@@ -216,7 +289,6 @@ const queryProductsByCategory = gql`query productByCategory($categoryId: ID, $pa
             }
           }
         },
-
         imgs {
           data {
             attributes {
@@ -224,6 +296,14 @@ const queryProductsByCategory = gql`query productByCategory($categoryId: ID, $pa
             }
           }
         }
+      }
+    }
+    meta {
+      pagination {
+        page,
+        pageCount,
+        pageSize,
+        total,
       }
     }
   }
