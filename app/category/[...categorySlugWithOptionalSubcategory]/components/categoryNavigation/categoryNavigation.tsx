@@ -1,8 +1,6 @@
 'use client'
-import { Category, Subcategory } from "@/app/(lib)/definitions";
-import { getCategorySlug, getSubcategorySlug } from "@/app/(lib)/helpers";
-import Link from "next/link";
-import { SyntheticEvent, useReducer } from "react";
+import { Category } from "@/app/(lib)/definitions";
+import { useReducer } from "react";
 import ExpandButton from "./expandButton";
 import CategoryLink from "./categoryLink";
 import SubcategoryList from "./subcategoryList";
@@ -50,8 +48,10 @@ export default function CategoryNavigation({ categoriesJSONstring }: Props) {
             {state.categories.map(c => {
                 return (
                     <div key={c.category.id.concat(c.category.name)}>
-                        <CategoryLink category={c.category} />
-                        <ExpandButton expandFunction={dispatch} categoryId={c.category.id} />
+                        <div>
+                            <CategoryLink category={c.category} />
+                            <ExpandButton expandFunction={dispatch} categoryId={c.category.id} />
+                        </div>
 
                         <div className={`${c.expanded ? '' : 'hidden'}`}>
                             <SubcategoryList category={c.category} subcategories={c.category.subcategories} />
