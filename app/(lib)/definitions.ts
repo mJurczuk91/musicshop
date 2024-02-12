@@ -2,7 +2,9 @@ export type Product = {
     id: string,
     name: string,
     category: string,
+    categoryId: string,
     subcategory: string,
+    subcategoryId: string,
     price: string,
     amount: number,
     description: string,
@@ -18,8 +20,14 @@ export type BlogArticleStub = {
 }
 
 export type Category = {
+    id: string,
     name: string,
-    subcategories: string[],
+    subcategories: Subcategory[],
+}
+
+export type Subcategory = {
+    id: string,
+    name: string,
 }
 
 export type User = {
