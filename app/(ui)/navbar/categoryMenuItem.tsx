@@ -11,9 +11,9 @@ export default function CategoryMenuItem({category:{ name, subcategories }}:Prop
             {name}
         </Link>
         <div className="invisible absolute flex flex-col p-6 bg-white shadow-md group-hover:visible">
-            {subcategories.map((item) => {
-                return <Link key={item} href={`/category`}>
-                    <span className="capitalize">{item}</span>
+            {subcategories.map((subcategory) => {
+                return <Link key={subcategory.id} href={`/category`}>
+                    <span className="capitalize">{subcategory.name}</span>
                 </Link>
             })}
         </div>
