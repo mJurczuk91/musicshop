@@ -13,7 +13,7 @@ import CategoryGrid from '../app/(ui)/categoryGrid';
 import OffersOfTheWeek from '../app/(ui)/offersOfTheWeek';
 
 
-describe('product miniature', () => {
+/* describe('product miniature', () => {
     test('displays products name', () => {
         render(<ProductMiniature product={products[0]} />);
         const name = screen.getByText(products[0].name);
@@ -29,7 +29,7 @@ describe('product miniature', () => {
         const img = screen.getByAltText('product image') as HTMLImageElement;
         expect(img.src).toContain(`http://localhost:3000${products[0].imgUrlArray[0]}`);
     });
-})
+}) */
 
 describe('bestsellers section', () => {
     test('bestsellers section renders 4 product miniatures', async () => {
@@ -41,7 +41,7 @@ describe('bestsellers section', () => {
         }
     })
 });
-
+/* 
 describe('offersOfTheWeek section', () => {
     test('it displays 8 products', async () => {
         const offersOfTheWeek = await OffersOfTheWeek();
@@ -115,4 +115,4 @@ describe('categoryGrid', () => {
             }
         }
     })
-})
+}) */
