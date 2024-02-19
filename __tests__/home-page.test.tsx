@@ -11,9 +11,10 @@ import CategoryMenuItem from '../app/(ui)/navbar/categoryMenuItem';
 import CategoryMenu from '../app/(ui)/navbar/categoryMenu';
 import CategoryGrid from '../app/(ui)/categoryGrid';
 import OffersOfTheWeek from '../app/(ui)/offersOfTheWeek';
+import { flattenStrapiResponse } from '@/app/(lib)/services/helpers';
 
 
-/* describe('product miniature', () => {
+describe('product miniature', () => {
     test('displays products name', () => {
         render(<ProductMiniature product={products[0]} />);
         const name = screen.getByText(products[0].name);
@@ -21,15 +22,15 @@ import OffersOfTheWeek from '../app/(ui)/offersOfTheWeek';
     });
     test('displays first 30 letters of product description', () => {
         render(<ProductMiniature product={products[0]} />);
-        const description = screen.getByText(products[0].description.slice(0, 30));
+        const description = screen.getByText(products[0].description.slice(0, 30).trim());
         expect(description).toBeInTheDocument();
     });
     test('displays products image', () => {
         render(<ProductMiniature product={products[0]} />);
         const img = screen.getByAltText('product image') as HTMLImageElement;
-        expect(img.src).toContain(`http://localhost:3000${products[0].imgUrlArray[0]}`);
+        expect(img.src).toContain(`${products[0].imgUrlArray[0]}`);
     });
-}) */
+})
 describe('bestsellers section', () => {
     test('bestsellers section renders 4 product miniatures', async () => {
         const bestsellers = await Bestsellers();

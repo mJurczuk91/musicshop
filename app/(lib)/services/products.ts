@@ -51,6 +51,10 @@ async function getPage(page: number = 0, pageSize: number = 20): Promise<Paginat
     const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
     return formatProductFromFlatResponse(flat.product);
   })
+  const fs = require('fs');
+  fs.writeFile('output.json', JSON.stringify(products), () => {
+    
+  })
   return {
     data: products,
     pagination: {...flattenStrapiResponse(resp.data.products.meta)},
