@@ -1,11 +1,10 @@
-import { getClient } from "../apollo";
+import client from "../apollo";
 import { gql } from "@apollo/client";
 import { PaginatedData, Product } from "../definitions";
 import { flattenStrapiResponse } from "./helpers";
 import { HOST } from "./helpers"
 
 async function getById(productId: string): Promise<Product> {
-  const client = getClient();
   const resp = await client.query({
     query: queryProductById,
     variables: { productId },
@@ -16,7 +15,6 @@ async function getById(productId: string): Promise<Product> {
 }
 
 async function getByCategory(categoryId: string, page: number = 0, pageSize: number = 20):Promise<PaginatedData<Product>> {
-  const client = getClient();
   const resp = await client.query({
     query: queryProductsByCategory,
     variables: {
@@ -39,7 +37,6 @@ async function getByCategory(categoryId: string, page: number = 0, pageSize: num
 }
 
 async function getPage(page: number = 0, pageSize: number = 20): Promise<PaginatedData<Product>> {
-  const client = getClient();
   const resp = await client.query({
     query: queryProducts,
     variables: {

@@ -8,14 +8,6 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.js'],
-    server: {
-      deps:{
-        inline:[
-          "@apollo/client",
-          "@apollo/experimental-nextjs-app-support"
-      ],
-      }
-    }
   },
   resolve: {
     alias: {

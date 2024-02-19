@@ -30,7 +30,6 @@ import OffersOfTheWeek from '../app/(ui)/offersOfTheWeek';
         expect(img.src).toContain(`http://localhost:3000${products[0].imgUrlArray[0]}`);
     });
 }) */
-
 describe('bestsellers section', () => {
     test('bestsellers section renders 4 product miniatures', async () => {
         const bestsellers = await Bestsellers();

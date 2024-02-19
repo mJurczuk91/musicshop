@@ -1,11 +1,10 @@
 import { PaginatedData } from "../definitions"
-import { getClient } from "../apollo"
+import client from "../apollo"
 import { gql } from "@apollo/client";
 import { flattenStrapiResponse } from "./helpers";
 import { Category } from "../definitions";
 
 const getAll = async (page = 0, pageSize = 100):Promise<PaginatedData<Category>> => {
-    const client = getClient();
     const resp = await client.query({
         query: queryCategories,
         variables: {
