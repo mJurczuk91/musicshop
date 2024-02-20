@@ -1,25 +1,27 @@
 import { CartItem, Product } from "@/app/(lib)/definitions";
 import { Dispatch, createContext, useReducer } from "react";
 
-export type AddCartItemsAction = {
-    type: 'add',
+export enum CartActionTypes {
+    'add'='add', 'remove'="remove"
+}
+
+export type CartAction = {
+    type: CartActionTypes,
     payload: {
         product: Product,
         amount: number,
     },
 }
 
-export type RemoveCartItemsAction = {
-    type: 'remove',
-    payload: {
-        product: Product,
-        amount: number,
-    },
+export type InitCart = {
+    type: 'init',
+    payload: CartState,
 }
+
 
 export type CartState = CartItem[] | null;
 
-export function cartReducer(state: CartState, action: AddCartItemsAction | RemoveCartItemsAction): CartState {
+export function cartReducer(state: CartState, action: CartAction|InitCart): CartState {
     switch (action.type) {
         case 'add': {
             if (!state) return [action.payload];
@@ -41,13 +43,17 @@ export function cartReducer(state: CartState, action: AddCartItemsAction | Remov
             });
             return newState.length === 0 ? null : newState;
         }
+        case 'init': {
+            if(!state) return action.payload;
+            return state;
+        }
         default: return state;
     }
 }
 
 export type CartContextType = {
     cart: CartState,
-    dispatch: Dispatch<AddCartItemsAction | RemoveCartItemsAction>,
+    dispatch: Dispatch<CartAction>,
 }
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);

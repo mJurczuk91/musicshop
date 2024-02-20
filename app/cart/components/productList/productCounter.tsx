@@ -1,9 +1,12 @@
+'use client'
+
 import { Dispatch } from "react"
-import { AddCartItemsAction, RemoveCartItemsAction } from "../../context/cartContext"
+import { CartAction } from "../../context/cartContext"
+import { CartActionTypes } from "../../context/cartContext"
 import { CartItem } from "@/app/(lib)/definitions"
 
 type Props = {
-    dispatch: Dispatch<AddCartItemsAction | RemoveCartItemsAction>,
+    dispatch: Dispatch<CartAction>,
     item: CartItem,
 }
 
@@ -14,8 +17,8 @@ export function ProductCounter({dispatch, item}:Props){
                 {item.amount}
             </span>
             <div className="">
-                <button onClick={()=>{dispatch({type:'add', payload:{product: item.product, amount: 1}})}}>+</button>
-                <button onClick={()=>{if(item.amount > 1) dispatch({type:'remove', payload:{product: item.product, amount: 1}})}}>-</button>
+                <button onClick={()=>{dispatch({type:CartActionTypes.add, payload:{product: item.product, amount: 1}})}}>+</button>
+                <button onClick={()=>{if(item.amount > 1) dispatch({type:CartActionTypes.remove, payload:{product: item.product, amount: 1}})}}>-</button>
             </div>
         </div>
     )

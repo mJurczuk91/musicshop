@@ -1,6 +1,8 @@
+'use client'
+
 import { CartItem } from "@/app/(lib)/definitions"
 import { Dispatch } from "react"
-import { AddCartItemsAction, RemoveCartItemsAction } from "../../context/cartContext"
+import { CartAction } from "../../context/cartContext"
 import Link from "next/link"
 import { getProductLink } from "@/app/(lib)/helpers"
 import { ProductCounter } from "./productCounter"
@@ -8,7 +10,7 @@ import { RemoveElementButton } from "./removeElementButton"
 
 type Props = {
     item: CartItem,
-    dispatch: Dispatch<AddCartItemsAction | RemoveCartItemsAction>,
+    dispatch: Dispatch<CartAction>,
 }
 
 export function ProductListElement({ item:{product, amount}, dispatch }: Props) {
