@@ -30,7 +30,7 @@ export const comments = {
   getByProductId,
 }
 
-const queryCommentsByProductId = gql`query products($pagination: PaginationArg, $productId: ID) {
+const queryCommentsByProductId = gql`query comments($pagination: PaginationArg, $productId: ID) {
     comments(pagination: $pagination, filters: {
       product: {
         id: {

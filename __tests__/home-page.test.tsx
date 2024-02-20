@@ -11,7 +11,7 @@ import CategoryMenuItem from '../app/(ui)/navbar/categoryMenuItem';
 import CategoryMenu from '../app/(ui)/navbar/categoryMenu';
 import CategoryGrid from '../app/(ui)/categoryGrid';
 import OffersOfTheWeek from '../app/(ui)/offersOfTheWeek';
-import { flattenStrapiResponse } from '@/app/(lib)/services/helpers';
+import { HOST } from '@/app/(lib)/services/helpers';
 
 
 describe('product miniature', () => {
@@ -31,6 +31,7 @@ describe('product miniature', () => {
         expect(img.src).toContain(`${products[0].imgUrlArray[0]}`);
     });
 })
+
 describe('bestsellers section', () => {
     test('bestsellers section renders 4 product miniatures', async () => {
         const bestsellers = await Bestsellers();
@@ -41,16 +42,16 @@ describe('bestsellers section', () => {
         }
     })
 });
-/* 
+
 describe('offersOfTheWeek section', () => {
     test('it displays 8 products', async () => {
         const offersOfTheWeek = await OffersOfTheWeek();
         render(offersOfTheWeek);
-        for (let product of products.slice(0, 8)) {
+        for (let product of products.slice(8, 16)) {
             expect(screen.getByText(product.name)).toBeInTheDocument();
             expect(screen.getByText(product.description.slice(0, 30).trim())).toBeInTheDocument();
         }
-        expect(screen.queryByText(products[8].name)).toBeNull();
+        expect(screen.queryByText(products[17].name)).toBeNull();
     })
 })
 
@@ -71,7 +72,7 @@ describe('blog articles section', () => {
         const images = screen.getAllByAltText("article image") as HTMLImageElement[];
         const imageSrcs = images.map(img => img.src);
         for (let article of blogArticles) {
-            expect(imageSrcs).toContain(`http://localhost:3000${article.image_url}`);
+            expect(imageSrcs).toContain(`${HOST}${article.image_url}`);
         }
     })
 })
@@ -84,9 +85,9 @@ describe('CategoryMenuItem', () => {
     });
     test('it displays all subcategories', () => {
         render(<CategoryMenuItem category={categories[0]} />);
-        for (let item of categories[0].subcategories) {
-            const subcat = screen.getByText(item);
-            expect(subcat).toBeInTheDocument();
+        for (let subcat of categories[0].subcategories) {
+            const result = screen.getByText(subcat.name);
+            expect(result).toBeInTheDocument();
         }
     });
 });
@@ -98,7 +99,7 @@ describe('CategoryMenu', async () => {
         for (let cat of categories) {
             expect(screen.getByText(cat.name)).toBeInTheDocument();
             for (let subcat of cat.subcategories) {
-                expect(screen.getByText(subcat)).toBeInTheDocument();
+                expect(screen.getByText(subcat.name)).toBeInTheDocument();
             }
         }
     })
@@ -111,8 +112,8 @@ describe('categoryGrid', () => {
         for (let cat of categories) {
             expect(screen.getByText(cat.name)).toBeInTheDocument();
             for (let subcat of cat.subcategories.slice(0, 3)) {
-                expect(screen.getByText(subcat)).toBeInTheDocument();
+                expect(screen.getByText(subcat.name)).toBeInTheDocument();
             }
         }
     })
-}) */
+})

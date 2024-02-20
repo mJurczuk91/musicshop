@@ -37,7 +37,7 @@ const formatCategoryFromApiResponse = (category:any):Category => {
     }
 }
 
-const queryCategories = gql`query Categories($pagination: PaginationArg){
+const queryCategories = gql`query categories($pagination: PaginationArg){
     categories(pagination: $pagination) {
       data {
         id,
