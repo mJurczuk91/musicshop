@@ -1,6 +1,7 @@
 import { categories } from "@/app/(lib)/services/categories";
 import CategoryNavigation from "./components/categoryNavigation/categoryNavigation";
 import SortablePaginatedResponsiveProductGrid from "./components/sortablePaginatedResponsiveProductGrid/sortablePaginatedResponsiveProductGrid";
+import { parseSlug } from "@/app/(lib)/helpers";
 
 type Props = {
     params: {
@@ -18,7 +19,7 @@ export default async function Page({ params }: Props) {
 
     return (
         <div>
-            <CategoryNavigation categoriesJSONstring={JSON.stringify(allCategories)} />
+            <CategoryNavigation categoriesJSONstring={JSON.stringify(allCategories)} currentCategoryId={parseSlug(categorySlug).id} />
             <SortablePaginatedResponsiveProductGrid categorySlug={categorySlug} subcategorySlug={subcategorySlug} pageNo={pageNo} />
         </div>
     )

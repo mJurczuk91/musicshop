@@ -18,8 +18,14 @@ export type BlogArticleStub = {
 }
 
 export type Category = {
+    id: string,
     name: string,
-    subcategories: string[],
+    subcategories: Subcategory[],
+}
+
+export type Subcategory = {
+    id: string,
+    name: string,
 }
 
 export type User = {
