@@ -8,11 +8,9 @@ type Props = {
 
 export function PageSelector({ pagination, slug }: Props) {
     let pageNoArray = [];
-    console.log(pagination);
     for (let i = 1; i < pagination.pageCount + 1; i++) {
         pageNoArray.push(i);
     }
-    console.log(pageNoArray);
     return (
         <div>
             {pageNoArray.map(page => {

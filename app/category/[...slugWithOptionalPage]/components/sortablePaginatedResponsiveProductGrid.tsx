@@ -3,7 +3,6 @@ import { products as productsService } from "@/app/(lib)/services/products";
 import ResponsiveProductGrid from "@/app/(ui)/responsiveProductGrid";
 import { PageSelector } from "./pageSelector";
 import { CategorySlugType } from "@/app/(lib)/definitions";
-import { g } from "vitest/dist/suite-xGC-mxBC.js";
 
 type Props = {
     slug: string,
