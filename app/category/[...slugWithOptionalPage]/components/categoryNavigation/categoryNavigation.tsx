@@ -34,7 +34,7 @@ export default function CategoryNavigation({ categoriesJSONstring, currentCatego
                         </div>
 
                         <div className={`${isCategoryExpanded(c.id) ? '' : 'hidden'}`}>
-                            <SubcategoryList category={c} subcategories={c.subcategories} />
+                            <SubcategoryList subcategories={c.subcategories} />
                         </div>
                     </div>
                 )

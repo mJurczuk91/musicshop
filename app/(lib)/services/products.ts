@@ -38,7 +38,7 @@ async function getByCategory(categoryId: string, page: number = 0, pageSize: num
   });
   return {
     data: products,
-    pagination: {...flattenStrapiResponse(resp.data.products.meta)}
+    pagination: resp.data.products.meta.pagination,
   }
 }
 
@@ -54,6 +54,7 @@ async function getBySubcategory(subcategoryId: string, page: number = 0, pageSiz
       subcategoryId,
     }
   });
+  console.log(resp.data.products);
   const dataArr = resp.data.products.data as any[];
   const products = dataArr.map(product => {
     const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
@@ -61,7 +62,7 @@ async function getBySubcategory(subcategoryId: string, page: number = 0, pageSiz
   });
   return {
     data: products,
-    pagination: {...flattenStrapiResponse(resp.data.products.meta)}
+    pagination: resp.data.products.meta.pagination,
   }
 }
 
@@ -83,7 +84,7 @@ async function getPage(page: number = 0, pageSize: number = 20): Promise<Paginat
   })
   return {
     data: products,
-    pagination: {...flattenStrapiResponse(resp.data.products.meta)},
+    pagination: resp.data.products.meta.pagination,
   }
 }
 

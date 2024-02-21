@@ -9,7 +9,7 @@ export type Product = {
     amount: number,
     description: string,
     imgUrlArray: string[],
-    details: {key:string, value:string}[],
+    details: { key: string, value: string }[],
 }
 
 export type BlogArticleStub = {
@@ -46,10 +46,17 @@ export type Comment = {
 
 export type PaginatedData<T> = {
     data: T[],
-    pagination: null|{
-        page: number,
-        pageCount: number,
-        pageSize: number,
-        total: number,
-    }
+    pagination: Pagination | null,
+}
+
+export type Pagination = {
+    page: number,
+    pageCount: number,
+    pageSize: number,
+    total: number,
+}
+
+export enum CategorySlugType {
+    'c'='CATEGORY',
+    's'='SUBCATEGORY'
 }

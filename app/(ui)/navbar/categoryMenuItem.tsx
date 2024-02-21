@@ -8,12 +8,12 @@ type Props = {
 
 export default function CategoryMenuItem({category}:Props) {
     return <div className="group">
-        <Link className="mx-4 capitalize" href={`/category/${getCategorySlug(category)}`}>
+        <Link className="mx-4 capitalize" href={`/category/${getCategorySlug(category.name, category.id)}`}>
             {category.name}
         </Link>
         <div className="invisible absolute flex flex-col p-6 bg-white shadow-md group-hover:visible">
             {category.subcategories.map((subcategory) => {
-                return <Link key={subcategory.id} href={`/category/${getCategorySlug(category)}/${getSubcategorySlug(subcategory)}`}>
+                return <Link key={subcategory.id} href={`/category/${getCategorySlug(category.name, category.id)}/${getSubcategorySlug(subcategory.name, subcategory.id)}`}>
                     <span className="capitalize">{subcategory.name}</span>
                 </Link>
             })}
