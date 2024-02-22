@@ -7,10 +7,11 @@ const loopOverKeys = (obj: any): any => {
     const result = Object.create({});
     for (let key of Object.keys(obj)) {
         if (key === '__typename') continue;
-        if(Object.keys(obj[key]).includes('data')){
-            if(Array.isArray(obj[key]['data'])){
-                const any = obj[key]['data'] as any[];
-                result[key] = any.map(i => {
+        
+        if(obj[key]?.data){
+            if(Array.isArray(obj[key].data)){
+                const array = obj[key].data as any[];
+                result[key] = array.map(i => {
                     if(Object.keys(i).includes('id')){
                         return loopOverKeys({...i.attributes, id: i.id});
                     } else return loopOverKeys({...i.attributes});
@@ -27,4 +28,4 @@ const loopOverKeys = (obj: any): any => {
     return result;
 }
 
-export const HOST = "https://m-jurczuk.pl/";
+export const HOST:string = "https://m-jurczuk.pl/";
