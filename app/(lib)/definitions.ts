@@ -53,3 +53,8 @@ export type PaginatedData<T> = {
         total: number,
     }
 }
+
+export type CartItem = {
+    product: Product,
+    amount: number,
+}

@@ -23,5 +23,7 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "vitest.config.mts", "app/api/route.js"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+
+  "allowImportingTsExtensions": true, // needed for cart page dynamic import
 }
