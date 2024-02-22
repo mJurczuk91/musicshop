@@ -1,5 +1,5 @@
 import { Product } from "@/app/(lib)/definitions";
-import { getProductSlug, getSubcategorySlug } from "@/app/(lib)/helpers";
+import { getProductSlug, getCategorySlug, getSubcategorySlug } from "@/app/(lib)/helpers";
 import Link from "next/link";
 
 type Props = {
@@ -14,7 +14,7 @@ export default function ProductBreadcrumbs({ product }: Props) {
 
                 <span> / </span>
 
-                <Link href={`/categories/${product.category}`}>
+                <Link href={`/category/${getCategorySlug(product.category, product.categoryId)}`}>
                     <span className="capitalize">
                         {product.category}
                     </span>
@@ -22,7 +22,7 @@ export default function ProductBreadcrumbs({ product }: Props) {
 
                 <span> / </span>
 
-                <Link href={`/categories/${product.category}/${getSubcategorySlug(product.subcategory)}`}>
+                <Link href={`/category/${getSubcategorySlug(product.subcategory, product.subcategoryId)}`}>
                     <span className="capitalize">
                         {product.subcategory}
                     </span>

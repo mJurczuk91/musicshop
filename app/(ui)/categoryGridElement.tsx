@@ -1,14 +1,19 @@
 import Link from "next/link"
-import { Subcategory } from "../(lib)/definitions"
+import { Category, Subcategory } from "../(lib)/definitions"
+import { getCategorySlug, getSubcategorySlug } from "../(lib)/helpers"
 
-export default function CategoryGridElement({categoryName, subcategories} : {categoryName:string, subcategories:Subcategory[]}){
+export type Props = {
+    category: Category,
+}
+
+export default function CategoryGridElement({category} : Props){
     return <div style={{}} className="flex justify-between p-2 border-gray-400 border-opacity-25 odd:text-right md:odd:text-left">
         <div className="flex flex-col w-full">
-            <Link href={`/category/${categoryName}`} className="capitalize font-bold tracking-tight">{categoryName}</Link>
-            {subcategories.map(subcategory => {
-                return <Link key={subcategory.id} className="tracking-tight capitalize" href={`/category/${categoryName}/${subcategory.name}`}>{subcategory.name}</Link>
+            <Link href={`/category/${getCategorySlug(category.name, category.id)}`} className="capitalize font-bold tracking-tight">{category.name}</Link>
+            {category.subcategories.slice(0,3).map(subcategory => {
+                return <Link key={subcategory.id} className="tracking-tight capitalize" href={`/category/${getSubcategorySlug(subcategory.name, subcategory.id)}`}>{subcategory.name}</Link>
             })}
         </div>
-        <img src={`/svg/${categoryName}.svg`} alt={categoryName} className="hidden md:block h-auto w-16" />
+        <img src={`/svg/${category.name}.svg`} alt={category.name} className="hidden md:block h-auto w-16" />
     </div>
 }  
