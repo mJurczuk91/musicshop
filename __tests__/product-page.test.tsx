@@ -1,6 +1,6 @@
 import { test, describe, expect } from "vitest";
 import { products } from "../mocks/data/mockProducts";
-import { comments } from '../mocks/data/mockComments'
+import { comments } from '@/mocks/data/mockCommentsForFirstProduct';
 import ProductBreadcrumbs from "../app/product/[slug]/components/productBreadcrumbs";
 import { render, screen } from "@testing-library/react";
 import ImageSelector from "@/app/product/[slug]/components/imageSelector";
@@ -100,7 +100,7 @@ describe('comment section', () => {
 
         //messages longer than 150 chars have three dots at the end
         firstProductComments.map(c => {
-            const msgShort = c.message.length > 150 ? c.message.slice(0, 150).concat('...') : c.message;
+            const msgShort = c.message.length > 150 ? c.message.slice(0, 150).trim().concat('...') : c.message;
             expect(screen.getByText(msgShort)).toBeInTheDocument();
         })
     });

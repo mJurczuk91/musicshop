@@ -1,20 +1,23 @@
 export const blogArticles = [
     {
-        "title": "Comis veritatis absconditus somniculosus celebrer.",
-        "image_url": "/guitars.jpg",
+        "id": "1",
+        "synopsis": "Unde comburo vestrum arcus tribuo suppellex. Solitudo vigilo paens umerus victoria abeo beatus cenaculum tenetur adhuc. Basium acerbitas thorax quam crepusculum subito amiculum usque quam.",
+        "title": "Volup succurro fugit utroque contego.",
         "link": "/#",
-        "synopsis": "Claudeo terminatio subnecto antea considero suffoco tubineus aliquam ullam. Ver maxime attollo conventus tantum arx consuasor. Soluta vulgaris ancilla magni vere terror."
+        "image_url": "/uploads/headphones3_e75ceada5f.jpg"
     },
     {
-        "title": "Canto synagoga quisquam beatae cernuus cognomen alienus magni ea.",
-        "image_url": "/guitars.jpg",
+        "id": "2",
+        "synopsis": "Valetudo inflammatio volo arx eos dicta tamquam tenax cui quasi. Tolero vinco umerus. Dedico sumo capillus ex eius absum harum adnuo anser pecco.",
+        "title": "Ventosus sui succurro soluta tenetur vulticulus sol labore bellicus.",
         "link": "/#",
-        "synopsis": "Spiculum demonstro dicta capillus peior surculus avaritia. Tot spectaculum trucido talis. Atque colligo ars confero quisquam usitas vitium arto volutabrum."
+        "image_url": "/uploads/keyboards2_46703129ae.jpg"
     },
     {
-        "title": "Calcar arcesso via angulus.",
-        "image_url": "/guitars.jpg",
+        "id": "3",
+        "synopsis": "Cogo quos tametsi deficio cupiditas auxilium callide. Illum decerno urbs molestias. Beatus dolor arx amor omnis centum depraedor.",
+        "title": "Delibero tenuis tergo ex usus.",
         "link": "/#",
-        "synopsis": "Depulso subnecto comedo creo ultio patrocinor conservo super carbo. Caute volaticus tabella vestigium sapiente adeptio tepidus delectus. Thalassinus blanditiis adsidue vix cognomen."
+        "image_url": "/uploads/guitars2_9cc61ca578.jpg"
     }
 ];

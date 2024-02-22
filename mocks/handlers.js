@@ -1,24 +1,28 @@
-import { http, HttpResponse } from 'msw'
-import { blogArticles } from './data/mockBlogArticles.js';
-import { categories } from './data/mockCategories.js';
-import { products } from './data/mockProducts.js';
-import { users } from './data/mockUsers.js'
-import { comments } from './data/mockComments.js';
+import { http, HttpResponse, graphql } from 'msw'
+import { productsResponse } from './data/graphqlResponses/products.js'
+import { articlesResponse } from './data/graphqlResponses/articles.js'
+import { categoriesResponse } from './data/graphqlResponses/categories.js'
+import { commentsResponse } from './data/graphqlResponses/commentsForFirstProduct.js'
 
 export const handlers = [
-  http.get("http://localhost:3001/products", () => {
-    return HttpResponse.json(products);
+  graphql.query('products', () => {
+    return HttpResponse.json({
+      ...productsResponse
+    })
   }),
-  http.get("http://localhost:3001/articles", () => {
-    return HttpResponse.json(blogArticles);
+  graphql.query('blogArticles', () => {
+    return HttpResponse.json({
+      ...articlesResponse
+    })
   }),
-  http.get("http://localhost:3001/categories", () => {
-    return HttpResponse.json(categories);
+  graphql.query('categories', () => {
+    return HttpResponse.json({
+      ...categoriesResponse
+    })
   }),
-  http.get("http://localhost:3001/users", () => {
-    return HttpResponse.json(users);
-  }),
-  http.get("http://localhost:3001/comments", () => {
-    return HttpResponse.json(comments);
+  graphql.query('comments', () => {
+    return HttpResponse.json({
+      ...commentsResponse
+    })
   }),
 ];

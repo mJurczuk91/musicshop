@@ -60,3 +60,8 @@ export enum CategorySlugType {
     'c'='CATEGORY',
     's'='SUBCATEGORY'
 }
+
+export type CartItem = {
+    product: Product,
+    amount: number,
+}

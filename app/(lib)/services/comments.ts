@@ -1,11 +1,10 @@
 import { PaginatedData } from "../definitions"
-import { getClient } from "../apollo"
+import client from "../apollo"
 import { gql } from "@apollo/client";
 import { flattenStrapiResponse } from "./helpers";
 import { Comment } from "../definitions";
 
 const getByProductId = async (id: string, page = 0, pageSize = 20): Promise<PaginatedData<Comment>>  => {
-    const client = getClient();
     const resp = await client.query({
         query: queryCommentsByProductId,
         variables: {
@@ -31,7 +30,7 @@ export const comments = {
   getByProductId,
 }
 
-const queryCommentsByProductId = gql`query products($pagination: PaginationArg, $productId: ID) {
+const queryCommentsByProductId = gql`query comments($pagination: PaginationArg, $productId: ID) {
     comments(pagination: $pagination, filters: {
       product: {
         id: {
