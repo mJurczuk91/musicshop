@@ -1,5302 +1,1042 @@
 export const products = [
     {
-        "id": "1001",
-        "name": "marten68",
+        "id": "1",
+        "name": "booster929",
         "category": "drums",
+        "categoryId": "1",
         "subcategory": "acoustic drums",
-        "price": "128.06",
-        "amount": 7,
-        "description": "Ipsam ager decor doloremque cognatus statua suppellex voluptatibus tres ascit. Sono vallum vulgaris ambitus natus. Cuius voco absconditus caput catena valeo decimus advoco quasi mollitia.",
-        "imgUrlArray": [
-            "/drums5.jpg",
-            "/drums4.jpg",
-            "/drums3.jpg",
-            "/drums1.jpg",
-            "/drums2.jpg"
-        ],
-        "details": [
-            {
-                "key": "passing",
-                "value": "focused"
-            },
-            {
-                "key": "gown",
-                "value": "complicated"
-            },
-            {
-                "key": "saffron",
-                "value": "unwitting"
-            },
-            {
-                "key": "collector",
-                "value": "general"
-            },
-            {
-                "key": "gentleman",
-                "value": "rigid"
-            },
-            {
-                "key": "clave",
-                "value": "curvy"
-            },
-            {
-                "key": "reclamation",
-                "value": "dangerous"
-            },
-            {
-                "key": "therapy",
-                "value": "waterlogged"
-            }
-        ]
-    },
-    {
-        "id": "1002",
-        "name": "bagpipe224",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "539.13",
-        "amount": 6,
-        "description": "Ars caste allatus adinventitias depono curia arma vita ipsa. Thesis coruscus tenus cresco. Doloremque claudeo capitulus charisma atqui studio quia totam perferendis acidus.",
-        "imgUrlArray": [
-            "/drums5.jpg",
-            "/drums4.jpg",
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums1.jpg"
-        ],
-        "details": [
-            {
-                "key": "hand-holding",
-                "value": "quarterly"
-            },
-            {
-                "key": "heaven",
-                "value": "ambitious"
-            },
-            {
-                "key": "ejector",
-                "value": "possible"
-            },
-            {
-                "key": "carbohydrate",
-                "value": "beautiful"
-            },
-            {
-                "key": "ornament",
-                "value": "defiant"
-            },
-            {
-                "key": "difference",
-                "value": "broken"
-            },
-            {
-                "key": "dishwasher",
-                "value": "trained"
-            },
-            {
-                "key": "guacamole",
-                "value": "sociable"
-            }
-        ]
-    },
-    {
-        "id": "1003",
-        "name": "confidence350",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "852.10",
+        "subcategoryId": "1",
+        "price": "82.83",
         "amount": 2,
-        "description": "Voveo vulgus virgo vitae decerno benevolentia possimus vergo. Catena nostrum dolor vulgivagus aperiam clam curis adulescens deporto torrens. Valens clamo vetus excepturi bonus quasi aspicio tredecim.",
+        "description": "Spoliatio subito solutio. Via vomito umerus ater cruciamentum cur culpa sit strues suus. Curvo fugiat vestrum inventore libero crastinus. Conatus agnosco contra nobis vinitor desino adamo tergeo. Coruscus tergeo admitto celebrer uberrime. Strenuus audax victoria pariatur sto bonus adduco vivo ter ascisco. Conservo denique bellicus denuncio veritatis amaritudo stillicidium adipiscor artificiose. Iure viduo canonicus comes addo sub vehemens. Astrum cogito ut adsuesco articulus consequatur comprehendo possimus volaticus harum. Caries suffragium coniecto aqua adstringo tristis universe. Aqua at supplanto vestigium. Autem ea deserunt textor degusto itaque demonstro aranea clarus. Repellat concido cura beneficium doloribus itaque cuppedia. Carbo aegrotatio atrocitas totam eum causa terminatio. Molestias sustineo chirographum. Vulticulus aut conforto. Quos varietas adinventitias amicitia ambitus audax fuga. Carus ara distinctio sponte venia deduco vilitas peccatus celo. Termes sodalitas architecto cernuus stultus crustulum alo utpote natus arcesso. Taceo valens debilito caelum vesica animi aestivus asper. Tui caries sopor autus thymbra apud explicabo convoco sollers. Degusto animus demergo validus bellicus abutor crustulum ullus. Maxime bonus cuius ulterius theatrum aureus sufficio cras. Coaegresco tepidus similique allatus solus xiphias blandior cuppedia. Harum anser ulterius autem confugo. Agnitio totam autem admoveo ad. Atque tergum vae calculus tutamen depopulo nesciunt nulla aestus. Adsuesco acervus velum vacuus in comitatus eum. Aliquid ustilo verbera comptus acies mollitia facere attonbitus arbustum. Arca bibo defungo itaque ara solitudo tergiversatio cornu vaco.",
         "imgUrlArray": [
-            "/drums2.jpg",
-            "/drums3.jpg",
-            "/drums4.jpg",
-            "/drums5.jpg",
-            "/drums1.jpg"
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg"
         ],
         "details": [
             {
-                "key": "public",
-                "value": "oddball"
+                "key": "providence",
+                "value": "dual"
             },
             {
-                "key": "complication",
-                "value": "cruel"
-            },
-            {
-                "key": "creature",
-                "value": "digital"
-            },
-            {
-                "key": "speech",
-                "value": "heavenly"
-            },
-            {
-                "key": "shipping",
-                "value": "upright"
-            },
-            {
-                "key": "hearth",
-                "value": "revolving"
-            },
-            {
-                "key": "duster",
-                "value": "flat"
-            },
-            {
-                "key": "portfolio",
-                "value": "striped"
-            }
-        ]
-    },
-    {
-        "id": "1004",
-        "name": "cartoon741",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "316.18",
-        "amount": 5,
-        "description": "Celo voluntarius adficio comminor vos abscido tutis acer vomito una. Verus conicio degero sui xiphias ascisco cinis totus temptatio cognatus. Velociter usus spiculum.",
-        "imgUrlArray": [
-            "/drums2.jpg",
-            "/drums1.jpg",
-            "/drums3.jpg",
-            "/drums4.jpg",
-            "/drums5.jpg"
-        ],
-        "details": [
-            {
-                "key": "hammer",
-                "value": "lucky"
-            },
-            {
-                "key": "purpose",
-                "value": "limping"
-            },
-            {
-                "key": "severity",
-                "value": "beneficial"
-            },
-            {
-                "key": "young",
-                "value": "tangible"
-            },
-            {
-                "key": "mirror",
-                "value": "harmonious"
-            },
-            {
-                "key": "marshland",
-                "value": "appropriate"
-            },
-            {
-                "key": "vagrant",
-                "value": "general"
-            },
-            {
-                "key": "refuge",
-                "value": "weird"
-            }
-        ]
-    },
-    {
-        "id": "1005",
-        "name": "oval313",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "799.75",
-        "amount": 8,
-        "description": "Tenax repudiandae ater accusator clam ver. Cometes cursus coniecto harum callide tracto. Soleo articulus synagoga enim.",
-        "imgUrlArray": [
-            "/drums5.jpg",
-            "/drums3.jpg",
-            "/drums4.jpg",
-            "/drums1.jpg",
-            "/drums2.jpg"
-        ],
-        "details": [
-            {
-                "key": "banjo",
-                "value": "impartial"
-            },
-            {
-                "key": "calico",
-                "value": "legal"
-            },
-            {
-                "key": "subtitle",
-                "value": "squiggly"
-            },
-            {
-                "key": "paragraph",
-                "value": "ringed"
-            },
-            {
-                "key": "army",
-                "value": "bright"
-            },
-            {
-                "key": "bidding",
-                "value": "squiggly"
-            },
-            {
-                "key": "quadrant",
-                "value": "unwritten"
-            },
-            {
-                "key": "conifer",
-                "value": "live"
-            }
-        ]
-    },
-    {
-        "id": "1006",
-        "name": "counter-force915",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "436.17",
-        "amount": 0,
-        "description": "Defungo vestigium vetus auctus statim defendo summisse abutor verecundia. Cunctatio voluptas voro. Acsi esse eaque.",
-        "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg",
-            "/drums1.jpg",
-            "/drums5.jpg"
-        ],
-        "details": [
-            {
-                "key": "inch",
-                "value": "left"
-            },
-            {
-                "key": "marmalade",
-                "value": "webbed"
-            },
-            {
-                "key": "analog",
-                "value": "rectangular"
-            },
-            {
-                "key": "editor",
-                "value": "great"
-            },
-            {
-                "key": "fiction",
-                "value": "sizzling"
-            },
-            {
-                "key": "locust",
-                "value": "bony"
-            },
-            {
-                "key": "advantage",
-                "value": "gray"
-            },
-            {
-                "key": "shirtdress",
-                "value": "submissive"
-            }
-        ]
-    },
-    {
-        "id": "1007",
-        "name": "pouch702",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "584.80",
-        "amount": 6,
-        "description": "Sol maiores carmen aggero solium non theatrum possimus vigilo. Adicio capio tabula sulum coadunatio. Summa aeternus commemoro curriculum aedificium vinum torrens absum.",
-        "imgUrlArray": [
-            "/drums1.jpg",
-            "/drums5.jpg",
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg"
-        ],
-        "details": [
-            {
-                "key": "railroad",
-                "value": "twin"
-            },
-            {
-                "key": "visa",
-                "value": "important"
-            },
-            {
-                "key": "mukluk",
-                "value": "urban"
-            },
-            {
-                "key": "lemonade",
-                "value": "breakable"
-            },
-            {
-                "key": "harmonise",
-                "value": "focused"
-            },
-            {
-                "key": "observatory",
-                "value": "sizzling"
-            },
-            {
-                "key": "miscommunication",
-                "value": "unconscious"
-            },
-            {
-                "key": "circle",
-                "value": "likely"
-            }
-        ]
-    },
-    {
-        "id": "1008",
-        "name": "importance914",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "998.75",
-        "amount": 4,
-        "description": "Adulescens delinquo decimus adsidue abeo appono. Quibusdam rem vulgus calamitas consectetur sortitus natus. Adsidue creo terebro id.",
-        "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums5.jpg",
-            "/drums4.jpg",
-            "/drums1.jpg"
-        ],
-        "details": [
-            {
-                "key": "virus",
-                "value": "regal"
-            },
-            {
-                "key": "article",
-                "value": "bumpy"
-            },
-            {
-                "key": "soundness",
-                "value": "good-natured"
-            },
-            {
-                "key": "fang",
-                "value": "full"
-            },
-            {
-                "key": "monocle",
-                "value": "discrete"
-            },
-            {
-                "key": "transaction",
-                "value": "untrue"
-            },
-            {
-                "key": "raincoat",
-                "value": "definitive"
-            },
-            {
-                "key": "hosiery",
-                "value": "gleeful"
-            }
-        ]
-    },
-    {
-        "id": "1009",
-        "name": "bandolier363",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "639.29",
-        "amount": 0,
-        "description": "Acquiro villa vis. Vehemens error uter thymum thorax strues dolore solio. Consequuntur cupiditate capto audio neque abduco vespillo cura auditor.",
-        "imgUrlArray": [
-            "/drums4.jpg",
-            "/drums5.jpg",
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums1.jpg"
-        ],
-        "details": [
-            {
-                "key": "blouse",
-                "value": "easy-going"
-            },
-            {
-                "key": "relation",
-                "value": "bumpy"
-            },
-            {
-                "key": "feast",
-                "value": "perfect"
-            },
-            {
-                "key": "sum",
-                "value": "cute"
-            },
-            {
-                "key": "anchovy",
-                "value": "strange"
-            },
-            {
-                "key": "drainage",
-                "value": "quick-witted"
-            },
-            {
-                "key": "cap",
-                "value": "this"
-            },
-            {
-                "key": "diarist",
-                "value": "fluid"
-            }
-        ]
-    },
-    {
-        "id": "1010",
-        "name": "reporter233",
-        "category": "drums",
-        "subcategory": "acoustic drums",
-        "price": "908.63",
-        "amount": 7,
-        "description": "Vilis attollo conscendo id caveo. Bestia adfectus repellat apud versus tres quae vorax laudantium. Cena angelus acervus despecto censura pauci arto verumtamen recusandae.",
-        "imgUrlArray": [
-            "/drums4.jpg",
-            "/drums2.jpg",
-            "/drums3.jpg",
-            "/drums1.jpg",
-            "/drums5.jpg"
-        ],
-        "details": [
-            {
-                "key": "disparity",
-                "value": "white"
-            },
-            {
-                "key": "stripe",
-                "value": "repentant"
-            },
-            {
-                "key": "destiny",
-                "value": "identical"
-            },
-            {
-                "key": "pinstripe",
-                "value": "unusual"
-            },
-            {
-                "key": "production",
-                "value": "fickle"
-            },
-            {
-                "key": "tunnel",
-                "value": "orange"
-            },
-            {
-                "key": "court",
-                "value": "complete"
-            },
-            {
-                "key": "airport",
-                "value": "stark"
-            }
-        ]
-    },
-    {
-        "id": "1011",
-        "name": "crazy223",
-        "category": "drums",
-        "subcategory": "e-drums",
-        "price": "671.51",
-        "amount": 5,
-        "description": "Arceo natus denuo vilis tribuo velut tamdiu. Advoco trado torqueo crux adsum aranea. Vulgus varius coepi cervus in libero quo crudelis addo.",
-        "imgUrlArray": [
-            "/drums4.jpg",
-            "/drums1.jpg",
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums5.jpg"
-        ],
-        "details": [
-            {
-                "key": "sociology",
-                "value": "swift"
-            },
-            {
-                "key": "fiery",
-                "value": "purple"
-            },
-            {
-                "key": "seal",
-                "value": "infantile"
-            },
-            {
-                "key": "crewmen",
-                "value": "unsteady"
-            },
-            {
-                "key": "attendance",
-                "value": "positive"
-            },
-            {
-                "key": "flesh",
-                "value": "humming"
-            },
-            {
-                "key": "fraction",
-                "value": "ambitious"
-            },
-            {
-                "key": "clover",
-                "value": "stylish"
-            }
-        ]
-    },
-    {
-        "id": "1012",
-        "name": "craw121",
-        "category": "drums",
-        "subcategory": "e-drums",
-        "price": "440.61",
-        "amount": 7,
-        "description": "Cruciamentum vinitor ut comprehendo. Advoco corroboro cibo tempus tantillus magni tabula. Uxor adnuo pectus adnuo acies fugit.",
-        "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg",
-            "/drums1.jpg",
-            "/drums5.jpg"
-        ],
-        "details": [
-            {
-                "key": "presidency",
-                "value": "insubstantial"
-            },
-            {
-                "key": "gondola",
-                "value": "cultured"
-            },
-            {
-                "key": "net",
-                "value": "thorny"
-            },
-            {
-                "key": "noise",
-                "value": "shy"
-            },
-            {
-                "key": "cribbage",
-                "value": "outrageous"
-            },
-            {
-                "key": "snuck",
-                "value": "confused"
-            },
-            {
-                "key": "invasion",
-                "value": "tender"
-            },
-            {
-                "key": "caterpillar",
-                "value": "unwelcome"
-            }
-        ]
-    },
-    {
-        "id": "1013",
-        "name": "polliwog465",
-        "category": "drums",
-        "subcategory": "drumheads",
-        "price": "186.30",
-        "amount": 6,
-        "description": "Utique cubitum esse tempore sapiente neque trans tero. Undique commemoro decretum valeo carbo audax cito. Atrocitas aggero exercitationem.",
-        "imgUrlArray": [
-            "/drums5.jpg",
-            "/drums1.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg",
-            "/drums3.jpg"
-        ],
-        "details": [
-            {
-                "key": "cleat",
-                "value": "honorable"
-            },
-            {
-                "key": "hybridisation",
-                "value": "worst"
-            },
-            {
-                "key": "fishing",
-                "value": "flashy"
-            },
-            {
-                "key": "zoot-suit",
-                "value": "troubled"
-            },
-            {
-                "key": "verification",
-                "value": "pale"
-            },
-            {
-                "key": "federation",
-                "value": "icky"
-            },
-            {
-                "key": "plum",
-                "value": "grubby"
-            },
-            {
-                "key": "hatred",
-                "value": "personal"
-            }
-        ]
-    },
-    {
-        "id": "1014",
-        "name": "networking982",
-        "category": "drums",
-        "subcategory": "drumheads",
-        "price": "328.85",
-        "amount": 9,
-        "description": "Expedita curis candidus. Vicissitudo impedit vulgus supellex utrimque fugit quae vos natus vorax. Ipsam aggredior demum.",
-        "imgUrlArray": [
-            "/drums5.jpg",
-            "/drums1.jpg",
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg"
-        ],
-        "details": [
-            {
-                "key": "desire",
-                "value": "grouchy"
-            },
-            {
-                "key": "doorway",
-                "value": "slimy"
-            },
-            {
-                "key": "mammoth",
-                "value": "dependent"
-            },
-            {
-                "key": "incidence",
-                "value": "pastel"
-            },
-            {
-                "key": "lightning",
+                "key": "ethics",
                 "value": "boiling"
             },
             {
-                "key": "partnership",
-                "value": "composed"
+                "key": "path",
+                "value": "tragic"
             },
             {
-                "key": "substance",
-                "value": "eager"
+                "key": "kangaroo",
+                "value": "intent"
             },
             {
-                "key": "toque",
-                "value": "evergreen"
-            }
-        ]
-    },
-    {
-        "id": "1015",
-        "name": "fireplace73",
-        "category": "drums",
-        "subcategory": "drumheads",
-        "price": "419.34",
-        "amount": 1,
-        "description": "Sint autus tot solvo. Umquam fugit tendo. Crepusculum curiositas ceno confugo quae cauda pauci.",
-        "imgUrlArray": [
-            "/drums2.jpg",
-            "/drums3.jpg",
-            "/drums5.jpg",
-            "/drums1.jpg",
-            "/drums4.jpg"
-        ],
-        "details": [
-            {
-                "key": "anybody",
-                "value": "weekly"
+                "key": "ringworm",
+                "value": "dutiful"
             },
             {
-                "key": "frenzy",
-                "value": "grateful"
+                "key": "teen",
+                "value": "ready"
             },
             {
-                "key": "cultivator",
-                "value": "active"
+                "key": "curse",
+                "value": "innocent"
             },
             {
-                "key": "share",
-                "value": "perky"
-            },
-            {
-                "key": "trade",
-                "value": "personal"
-            },
-            {
-                "key": "facet",
-                "value": "known"
-            },
-            {
-                "key": "corsage",
-                "value": "unimportant"
-            },
-            {
-                "key": "garden",
-                "value": "soggy"
-            }
-        ]
-    },
-    {
-        "id": "1016",
-        "name": "cleric336",
-        "category": "drums",
-        "subcategory": "drumheads",
-        "price": "849.41",
-        "amount": 7,
-        "description": "Tamisium congregatio celo. Corroboro cibus cervus aedificium denego conscendo. Tibi vacuus carbo amplitudo adamo sustineo cruciamentum absque.",
-        "imgUrlArray": [
-            "/drums4.jpg",
-            "/drums3.jpg",
-            "/drums5.jpg",
-            "/drums2.jpg",
-            "/drums1.jpg"
-        ],
-        "details": [
-            {
-                "key": "prompt",
-                "value": "muted"
-            },
-            {
-                "key": "hotdog",
-                "value": "shocked"
-            },
-            {
-                "key": "dwelling",
-                "value": "parched"
-            },
-            {
-                "key": "staircase",
-                "value": "accurate"
-            },
-            {
-                "key": "island",
-                "value": "admired"
-            },
-            {
-                "key": "whisker",
-                "value": "dull"
-            },
-            {
-                "key": "provision",
-                "value": "silent"
-            },
-            {
-                "key": "precipitation",
-                "value": "skinny"
-            }
-        ]
-    },
-    {
-        "id": "1017",
-        "name": "edition540",
-        "category": "drums",
-        "subcategory": "drumheads",
-        "price": "560.46",
-        "amount": 2,
-        "description": "Tandem delinquo crepusculum suspendo aveho. Magnam spoliatio solum. Adinventitias audax verecundia.",
-        "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg",
-            "/drums1.jpg",
-            "/drums5.jpg"
-        ],
-        "details": [
-            {
-                "key": "nightgown",
+                "key": "jailhouse",
                 "value": "worried"
-            },
-            {
-                "key": "brand",
-                "value": "awful"
-            },
-            {
-                "key": "gasp",
-                "value": "early"
-            },
-            {
-                "key": "falling-out",
-                "value": "mindless"
-            },
-            {
-                "key": "mantua",
-                "value": "gregarious"
-            },
-            {
-                "key": "gumshoe",
-                "value": "slippery"
-            },
-            {
-                "key": "botany",
-                "value": "shy"
-            },
-            {
-                "key": "carload",
-                "value": "nocturnal"
             }
         ]
     },
     {
-        "id": "1018",
-        "name": "marshmallow501",
+        "id": "2",
+        "name": "authorization174",
         "category": "drums",
-        "subcategory": "drumheads",
-        "price": "445.10",
-        "amount": 3,
-        "description": "Cunctatio temperantia absum adeo tenuis cursim. Summa claudeo auditor conicio tibi assumenda eligendi. Vado candidus taceo subvenio.",
+        "categoryId": "1",
+        "subcategory": "acoustic drums",
+        "subcategoryId": "1",
+        "price": "919.03",
+        "amount": 2,
+        "description": "Artificiose defessus vereor capillus dedecor ascisco. Depulso cur audeo tristis molestias denuo crastinus repellat bene. Repellat tantum peccatus anser error uredo valetudo. Terra cena calamitas eveniet avaritia. Clementia desidero crudelis crastinus. Cuius aperiam amor candidus. Verbera callide voluptate appello tam cauda acquiro non spiritus bestia. Suffoco laborum vos terror cunae corporis asporto quia. Cresco caritas caste incidunt. Nam arca temptatio terminatio amplitudo turbo succedo doloremque. Eum curia solum ver vis arcesso. Angulus theca alter comis sum cogo surculus. Vallum trepide conservo crinis. Tametsi tergum cedo. Ventosus addo succedo cohibeo comburo audax solutio provident deorsum auxilium. Depono altus volutabrum velum eos terebro tui officia adficio talio. Nesciunt repellat peior deduco solio appello vicissitudo. Canonicus synagoga audax studio defero animi sono vetus solum. Volubilis voveo caterva voluptates curto viscus. Cultura vestrum decet allatus arbor clarus beneficium cultura desidero ait. Circumvenio sit via vesica. Urbanus cetera blandior admoneo fugit pauper voluptas vindico consequuntur vitium. Dedecor aurum articulus tardus cupiditas. Aegrotatio desidero vicinus campana cenaculum cultura amor admoneo utor. Sint undique textor testimonium. Corona commodi vicissitudo studio timor. Vestigium ullus suscipit carus aetas tamen aperte vir quibusdam. Decens nam cupio carpo caelum. Excepturi nulla subiungo aperiam aeternus amet. Velum cenaculum capto textilis ventito thema eos.",
         "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums1.jpg",
-            "/drums5.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg"
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg"
         ],
         "details": [
             {
-                "key": "music-box",
-                "value": "coordinated"
+                "key": "advocacy",
+                "value": "unlawful"
             },
             {
-                "key": "correspondent",
-                "value": "equatorial"
-            },
-            {
-                "key": "probe",
-                "value": "bruised"
-            },
-            {
-                "key": "rule",
-                "value": "outlying"
-            },
-            {
-                "key": "anorak",
-                "value": "tidy"
-            },
-            {
-                "key": "clogs",
-                "value": "mellow"
-            },
-            {
-                "key": "plasterboard",
-                "value": "married"
-            },
-            {
-                "key": "cocktail",
-                "value": "jaded"
-            }
-        ]
-    },
-    {
-        "id": "1019",
-        "name": "chauvinist121",
-        "category": "drums",
-        "subcategory": "drumheads",
-        "price": "797.60",
-        "amount": 5,
-        "description": "Umerus depono bene vulnus tricesimus aspicio ventito. Vallum fugiat vox sustineo quod tamen cibus exercitationem capto coruscus. Maxime ceno denuncio utroque.",
-        "imgUrlArray": [
-            "/drums2.jpg",
-            "/drums1.jpg",
-            "/drums4.jpg",
-            "/drums5.jpg",
-            "/drums3.jpg"
-        ],
-        "details": [
-            {
-                "key": "reveal",
-                "value": "sure-footed"
-            },
-            {
-                "key": "green",
-                "value": "unsteady"
-            },
-            {
-                "key": "copywriter",
-                "value": "concrete"
-            },
-            {
-                "key": "liner",
-                "value": "vivid"
-            },
-            {
-                "key": "edible",
-                "value": "international"
-            },
-            {
-                "key": "honor",
-                "value": "forked"
-            },
-            {
-                "key": "republican",
-                "value": "stale"
-            },
-            {
-                "key": "metronome",
-                "value": "hidden"
-            }
-        ]
-    },
-    {
-        "id": "1020",
-        "name": "radiosonde69",
-        "category": "drums",
-        "subcategory": "drum hardware",
-        "price": "185.86",
-        "amount": 9,
-        "description": "Voro deripio vulariter attonbitus vinum repellat admoneo triduana amo supra. Thalassinus adicio accendo vergo coadunatio spiritus spargo coniuratio accusamus. Vulnus caecus ipsum similique vitium.",
-        "imgUrlArray": [
-            "/drums5.jpg",
-            "/drums4.jpg",
-            "/drums2.jpg",
-            "/drums3.jpg",
-            "/drums1.jpg"
-        ],
-        "details": [
-            {
-                "key": "pith",
-                "value": "flippant"
-            },
-            {
-                "key": "illiteracy",
-                "value": "querulous"
-            },
-            {
-                "key": "phrase",
-                "value": "rundown"
-            },
-            {
-                "key": "offset",
-                "value": "frizzy"
-            },
-            {
-                "key": "fleck",
-                "value": "remorseful"
-            },
-            {
-                "key": "squid",
-                "value": "thick"
-            },
-            {
-                "key": "account",
-                "value": "scared"
-            },
-            {
-                "key": "philanthropy",
+                "key": "accessory",
                 "value": "white"
-            }
-        ]
-    },
-    {
-        "id": "1021",
-        "name": "wet-bar904",
-        "category": "drums",
-        "subcategory": "drum hardware",
-        "price": "426.44",
-        "amount": 2,
-        "description": "Solium sufficio adeo eaque. Celo crastinus vapulus iusto vindico quisquam dens stella conventus cotidie. Tabgo inflammatio repellendus.",
-        "imgUrlArray": [
-            "/drums5.jpg",
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg",
-            "/drums1.jpg"
-        ],
-        "details": [
-            {
-                "key": "fibre",
-                "value": "hard"
-            },
-            {
-                "key": "jacket",
-                "value": "treasured"
-            },
-            {
-                "key": "venti",
-                "value": "glum"
-            },
-            {
-                "key": "payment",
-                "value": "motherly"
-            },
-            {
-                "key": "whisker",
-                "value": "harmonious"
-            },
-            {
-                "key": "screw",
-                "value": "alienated"
-            },
-            {
-                "key": "strength",
-                "value": "dark"
-            },
-            {
-                "key": "figurine",
-                "value": "illiterate"
-            }
-        ]
-    },
-    {
-        "id": "1022",
-        "name": "dolor933",
-        "category": "drums",
-        "subcategory": "drum hardware",
-        "price": "772.40",
-        "amount": 9,
-        "description": "Universe coniuratio vigilo averto ante depono optio admitto spiculum. Cura supra aeternus reiciendis cupiditas concido illum. Coma clementia atrocitas comburo adipiscor.",
-        "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums5.jpg",
-            "/drums1.jpg",
-            "/drums2.jpg",
-            "/drums4.jpg"
-        ],
-        "details": [
-            {
-                "key": "sphynx",
-                "value": "wise"
-            },
-            {
-                "key": "mat",
-                "value": "nippy"
-            },
-            {
-                "key": "eligibility",
-                "value": "pale"
-            },
-            {
-                "key": "nuke",
-                "value": "quizzical"
-            },
-            {
-                "key": "footstool",
-                "value": "bowed"
-            },
-            {
-                "key": "tenor",
-                "value": "relieved"
-            },
-            {
-                "key": "dill",
-                "value": "trustworthy"
-            },
-            {
-                "key": "urn",
-                "value": "amused"
-            }
-        ]
-    },
-    {
-        "id": "1023",
-        "name": "fixture988",
-        "category": "drums",
-        "subcategory": "drum hardware",
-        "price": "922.35",
-        "amount": 10,
-        "description": "Tristis verus delego. Video virga nostrum comes temptatio bene. Aspicio ager ex inventore vacuus totam viduo valetudo.",
-        "imgUrlArray": [
-            "/drums2.jpg",
-            "/drums5.jpg",
-            "/drums4.jpg",
-            "/drums3.jpg",
-            "/drums1.jpg"
-        ],
-        "details": [
-            {
-                "key": "conditioner",
-                "value": "frugal"
-            },
-            {
-                "key": "promenade",
-                "value": "artistic"
-            },
-            {
-                "key": "step-daughter",
-                "value": "shimmering"
-            },
-            {
-                "key": "measure",
-                "value": "submissive"
-            },
-            {
-                "key": "faithful",
-                "value": "mushy"
-            },
-            {
-                "key": "discipline",
-                "value": "acclaimed"
-            },
-            {
-                "key": "wind",
-                "value": "fitting"
-            },
-            {
-                "key": "milestone",
-                "value": "wide-eyed"
-            }
-        ]
-    },
-    {
-        "id": "1024",
-        "name": "copywriter798",
-        "category": "drums",
-        "subcategory": "drum hardware",
-        "price": "374.71",
-        "amount": 4,
-        "description": "Dolorum cervus coniecto minus bibo laudantium alienus templum videlicet sol. Abeo reiciendis suadeo. Adinventitias tutamen tantillus adaugeo comprehendo.",
-        "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums1.jpg",
-            "/drums4.jpg",
-            "/drums5.jpg"
-        ],
-        "details": [
-            {
-                "key": "state",
-                "value": "verifiable"
-            },
-            {
-                "key": "secret",
-                "value": "masculine"
-            },
-            {
-                "key": "collectivization",
-                "value": "juvenile"
-            },
-            {
-                "key": "sponsor",
-                "value": "bold"
-            },
-            {
-                "key": "CD",
-                "value": "soggy"
-            },
-            {
-                "key": "painting",
-                "value": "automatic"
-            },
-            {
-                "key": "doctor",
-                "value": "bubbly"
-            },
-            {
-                "key": "technique",
-                "value": "canine"
-            }
-        ]
-    },
-    {
-        "id": "1025",
-        "name": "roster378",
-        "category": "drums",
-        "subcategory": "drum hardware",
-        "price": "708.60",
-        "amount": 5,
-        "description": "Unus uxor tondeo sublime. Beatae thymbra dicta creta teneo. Coruscus strues amoveo tui temptatio volubilis facilis.",
-        "imgUrlArray": [
-            "/drums1.jpg",
-            "/drums2.jpg",
-            "/drums3.jpg",
-            "/drums5.jpg",
-            "/drums4.jpg"
-        ],
-        "details": [
-            {
-                "key": "depth",
-                "value": "stained"
-            },
-            {
-                "key": "impress",
-                "value": "thirsty"
-            },
-            {
-                "key": "pocketbook",
-                "value": "pure"
-            },
-            {
-                "key": "breakpoint",
-                "value": "concerned"
-            },
-            {
-                "key": "fender",
-                "value": "ironclad"
-            },
-            {
-                "key": "aluminum",
-                "value": "sparkling"
-            },
-            {
-                "key": "deodorant",
-                "value": "skinny"
-            },
-            {
-                "key": "minute",
-                "value": "standard"
-            }
-        ]
-    },
-    {
-        "id": "1026",
-        "name": "bus386",
-        "category": "drums",
-        "subcategory": "drum hardware",
-        "price": "802.62",
-        "amount": 5,
-        "description": "Inventore urbs audax ademptio vestrum auctus atavus vorax quidem suppono. Absum vix subnecto acquiro voro sustineo voveo ustilo. Callide vinitor summa.",
-        "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums5.jpg",
-            "/drums4.jpg",
-            "/drums1.jpg",
-            "/drums2.jpg"
-        ],
-        "details": [
-            {
-                "key": "boundary",
-                "value": "quintessential"
-            },
-            {
-                "key": "evidence",
-                "value": "aggravating"
-            },
-            {
-                "key": "protocol",
-                "value": "mammoth"
-            },
-            {
-                "key": "caption",
-                "value": "evergreen"
-            },
-            {
-                "key": "rag",
-                "value": "darling"
-            },
-            {
-                "key": "pants",
-                "value": "shocked"
-            },
-            {
-                "key": "stove",
-                "value": "stunning"
-            },
-            {
-                "key": "plant",
-                "value": "funny"
-            }
-        ]
-    },
-    {
-        "id": "1027",
-        "name": "headlight326",
-        "category": "drums",
-        "subcategory": "drum hardware",
-        "price": "966.61",
-        "amount": 5,
-        "description": "Tendo territo comptus cunctatio audacia sapiente vulticulus quibusdam eligendi. Defetiscor voluptatum comburo cilicium sequi verbum adeptio numquam aequitas. Tabesco usus credo speculum.",
-        "imgUrlArray": [
-            "/drums3.jpg",
-            "/drums2.jpg",
-            "/drums1.jpg",
-            "/drums5.jpg",
-            "/drums4.jpg"
-        ],
-        "details": [
-            {
-                "key": "apartment",
-                "value": "impolite"
-            },
-            {
-                "key": "assist",
-                "value": "hairy"
-            },
-            {
-                "key": "plain",
-                "value": "merry"
-            },
-            {
-                "key": "ex-husband",
-                "value": "luxurious"
-            },
-            {
-                "key": "ghost",
-                "value": "deafening"
-            },
-            {
-                "key": "causal",
-                "value": "noisy"
-            },
-            {
-                "key": "rite",
-                "value": "royal"
-            },
-            {
-                "key": "code",
-                "value": "amused"
-            }
-        ]
-    },
-    {
-        "id": "1028",
-        "name": "hardship113",
-        "category": "guitars",
-        "subcategory": "electric guitars",
-        "price": "462.74",
-        "amount": 2,
-        "description": "Pauper totam tego vulgivagus vociferor. Tabula spes venio tutamen benigne accusamus ducimus apto abstergo. Cras acidus tabella perferendis ultra caelestis stips.",
-        "imgUrlArray": [
-            "/guitars2.jpg",
-            "/guitars5.jpg",
-            "/guitars4.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg"
-        ],
-        "details": [
-            {
-                "key": "flavor",
-                "value": "hideous"
-            },
-            {
-                "key": "intellect",
-                "value": "linear"
-            },
-            {
-                "key": "carol",
-                "value": "emotional"
-            },
-            {
-                "key": "spiritual",
-                "value": "soggy"
-            },
-            {
-                "key": "nose",
-                "value": "mild"
-            },
-            {
-                "key": "investor",
-                "value": "traumatic"
-            },
-            {
-                "key": "girl",
-                "value": "yellow"
-            },
-            {
-                "key": "lynx",
-                "value": "ringed"
-            }
-        ]
-    },
-    {
-        "id": "1029",
-        "name": "appeal890",
-        "category": "guitars",
-        "subcategory": "acoustic guitars",
-        "price": "645.15",
-        "amount": 10,
-        "description": "Umbra voveo conor tepesco unus defessus canto possimus culpa. Ars nesciunt aduro. Suus bellicus terga vespillo considero.",
-        "imgUrlArray": [
-            "/guitars5.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg",
-            "/guitars4.jpg",
-            "/guitars2.jpg"
-        ],
-        "details": [
-            {
-                "key": "baboon",
-                "value": "moist"
-            },
-            {
-                "key": "wannabe",
-                "value": "fortunate"
-            },
-            {
-                "key": "frost",
-                "value": "adept"
-            },
-            {
-                "key": "last",
-                "value": "corrupt"
-            },
-            {
-                "key": "bid",
-                "value": "wiggly"
-            },
-            {
-                "key": "salad",
-                "value": "thorough"
-            },
-            {
-                "key": "mouser",
-                "value": "big-hearted"
-            },
-            {
-                "key": "sari",
-                "value": "past"
-            }
-        ]
-    },
-    {
-        "id": "1030",
-        "name": "forehead882",
-        "category": "guitars",
-        "subcategory": "acoustic guitars",
-        "price": "916.79",
-        "amount": 3,
-        "description": "Cum nisi thermae defaeco decipio. Doloremque ea dedico averto ceno tabgo avarus chirographum vestrum. Provident ultio in in vergo assentator confido tamen theca molestias.",
-        "imgUrlArray": [
-            "/guitars4.jpg",
-            "/guitars5.jpg",
-            "/guitars2.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg"
-        ],
-        "details": [
-            {
-                "key": "puggle",
-                "value": "infinite"
-            },
-            {
-                "key": "storm",
-                "value": "nutritious"
-            },
-            {
-                "key": "anchovy",
-                "value": "lopsided"
-            },
-            {
-                "key": "macrofauna",
-                "value": "standard"
-            },
-            {
-                "key": "lot",
-                "value": "horrible"
-            },
-            {
-                "key": "facelift",
-                "value": "honorable"
-            },
-            {
-                "key": "backbone",
-                "value": "wee"
-            },
-            {
-                "key": "fraud",
-                "value": "sudden"
-            }
-        ]
-    },
-    {
-        "id": "1031",
-        "name": "word109",
-        "category": "guitars",
-        "subcategory": "acoustic guitars",
-        "price": "257.13",
-        "amount": 9,
-        "description": "Tempore demergo subvenio tempus temporibus maxime subvenio conor aegre. Vesco volubilis vomito color uxor tepesco sint. Cado ceno textor ipsam vomito absens ventus comparo.",
-        "imgUrlArray": [
-            "/guitars5.jpg",
-            "/guitars2.jpg",
-            "/guitars3.jpg",
-            "/guitars1.jpg",
-            "/guitars4.jpg"
-        ],
-        "details": [
-            {
-                "key": "affect",
-                "value": "scientific"
-            },
-            {
-                "key": "embryo",
-                "value": "bumpy"
-            },
-            {
-                "key": "flock",
-                "value": "possible"
-            },
-            {
-                "key": "suppression",
-                "value": "ragged"
-            },
-            {
-                "key": "crest",
-                "value": "acceptable"
-            },
-            {
-                "key": "hardhat",
-                "value": "powerless"
-            },
-            {
-                "key": "spending",
-                "value": "pesky"
-            },
-            {
-                "key": "chive",
-                "value": "scientific"
-            }
-        ]
-    },
-    {
-        "id": "1032",
-        "name": "simplification830",
-        "category": "guitars",
-        "subcategory": "acoustic guitars",
-        "price": "925.40",
-        "amount": 4,
-        "description": "Candidus cena sumo. Sum accusamus crapula aeneus culpo cupiditate crebro rem sed. Patruus abutor triumphus super degenero.",
-        "imgUrlArray": [
-            "/guitars5.jpg",
-            "/guitars2.jpg",
-            "/guitars4.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg"
-        ],
-        "details": [
-            {
-                "key": "subject",
-                "value": "tired"
-            },
-            {
-                "key": "privacy",
-                "value": "pink"
-            },
-            {
-                "key": "shine",
-                "value": "composed"
-            },
-            {
-                "key": "oversight",
-                "value": "shady"
-            },
-            {
-                "key": "method",
-                "value": "squiggly"
-            },
-            {
-                "key": "cable",
-                "value": "drafty"
-            },
-            {
-                "key": "toad",
-                "value": "powerful"
-            },
-            {
-                "key": "carload",
-                "value": "buzzing"
-            }
-        ]
-    },
-    {
-        "id": "1033",
-        "name": "top355",
-        "category": "guitars",
-        "subcategory": "acoustic guitars",
-        "price": "387.24",
-        "amount": 6,
-        "description": "Sono vorax strues ratione clamo clementia. Deporto benevolentia sequi. Deserunt calco attonbitus templum convoco.",
-        "imgUrlArray": [
-            "/guitars3.jpg",
-            "/guitars5.jpg",
-            "/guitars1.jpg",
-            "/guitars2.jpg",
-            "/guitars4.jpg"
-        ],
-        "details": [
-            {
-                "key": "mozzarella",
-                "value": "short-term"
-            },
-            {
-                "key": "maybe",
-                "value": "pleasant"
-            },
-            {
-                "key": "herbs",
-                "value": "shady"
-            },
-            {
-                "key": "embryo",
-                "value": "sharp"
-            },
-            {
-                "key": "assassination",
-                "value": "sardonic"
-            },
-            {
-                "key": "bud",
-                "value": "suspicious"
-            },
-            {
-                "key": "itinerary",
-                "value": "kind"
-            },
-            {
-                "key": "softball",
-                "value": "royal"
-            }
-        ]
-    },
-    {
-        "id": "1034",
-        "name": "rhubarb785",
-        "category": "guitars",
-        "subcategory": "acoustic guitars",
-        "price": "901.90",
-        "amount": 3,
-        "description": "Amor valetudo paens uxor iste blanditiis tabgo succedo spectaculum. Nemo ea ipsa acsi vicissitudo infit umerus. Tristis suscipit territo statim cito confugo ars virgo cimentarius.",
-        "imgUrlArray": [
-            "/guitars5.jpg",
-            "/guitars2.jpg",
-            "/guitars3.jpg",
-            "/guitars1.jpg",
-            "/guitars4.jpg"
-        ],
-        "details": [
-            {
-                "key": "agreement",
-                "value": "flashy"
-            },
-            {
-                "key": "chair",
-                "value": "lean"
             },
             {
-                "key": "eclipse",
-                "value": "cluttered"
+                "key": "player",
+                "value": "caring"
             },
             {
-                "key": "model",
-                "value": "scarce"
+                "key": "sampan",
+                "value": "agitated"
             },
             {
-                "key": "infant",
-                "value": "inexperienced"
+                "key": "costume",
+                "value": "elaborate"
             },
             {
-                "key": "tide",
+                "key": "chalk",
                 "value": "sweaty"
             },
             {
-                "key": "molar",
-                "value": "wiry"
+                "key": "going",
+                "value": "juicy"
             },
             {
-                "key": "clothes",
-                "value": "crowded"
+                "key": "collectivisation",
+                "value": "well-groomed"
             }
         ]
     },
     {
-        "id": "1035",
-        "name": "former290",
-        "category": "guitars",
-        "subcategory": "acoustic guitars",
-        "price": "697.62",
-        "amount": 8,
-        "description": "Verto cetera sortitus. Clarus tamisium totus. Depono vulnus adiuvo mollitia claudeo inflammatio vallum crepusculum cubicularis adulatio.",
-        "imgUrlArray": [
-            "/guitars4.jpg",
-            "/guitars1.jpg",
-            "/guitars2.jpg",
-            "/guitars5.jpg",
-            "/guitars3.jpg"
-        ],
-        "details": [
-            {
-                "key": "caviar",
-                "value": "superb"
-            },
-            {
-                "key": "prose",
-                "value": "attentive"
-            },
-            {
-                "key": "making",
-                "value": "knotty"
-            },
-            {
-                "key": "asset",
-                "value": "raw"
-            },
-            {
-                "key": "scheduling",
-                "value": "gigantic"
-            },
-            {
-                "key": "hockey",
-                "value": "flawless"
-            },
-            {
-                "key": "buggy",
-                "value": "imperturbable"
-            },
-            {
-                "key": "film",
-                "value": "boiling"
-            }
-        ]
-    },
-    {
-        "id": "1036",
-        "name": "weedkiller102",
-        "category": "guitars",
-        "subcategory": "acoustic guitars",
-        "price": "526.12",
+        "id": "3",
+        "name": "combination936",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "acoustic drums",
+        "subcategoryId": "1",
+        "price": "360.80",
         "amount": 5,
-        "description": "Vulariter pectus deleniti curia voluntarius libero. Angelus spiculum tero bonus. Celer vos aeneus.",
+        "description": "Adhaero inflammatio facilis thesis tres calcar tero angulus. Tametsi pauper iusto deporto dignissimos versus decor. Sto spes statim dapifer stips dignissimos claudeo toties depereo deficio. Creo curvo tum accendo esse sint aliquid voco curo decimus. Decor nemo canto cavus subvenio caelum tabesco conturbo adsidue. Vesco artificiose cupiditate vobis concedo clarus denuo carmen aliquid sum. Solum sollers video ocer aestivus defessus. Patrocinor voluptatem curo argentum tricesimus corroboro ocer. Verumtamen maxime solitudo tolero verbum volo. Truculenter denuo depereo viduo temporibus corpus adfero. Impedit tabula cruciamentum desipio sto explicabo coniuratio tristis reprehenderit aestivus. Cauda calcar suasoria terreo thema officiis summisse cubo comitatus. Creta spes teneo certus adsidue libero quisquam stillicidium. Coerceo depono patior. Annus abbas agnosco neque aer tubineus. Angustus advenio totidem debitis taedium tamen cui. Caterva accommodo administratio absorbeo speculum xiphias ustulo capio. Demergo caelestis acies magnam aetas cupiditate. Cruentus ex vitiosus. Ver compello titulus cernuus atqui vado. Tutamen depereo asper atqui statim triduana aetas civis deripio ascisco. Territo inventore antiquus spectaculum concedo dolor. Aut una pel caelum vulariter callide conitor peior. Vetus cultura aequitas reprehenderit. Ducimus cognatus aliqua. Illo tubineus conatus spero contego. Tabernus vulgaris administratio laborum celebrer carmen illo. Somniculosus usus soleo deinde patrocinor ipsa abeo tum. Audio demitto tempus cotidie magnam velut error iste totam depereo. Depopulo defungo error usus recusandae.",
         "imgUrlArray": [
-            "/guitars4.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg",
-            "/guitars2.jpg",
-            "/guitars5.jpg"
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg"
         ],
         "details": [
             {
-                "key": "sparerib",
-                "value": "stupendous"
+                "key": "pine",
+                "value": "another"
             },
             {
-                "key": "sheep",
-                "value": "modern"
+                "key": "sponsorship",
+                "value": "clean"
             },
             {
-                "key": "tent",
-                "value": "harmonious"
+                "key": "duster",
+                "value": "sympathetic"
             },
             {
-                "key": "bricklaying",
-                "value": "improbable"
+                "key": "pupil",
+                "value": "shoddy"
             },
             {
-                "key": "miscommunication",
-                "value": "spherical"
+                "key": "knowledge",
+                "value": "idolized"
             },
             {
-                "key": "divine",
-                "value": "alarming"
+                "key": "violence",
+                "value": "memorable"
             },
             {
-                "key": "loan",
-                "value": "double"
+                "key": "shipper",
+                "value": "dependent"
             },
             {
-                "key": "carpet",
-                "value": "dull"
+                "key": "playwright",
+                "value": "jolly"
             }
         ]
     },
     {
-        "id": "1037",
-        "name": "spectrograph485",
-        "category": "guitars",
-        "subcategory": "guitar amplifiers",
-        "price": "47.42",
+        "id": "4",
+        "name": "enjoyment737",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "acoustic drums",
+        "subcategoryId": "1",
+        "price": "249.89",
+        "amount": 0,
+        "description": "Vestigium ipsum minima textus vomito cruentus. Subseco complectus antiquus calamitas sperno. Peccatus charisma vespillo aestus desino. Uberrime accusantium celebrer demo qui accendo. Caries arbitro despecto sum validus adficio vitae tergeo accusamus. Occaecati alienus paens aeternus aiunt pel. Umerus defendo supplanto comminor neque cubicularis. Pel clementia uter adamo eaque. Ventosus correptius culpo depromo cultellus qui alioqui vomer. Comprehendo corpus spiculum depraedor caute quidem. Trucido caecus sit amplus. Aspernatur illum aperte deduco nulla. Absorbeo culpa temporibus apostolus termes video optio cohaero cometes. Ascit tamen eos aeneus consequatur aegre ambulo. Laudantium vis suppono curvo causa advenio viduo repudiandae. Corrumpo acies sui tollo deorsum maiores. Beatae expedita voco abeo corporis deserunt aut. Sequi cunae appello centum surculus varius volup architecto ustulo. Thymbra considero vado. Tracto spiculum rerum cupressus. Tempora antiquus degenero traho asper. Concedo capto admiratio bibo vacuus cetera conspergo ara. Accendo deorsum amita centum decipio statua cupiditate aranea assentator. Vinco amita curia ait denuncio natus. Cursim adstringo decumbo culpa tot laborum. Impedit aggero curvo summa. Pectus absorbeo arto auditor. Vicissitudo ciminatio cognatus tactus conduco adsum arto vorax uberrime. Asporto comedo tener perspiciatis. Eveniet abbas ipsa.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg"
+        ],
+        "details": [
+            {
+                "key": "checkbook",
+                "value": "orderly"
+            },
+            {
+                "key": "tablecloth",
+                "value": "quarterly"
+            },
+            {
+                "key": "spot",
+                "value": "acidic"
+            },
+            {
+                "key": "instant",
+                "value": "devoted"
+            },
+            {
+                "key": "depression",
+                "value": "general"
+            },
+            {
+                "key": "future",
+                "value": "separate"
+            },
+            {
+                "key": "sundial",
+                "value": "miserly"
+            },
+            {
+                "key": "impudence",
+                "value": "key"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "sculptural626",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "e-drums",
+        "subcategoryId": "2",
+        "price": "248.87",
         "amount": 8,
-        "description": "Eaque sub ante eos iusto tepesco dolor denego sopor. Demens conqueror delicate cresco thorax. Complectus contra defungo damnatio alius una utor amplus tenuis suggero.",
+        "description": "Consequatur curto valetudo. Consequatur commodo summa derideo saepe tremo. Demitto tergiversatio voluptas bonus. Campana textor aurum vester contigo. Vereor campana bos tepesco alii contra. Demo adopto vix avaritia coadunatio considero. Earum sursum consuasor curtus deserunt deputo amicitia. Neque decor subseco sortitus vilitas antiquus creta. Corrumpo curia laborum summa atqui consectetur vita voco aegrus. Neque aspicio aliquam audentia compello thema celer crebro utroque aequus. Voluptatibus vox nemo. Perferendis audeo aestus tolero. Vox magni cernuus cetera cupio admoneo ex decretum. Tres taceo aqua arbor. Acer dolorum corrumpo desino subnecto aestas spero astrum velum. Excepturi illum comburo facilis crux repellendus demulceo despecto tabula conicio. Sopor artificiose cui voluptatum animadverto ratione. Caute cursus adflicto. Auxilium dolorum provident delectus vulgivagus summisse. Comptus cinis conitor bellicus itaque calamitas conventus odit. Tantum vigor addo via damnatio culpo absconditus. Uberrime minima avaritia canonicus voluptatibus defetiscor adipisci peccatus. Solio crastinus cresco stips delibero vulpes magni. Curtus charisma accusator id. Aranea tonsor adulatio. Utrum tracto angulus cunabula. Repellendus error acervus cur thermae vito asperiores deprecator. Crinis audacia ara. Succurro cibus amplexus ocer vomer eius animus. Arx vetus ante totidem temperantia quam sollers abbas.",
         "imgUrlArray": [
-            "/guitars4.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg",
-            "/guitars2.jpg",
-            "/guitars5.jpg"
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg"
         ],
         "details": [
             {
-                "key": "tunnel",
-                "value": "peaceful"
+                "key": "director",
+                "value": "noteworthy"
             },
             {
-                "key": "university",
-                "value": "spicy"
+                "key": "gelatin",
+                "value": "bowed"
             },
             {
-                "key": "fortnight",
-                "value": "shadowy"
+                "key": "entree",
+                "value": "idle"
             },
             {
-                "key": "suspenders",
-                "value": "white"
+                "key": "trafficker",
+                "value": "general"
             },
             {
-                "key": "blister",
-                "value": "grimy"
+                "key": "seaside",
+                "value": "stingy"
             },
             {
-                "key": "table",
-                "value": "automatic"
+                "key": "eavesdropper",
+                "value": "finished"
             },
             {
-                "key": "young",
-                "value": "hideous"
+                "key": "sunroom",
+                "value": "our"
             },
             {
-                "key": "station-wagon",
-                "value": "proper"
+                "key": "environment",
+                "value": "required"
             }
         ]
     },
     {
-        "id": "1038",
-        "name": "architect424",
-        "category": "guitars",
-        "subcategory": "guitar effects",
-        "price": "478.95",
-        "amount": 1,
-        "description": "Utrum cena architecto confugo dolorum. Denique venustas studio facere delinquo sui explicabo capillus solio. Patruus cogo quam synagoga vomica timidus arbitro eos bardus valeo.",
-        "imgUrlArray": [
-            "/guitars3.jpg",
-            "/guitars2.jpg",
-            "/guitars4.jpg",
-            "/guitars5.jpg",
-            "/guitars1.jpg"
-        ],
-        "details": [
-            {
-                "key": "porch",
-                "value": "rusty"
-            },
-            {
-                "key": "ketchup",
-                "value": "hard-to-find"
-            },
-            {
-                "key": "smelting",
-                "value": "average"
-            },
-            {
-                "key": "sympathy",
-                "value": "infantile"
-            },
-            {
-                "key": "interview",
-                "value": "boiling"
-            },
-            {
-                "key": "goodness",
-                "value": "unsteady"
-            },
-            {
-                "key": "curio",
-                "value": "previous"
-            },
-            {
-                "key": "flame",
-                "value": "naughty"
-            }
-        ]
-    },
-    {
-        "id": "1039",
-        "name": "subcomponent64",
-        "category": "guitars",
-        "subcategory": "guitar effects",
-        "price": "364.38",
-        "amount": 9,
-        "description": "Volaticus volubilis clam vix vere sursum. Tenus aduro thesis verecundia adduco curiositas defendo conculco. Accedo conduco vos thymum causa defluo.",
-        "imgUrlArray": [
-            "/guitars5.jpg",
-            "/guitars2.jpg",
-            "/guitars3.jpg",
-            "/guitars4.jpg",
-            "/guitars1.jpg"
-        ],
-        "details": [
-            {
-                "key": "residence",
-                "value": "celebrated"
-            },
-            {
-                "key": "judgment",
-                "value": "worrisome"
-            },
-            {
-                "key": "atom",
-                "value": "square"
-            },
-            {
-                "key": "omega",
-                "value": "joyous"
-            },
-            {
-                "key": "mortgage",
-                "value": "serene"
-            },
-            {
-                "key": "plane",
-                "value": "horrible"
-            },
-            {
-                "key": "kendo",
-                "value": "flamboyant"
-            },
-            {
-                "key": "shingle",
-                "value": "well-off"
-            }
-        ]
-    },
-    {
-        "id": "1040",
-        "name": "world816",
-        "category": "guitars",
-        "subcategory": "guitar effects",
-        "price": "35.32",
+        "id": "6",
+        "name": "quadrant566",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "cymbals",
+        "subcategoryId": "3",
+        "price": "85.00",
         "amount": 5,
-        "description": "Avarus attollo tripudio aperio sit arcesso. Tantum aestivus crur nisi veniam. Ulterius esse certe congregatio deprecator volup demonstro pecto commemoro sit.",
+        "description": "Defessus varius impedit. Ascit vinum est solum tendo tutamen pax cupiditate sophismata. Provident sol varietas degusto succedo inventore depromo aurum aspernatur. Caecus cilicium theca quidem volup speculum. Acies deficio coepi subnecto somnus timor esse placeat voluptates. Aegre certe cuppedia vos caelestis quos accusator comptus. Degusto theca conqueror crapula derelinquo sumo custodia comptus. Ars concido demum. Urbs sopor argumentum at custodia. Sperno causa adipiscor. Defero tergeo armarium sublime sequi adduco tactus aspicio. Asperiores tantillus torrens cogito quaerat. Tactus animadverto cribro torqueo aveho considero peccatus angelus. Totus succurro verus centum cubo cui audax crur casso deludo. Ambitus animadverto adeptio defaeco tripudio illo. Brevis teres degusto deserunt crepusculum venio. Ciminatio corona suppono porro non. Abbas victus coerceo utpote sapiente. Succedo absum tempore adhuc quasi comes. Cubitum contabesco deleniti. Utor paulatim hic armarium spes. Adimpleo adsidue aggero derideo ambitus thermae. Quae sursum delectatio adopto esse adaugeo officiis. A adversus admitto trado cilicium. Tum tredecim pel agnitio. Bis bene despecto tandem venia damno adhaero somnus cibus. Comitatus defetiscor praesentium cinis aspicio arca artificiose. Sit vicissitudo tristis velit terreo cognomen cohaero quibusdam. Quisquam aperiam aestivus aeger conatus collum altus defungo. Vespillo tui perferendis ab candidus curiositas vito versus.",
         "imgUrlArray": [
-            "/guitars2.jpg",
-            "/guitars5.jpg",
-            "/guitars1.jpg",
-            "/guitars4.jpg",
-            "/guitars3.jpg"
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg"
         ],
         "details": [
             {
-                "key": "lecture",
-                "value": "energetic"
+                "key": "manservant",
+                "value": "huge"
             },
             {
-                "key": "tie",
-                "value": "powerful"
+                "key": "singular",
+                "value": "motionless"
             },
             {
-                "key": "chalice",
-                "value": "handmade"
+                "key": "lemur",
+                "value": "inborn"
             },
             {
-                "key": "edge",
-                "value": "jubilant"
+                "key": "hop",
+                "value": "firm"
             },
             {
-                "key": "log",
-                "value": "each"
+                "key": "knife-edge",
+                "value": "diligent"
             },
             {
-                "key": "aid",
-                "value": "well-informed"
+                "key": "forage",
+                "value": "growing"
             },
             {
-                "key": "eardrum",
-                "value": "mysterious"
+                "key": "dilution",
+                "value": "quixotic"
             },
             {
-                "key": "engagement",
-                "value": "lonely"
+                "key": "love",
+                "value": "masculine"
             }
         ]
     },
     {
-        "id": "1041",
-        "name": "nightclub846",
-        "category": "guitars",
-        "subcategory": "guitar effects",
-        "price": "840.65",
+        "id": "7",
+        "name": "cleric857",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "cymbals",
+        "subcategoryId": "3",
+        "price": "888.55",
+        "amount": 2,
+        "description": "Abbas vix benevolentia caste nostrum nesciunt urbanus. Tubineus omnis a suus illo damnatio. Officia repudiandae triumphus. Beneficium perspiciatis repudiandae. Correptius inventore solio quidem. Tergeo conitor contabesco nihil desipio confido pecto. Laborum aggero corroboro arma laboriosam validus sed tredecim. Cimentarius adnuo apparatus. Cognatus caecus corroboro. Adversus acquiro vitium sono placeat avarus eaque quaerat casus. Video vesica sordeo adiuvo. Amaritudo sit architecto. Credo corrupti facere. Creator socius ara videlicet conatus cui. Suasoria universe baiulus suspendo vallum vulgaris victoria. Tumultus alter vigor angustus socius debilito autem. Casso amplexus avaritia contabesco confugo civitas uberrime antea. Bellicus tamdiu tunc depono hic amaritudo commemoro velut cogo. Depromo approbo coma quos ultra coruscus sustineo tremo viriliter vita. Similique aranea suspendo ullam repellendus video. Xiphias sol sopor beneficium deprimo delibero. Terreo apostolus cedo aperio compello comparo comptus. Tutis vado summa colligo. Conitor sui admiratio asporto. Venio maxime sint. Absconditus quia ater victoria ventus talio. Suspendo perspiciatis pariatur adaugeo curvo socius arbor. Aveho taedium aiunt suasoria abeo explicabo venustas degusto. Dapifer carbo teres terra ventus tergum nulla cura tamen. Deserunt tempus earum curto crustulum ter adficio coaegresco.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg"
+        ],
+        "details": [
+            {
+                "key": "request",
+                "value": "famous"
+            },
+            {
+                "key": "end",
+                "value": "envious"
+            },
+            {
+                "key": "advertisement",
+                "value": "poised"
+            },
+            {
+                "key": "bullet",
+                "value": "admirable"
+            },
+            {
+                "key": "tofu",
+                "value": "small"
+            },
+            {
+                "key": "duty",
+                "value": "important"
+            },
+            {
+                "key": "rethinking",
+                "value": "leafy"
+            },
+            {
+                "key": "meatball",
+                "value": "necessary"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "name": "execution661",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "cymbals",
+        "subcategoryId": "3",
+        "price": "687.42",
+        "amount": 2,
+        "description": "Somniculosus omnis aeternus absorbeo. Talis demo aro volubilis attonbitus. Umquam ademptio approbo caste admiratio dicta universe animadverto adeptio. Cupressus capillus laudantium contigo cur damno est atrox constans tondeo. Deprecator optio crux aeger perferendis clementia labore ara repellat. Aptus patruus error error comprehendo aranea despecto demonstro arguo. Tergum crudelis commodi curriculum vere. Quos repellendus cicuta voluntarius beneficium valeo ago apostolus fuga. Vulgus clamo thema conforto compello. Conspergo adipiscor absorbeo cedo. Vado adeo accommodo cohibeo cariosus vivo. Curis vix vado denego turbo taedium confero. Callide terminatio barba comis vicinus vorago vulnero. Harum timidus damno nostrum compono. Quibusdam acsi voluptatibus deduco laboriosam sodalitas vero carcer. Ratione vulgo ubi arx absorbeo reiciendis brevis ipsa sunt cunabula. Ara harum sustineo aer vulticulus similique adhaero vita. Voluptates caute clam vomito aequus tenuis. Arbor contabesco considero sollers combibo accendo. Cupiditas adeptio expedita triumphus. Labore quidem totam. Animadverto tergiversatio socius utrum demum suppono argentum. Admoveo texo stabilis vorago tero contabesco comprehendo vos. Explicabo usus depromo. Cetera adfero adopto deporto nisi thesaurus utique depono. Minus non amplus volutabrum vobis verto doloribus cupio dedico. Maxime curis stultus pecto amicitia nam. Attero conduco desparatus velut. Adflicto dolore crebro odit acervus eius argumentum. Depopulo cubo bestia auctor audeo.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg"
+        ],
+        "details": [
+            {
+                "key": "interpreter",
+                "value": "generous"
+            },
+            {
+                "key": "bunch",
+                "value": "offbeat"
+            },
+            {
+                "key": "insect",
+                "value": "metallic"
+            },
+            {
+                "key": "bough",
+                "value": "joyful"
+            },
+            {
+                "key": "investigator",
+                "value": "medium"
+            },
+            {
+                "key": "somewhere",
+                "value": "itchy"
+            },
+            {
+                "key": "kitsch",
+                "value": "dangerous"
+            },
+            {
+                "key": "preservation",
+                "value": "deadly"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "thorn735",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "cymbals",
+        "subcategoryId": "3",
+        "price": "297.33",
         "amount": 10,
-        "description": "Acsi eos demulceo conculco. Spectaculum causa tabernus decor ventosus deinde delibero ulterius adfectus. Dolorem comburo convoco repellendus placeat est volva bellicus.",
+        "description": "Aliqua magnam ager numquam adsuesco tam. Decretum vestrum vomer minima summisse. Supellex carus pauper auditor capillus. Substantia cur civitas beatus amplexus alienus iusto delinquo aperte decretum. Socius clementia virtus. Est desolo acquiro accusamus amaritudo cupio vapulus. Decimus pauper artificiose similique. Ancilla cumque thermae ventito creo. Aro cubitum ager cometes ait pecus pectus. Caritas commemoro consequuntur sed depopulo atqui cavus. Adsidue tenetur summopere sumo cunabula. Creptio officiis viduo velociter depereo tener titulus ambulo sunt. Abduco sub verbera commodo sopor caute tergo aufero adsum mollitia. Certe paens depereo suffragium conqueror magnam ulciscor cunctatio. Vallum xiphias consuasor odio. Acidus toties desidero alias convoco demens aggredior. Facilis sustineo amplexus facilis. Vitae veritas defessus. Caste sint contra conspergo antiquus aggredior. Certus conatus depulso tonsor atrox iure patruus cras ademptio atque. Animi textus illum. Varius tolero valde armarium. Sophismata baiulus caute titulus. Id concido canonicus appono ago adduco civis denuncio torrens aro. Defetiscor corporis provident. Vulgaris magni deporto. Ademptio aegrus corrigo defetiscor. Auctus doloribus depopulo. Utor tergiversatio odio capto consequuntur tristis. Omnis substantia adaugeo considero terra.",
         "imgUrlArray": [
-            "/guitars3.jpg",
-            "/guitars4.jpg",
-            "/guitars2.jpg",
-            "/guitars5.jpg",
-            "/guitars1.jpg"
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg"
         ],
         "details": [
             {
-                "key": "arrow",
-                "value": "cooperative"
+                "key": "online",
+                "value": "idle"
             },
             {
-                "key": "egghead",
-                "value": "tinted"
+                "key": "brick",
+                "value": "smooth"
             },
             {
-                "key": "blast",
-                "value": "trusty"
+                "key": "narrative",
+                "value": "complete"
             },
             {
-                "key": "ceramics",
-                "value": "conventional"
+                "key": "scaffold",
+                "value": "fatherly"
             },
             {
-                "key": "wiretap",
-                "value": "cavernous"
+                "key": "metallurgist",
+                "value": "mature"
             },
             {
-                "key": "gray",
-                "value": "elderly"
+                "key": "minor-league",
+                "value": "flat"
             },
             {
-                "key": "chops",
-                "value": "livid"
+                "key": "addiction",
+                "value": "awkward"
             },
             {
-                "key": "phrase",
+                "key": "wastebasket",
                 "value": "sleepy"
             }
         ]
     },
     {
-        "id": "1042",
-        "name": "thunderhead906",
-        "category": "guitars",
-        "subcategory": "guitar effects",
-        "price": "632.34",
-        "amount": 5,
-        "description": "Caelestis tremo claustrum viriliter deinde. Vulgus tenus vilitas ustilo. Dolores voluptas vulnero certus ait.",
+        "id": "10",
+        "name": "honeybee299",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "cymbals",
+        "subcategoryId": "3",
+        "price": "976.60",
+        "amount": 7,
+        "description": "Tergeo coaegresco cunabula nesciunt cultellus argentum. Coniecto nostrum credo. Tunc autus bonus depono praesentium provident utilis celo vulgaris dedecor. Aegre pectus textus reiciendis esse sint cognatus angelus amet sint. Atrocitas quibusdam certe quae torqueo amoveo vehemens inventore agnosco. Vetus subseco attollo nihil vinco sulum casus. Deleo velut laudantium teneo ante. Vinum suscipio defaeco denego adsum vapulus. Super aut deporto consequatur thymum tantum. Umerus caute viscus adiuvo demergo thesaurus. Officiis solium alias crebro quos quidem aspicio tamisium id demens. Cado adfectus debitis suffragium arguo trado et crebro. Vulnero talis cubicularis cogito varietas. Thermae synagoga attero. Ab curatio utrum confido calculus sint auctus. Testimonium calamitas supra tempore eligendi hic dolore exercitationem verumtamen. Confugo campana pecus delibero acerbitas. Placeat atavus suffoco coadunatio tabesco vergo defluo molestias. Desparatus doloribus volaticus basium argumentum tametsi theca utor venio tyrannus. Ab vulnero curtus. Crastinus cuppedia cruciamentum abduco. Vergo solium voluptate mollitia vilicus appositus tamisium. Conforto sopor pecus cupiditate vilis hic decipio. Temptatio quod decumbo quam vulgo numquam varietas. Centum bellum aliquid tollo deputo. Tolero deorsum suffoco solium amita aufero saepe thalassinus curis administratio. Uterque synagoga deserunt statua cicuta spero depono assentator solvo. Theca vapulus spectaculum arbitro cura vaco vado utrimque. Cuius apud tertius fugit. Voluntarius tantum blanditiis confugo.",
         "imgUrlArray": [
-            "/guitars5.jpg",
-            "/guitars4.jpg",
-            "/guitars2.jpg",
-            "/guitars3.jpg",
-            "/guitars1.jpg"
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg"
         ],
         "details": [
             {
-                "key": "mycoplasma",
-                "value": "untidy"
+                "key": "decision-making",
+                "value": "selfish"
             },
             {
-                "key": "felony",
+                "key": "tract",
+                "value": "marvelous"
+            },
+            {
+                "key": "notice",
+                "value": "pretty"
+            },
+            {
+                "key": "practitioner",
                 "value": "droopy"
             },
             {
-                "key": "great-grandmother",
-                "value": "pale"
+                "key": "boulevard",
+                "value": "ripe"
             },
             {
-                "key": "reversal",
-                "value": "golden"
+                "key": "blowgun",
+                "value": "curvy"
             },
             {
-                "key": "making",
-                "value": "fake"
+                "key": "tenet",
+                "value": "repentant"
             },
             {
-                "key": "circle",
-                "value": "salty"
-            },
-            {
-                "key": "credenza",
-                "value": "puzzling"
-            },
-            {
-                "key": "variable",
-                "value": "everlasting"
+                "key": "cytoplasm",
+                "value": "ajar"
             }
         ]
     },
     {
-        "id": "1043",
-        "name": "senate530",
-        "category": "guitars",
-        "subcategory": "guitar effects",
-        "price": "288.54",
+        "id": "11",
+        "name": "invention329",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "cymbals",
+        "subcategoryId": "3",
+        "price": "135.08",
         "amount": 10,
-        "description": "Tribuo deprimo sed labore utor esse. Aduro urbs audacia aggero nulla thesis calculus sui. Vapulus aspernatur sperno aro commodo.",
+        "description": "Tametsi saepe caveo. Ulterius canto spiritus. Ciminatio demergo curatio depulso defessus usus ullam ex tergiversatio. Vomito surgo substantia stabilis denuncio quam vigilo suadeo nulla turbo. Dolorum somniculosus ater harum. Super perferendis avarus damno certus comis aiunt vespillo confido coma. Defendo bellicus aequitas necessitatibus amita nam tabula cura facilis. Deludo thymbra ut synagoga. Cubitum talus angulus. Comprehendo voveo pectus demens tubineus adstringo ait abbas corrupti cicuta. Vulticulus comitatus assentator caritas vociferor. Depopulo error abundans tergeo clam strues. Beatus desolo vere turbo basium spiculum vitiosus repudiandae cuppedia cras. Adficio agnosco vesco possimus adeo soluta arma. Defero concedo uterque tamquam contabesco ascit. Trucido correptius dolore candidus synagoga ater crapula coadunatio eius coerceo. Amo tutamen aranea demoror capio credo excepturi ater. Sperno pecco dignissimos cursim attonbitus tandem. Desino maiores sponte accusantium aequus. Cariosus voluntarius auxilium capitulus venustas deporto subvenio iste. Callide incidunt amplexus surculus apparatus solus agnosco tantillus esse ventosus. Tot solus adipiscor sophismata blandior desipio audentia calculus cerno. Decipio condico trans civis abbas averto bardus confugo placeat viridis. Sulum alienus stipes. Ulciscor fugiat apostolus vulpes nobis vinco amita vita delego voluptate. Itaque tamquam speciosus vesica inflammatio. Id avaritia toties avarus tergiversatio aptus minus acidus vitae. Ter sopor adiuvo. Tricesimus decens adeo animadverto curiositas angulus vorago ventosus dignissimos. Recusandae adulescens una laboriosam abutor cursus debitis.",
         "imgUrlArray": [
-            "/guitars1.jpg",
-            "/guitars2.jpg",
-            "/guitars3.jpg",
-            "/guitars4.jpg",
-            "/guitars5.jpg"
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg"
         ],
         "details": [
             {
-                "key": "therapist",
-                "value": "aching"
+                "key": "script",
+                "value": "shadowy"
             },
             {
-                "key": "communist",
-                "value": "cuddly"
+                "key": "recreation",
+                "value": "conscious"
             },
             {
-                "key": "robe",
-                "value": "feminine"
+                "key": "grandparent",
+                "value": "grandiose"
             },
             {
-                "key": "contest",
-                "value": "minor"
+                "key": "abacus",
+                "value": "agitated"
             },
             {
-                "key": "lumber",
-                "value": "pale"
+                "key": "marriage",
+                "value": "exemplary"
             },
             {
-                "key": "semantics",
-                "value": "that"
+                "key": "linseed",
+                "value": "medium"
             },
             {
-                "key": "medication",
-                "value": "upright"
+                "key": "might",
+                "value": "knotty"
             },
             {
-                "key": "wrist",
-                "value": "ancient"
-            }
-        ]
-    },
-    {
-        "id": "1044",
-        "name": "stump505",
-        "category": "guitars",
-        "subcategory": "guitar effects",
-        "price": "319.84",
-        "amount": 2,
-        "description": "Casso cruciamentum sol antiquus crinis atqui charisma tabula decet vorax. Consectetur arx creo collum. Beatus fugit eaque utrimque acsi cubitum tres triumphus ait.",
-        "imgUrlArray": [
-            "/guitars2.jpg",
-            "/guitars5.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg",
-            "/guitars4.jpg"
-        ],
-        "details": [
-            {
-                "key": "counseling",
-                "value": "deep"
-            },
-            {
-                "key": "ornament",
-                "value": "shameless"
-            },
-            {
-                "key": "connotation",
-                "value": "utilized"
-            },
-            {
-                "key": "weeder",
-                "value": "edible"
-            },
-            {
-                "key": "velocity",
-                "value": "huge"
-            },
-            {
-                "key": "handful",
-                "value": "outstanding"
-            },
-            {
-                "key": "dill",
-                "value": "negligible"
-            },
-            {
-                "key": "caboose",
-                "value": "difficult"
-            }
-        ]
-    },
-    {
-        "id": "1045",
-        "name": "marmalade984",
-        "category": "guitars",
-        "subcategory": "guitar effects",
-        "price": "659.02",
-        "amount": 10,
-        "description": "Suffragium odit sursum eligendi vulgivagus caelum adfectus vero civitas astrum. Voluptate audeo claro tendo depromo cibus. Cogito validus viduo.",
-        "imgUrlArray": [
-            "/guitars3.jpg",
-            "/guitars1.jpg",
-            "/guitars2.jpg",
-            "/guitars4.jpg",
-            "/guitars5.jpg"
-        ],
-        "details": [
-            {
-                "key": "sabre",
-                "value": "esteemed"
-            },
-            {
-                "key": "netbook",
-                "value": "awesome"
-            },
-            {
-                "key": "atelier",
-                "value": "emotional"
-            },
-            {
-                "key": "implement",
-                "value": "familiar"
-            },
-            {
-                "key": "subroutine",
-                "value": "organic"
-            },
-            {
-                "key": "flame",
-                "value": "fearless"
-            },
-            {
-                "key": "grass",
-                "value": "untidy"
-            },
-            {
-                "key": "koala",
-                "value": "soggy"
-            }
-        ]
-    },
-    {
-        "id": "1046",
-        "name": "skylight160",
-        "category": "guitars",
-        "subcategory": "strings",
-        "price": "939.80",
-        "amount": 6,
-        "description": "Delectus timidus amitto delibero sollicito defessus copiose urbanus omnis vulgivagus. Distinctio delectus triumphus vorax volaticus allatus. Timidus admoveo comptus ventosus.",
-        "imgUrlArray": [
-            "/guitars4.jpg",
-            "/guitars3.jpg",
-            "/guitars5.jpg",
-            "/guitars2.jpg",
-            "/guitars1.jpg"
-        ],
-        "details": [
-            {
-                "key": "collar",
-                "value": "wrong"
-            },
-            {
-                "key": "plug",
-                "value": "ecstatic"
-            },
-            {
-                "key": "fortnight",
-                "value": "pristine"
-            },
-            {
-                "key": "know-how",
-                "value": "brief"
-            },
-            {
-                "key": "trolley",
-                "value": "smug"
-            },
-            {
-                "key": "ego",
-                "value": "euphoric"
-            },
-            {
-                "key": "sort",
-                "value": "awesome"
-            },
-            {
-                "key": "mixer",
+                "key": "official",
                 "value": "mixed"
             }
         ]
     },
     {
-        "id": "1047",
-        "name": "pastor142",
-        "category": "guitars",
-        "subcategory": "strings",
-        "price": "187.08",
-        "amount": 6,
-        "description": "Subiungo strenuus cubitum qui cervus aperte toties vociferor viriliter adipisci. Balbus sufficio vestigium viriliter astrum. Cunabula sequi curvo cumque qui dolorem.",
-        "imgUrlArray": [
-            "/guitars5.jpg",
-            "/guitars2.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg",
-            "/guitars4.jpg"
-        ],
-        "details": [
-            {
-                "key": "double",
-                "value": "thorny"
-            },
-            {
-                "key": "hypothermia",
-                "value": "these"
-            },
-            {
-                "key": "stress",
-                "value": "victorious"
-            },
-            {
-                "key": "rod",
-                "value": "bouncy"
-            },
-            {
-                "key": "sunroom",
-                "value": "misty"
-            },
-            {
-                "key": "parsnip",
-                "value": "blank"
-            },
-            {
-                "key": "ischemia",
-                "value": "previous"
-            },
-            {
-                "key": "monitoring",
-                "value": "short"
-            }
-        ]
-    },
-    {
-        "id": "1048",
-        "name": "bootie100",
-        "category": "guitars",
-        "subcategory": "strings",
-        "price": "39.76",
-        "amount": 2,
-        "description": "Tolero commemoro deprecator victus accusantium. Thymum est strenuus universe catena. Ustulo vespillo sequi possimus.",
-        "imgUrlArray": [
-            "/guitars2.jpg",
-            "/guitars4.jpg",
-            "/guitars3.jpg",
-            "/guitars5.jpg",
-            "/guitars1.jpg"
-        ],
-        "details": [
-            {
-                "key": "router",
-                "value": "lean"
-            },
-            {
-                "key": "carabao",
-                "value": "selfish"
-            },
-            {
-                "key": "quota",
-                "value": "poor"
-            },
-            {
-                "key": "teaching",
-                "value": "serpentine"
-            },
-            {
-                "key": "progenitor",
-                "value": "forceful"
-            },
-            {
-                "key": "moth",
-                "value": "querulous"
-            },
-            {
-                "key": "youngster",
-                "value": "deafening"
-            },
-            {
-                "key": "spud",
-                "value": "scratchy"
-            }
-        ]
-    },
-    {
-        "id": "1049",
-        "name": "invoice240",
-        "category": "guitars",
-        "subcategory": "strings",
-        "price": "481.11",
-        "amount": 7,
-        "description": "Tibi carbo aro animus acidus amplus deprimo umbra illo. Sursum conduco vapulus tametsi valens cohaero. Vilitas tristis tantillus vorax coma templum.",
-        "imgUrlArray": [
-            "/guitars1.jpg",
-            "/guitars3.jpg",
-            "/guitars4.jpg",
-            "/guitars2.jpg",
-            "/guitars5.jpg"
-        ],
-        "details": [
-            {
-                "key": "load",
-                "value": "stable"
-            },
-            {
-                "key": "bronco",
-                "value": "noted"
-            },
-            {
-                "key": "perfection",
-                "value": "lawful"
-            },
-            {
-                "key": "standardisation",
-                "value": "composed"
-            },
-            {
-                "key": "purr",
-                "value": "spicy"
-            },
-            {
-                "key": "airline",
-                "value": "lopsided"
-            },
-            {
-                "key": "screenwriting",
-                "value": "damp"
-            },
-            {
-                "key": "capon",
-                "value": "fair"
-            }
-        ]
-    },
-    {
-        "id": "1050",
-        "name": "buggy16",
-        "category": "guitars",
-        "subcategory": "strings",
-        "price": "568.95",
-        "amount": 5,
-        "description": "Timor credo unde. Bene centum concido celer admoneo adsum. Vereor minima suspendo paulatim.",
-        "imgUrlArray": [
-            "/guitars5.jpg",
-            "/guitars2.jpg",
-            "/guitars4.jpg",
-            "/guitars1.jpg",
-            "/guitars3.jpg"
-        ],
-        "details": [
-            {
-                "key": "self",
-                "value": "ecstatic"
-            },
-            {
-                "key": "consistency",
-                "value": "sturdy"
-            },
-            {
-                "key": "ability",
-                "value": "extra-small"
-            },
-            {
-                "key": "rocket-ship",
-                "value": "standard"
-            },
-            {
-                "key": "press",
-                "value": "normal"
-            },
-            {
-                "key": "interior",
-                "value": "ready"
-            },
-            {
-                "key": "snow",
-                "value": "lonely"
-            },
-            {
-                "key": "cria",
-                "value": "annual"
-            }
-        ]
-    },
-    {
-        "id": "1051",
-        "name": "harpsichord71",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "743.65",
-        "amount": 8,
-        "description": "Commodi arcesso vinco. Antiquus strues confido vorax. Spargo sit non astrum tutis possimus admiratio succedo accusantium.",
-        "imgUrlArray": [
-            "/keyboards2.jpg",
-            "/keyboards5.jpg",
-            "/keyboards1.jpg",
-            "/keyboards4.jpg",
-            "/keyboards3.jpg"
-        ],
-        "details": [
-            {
-                "key": "soot",
-                "value": "exhausted"
-            },
-            {
-                "key": "reactant",
-                "value": "alienated"
-            },
-            {
-                "key": "comptroller",
-                "value": "wordy"
-            },
-            {
-                "key": "website",
-                "value": "sleepy"
-            },
-            {
-                "key": "bureau",
-                "value": "same"
-            },
-            {
-                "key": "accelerator",
-                "value": "ancient"
-            },
-            {
-                "key": "significance",
-                "value": "runny"
-            },
-            {
-                "key": "rust",
-                "value": "trivial"
-            }
-        ]
-    },
-    {
-        "id": "1052",
-        "name": "menu438",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "980.33",
-        "amount": 5,
-        "description": "Tum solium deorsum. Sopor ab vallum textus infit vesco denique. Vetus vero virgo coaegresco voveo constans stabilis tricesimus.",
-        "imgUrlArray": [
-            "/keyboards5.jpg",
-            "/keyboards2.jpg",
-            "/keyboards4.jpg",
-            "/keyboards1.jpg",
-            "/keyboards3.jpg"
-        ],
-        "details": [
-            {
-                "key": "recognition",
-                "value": "austere"
-            },
-            {
-                "key": "concept",
-                "value": "normal"
-            },
-            {
-                "key": "bustle",
-                "value": "reckless"
-            },
-            {
-                "key": "snow",
-                "value": "blaring"
-            },
-            {
-                "key": "passing",
-                "value": "sarcastic"
-            },
-            {
-                "key": "district",
-                "value": "composed"
-            },
-            {
-                "key": "advancement",
-                "value": "bustling"
-            },
-            {
-                "key": "incompetence",
-                "value": "ill-fated"
-            }
-        ]
-    },
-    {
-        "id": "1053",
-        "name": "coast126",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "75.16",
-        "amount": 2,
-        "description": "Aestivus videlicet demulceo atavus cubicularis clementia pecus commodi. Avaritia verus assentator porro cattus commemoro super alius vis. Sunt agnitio claustrum universe validus commodo.",
-        "imgUrlArray": [
-            "/keyboards2.jpg",
-            "/keyboards4.jpg",
-            "/keyboards1.jpg",
-            "/keyboards3.jpg",
-            "/keyboards5.jpg"
-        ],
-        "details": [
-            {
-                "key": "wetsuit",
-                "value": "rotating"
-            },
-            {
-                "key": "harald",
-                "value": "used"
-            },
-            {
-                "key": "mixer",
-                "value": "sugary"
-            },
-            {
-                "key": "site",
-                "value": "wiggly"
-            },
-            {
-                "key": "vogue",
-                "value": "lively"
-            },
-            {
-                "key": "exhaust",
-                "value": "firsthand"
-            },
-            {
-                "key": "bouquet",
-                "value": "interesting"
-            },
-            {
-                "key": "impulse",
-                "value": "useless"
-            }
-        ]
-    },
-    {
-        "id": "1054",
-        "name": "stove753",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "603.22",
-        "amount": 5,
-        "description": "Territo textilis totam praesentium thermae. Similique statim temeritas expedita vado crapula defero contra. Apto succurro totam spoliatio basium cupiditas comitatus autus.",
-        "imgUrlArray": [
-            "/keyboards1.jpg",
-            "/keyboards4.jpg",
-            "/keyboards5.jpg",
-            "/keyboards3.jpg",
-            "/keyboards2.jpg"
-        ],
-        "details": [
-            {
-                "key": "gyro",
-                "value": "known"
-            },
-            {
-                "key": "rocker",
-                "value": "trustworthy"
-            },
-            {
-                "key": "beyond",
-                "value": "international"
-            },
-            {
-                "key": "windage",
-                "value": "exalted"
-            },
-            {
-                "key": "milk",
-                "value": "unhappy"
-            },
-            {
-                "key": "sanction",
-                "value": "prize"
-            },
-            {
-                "key": "dilution",
-                "value": "leading"
-            },
-            {
-                "key": "ark",
-                "value": "puzzling"
-            }
-        ]
-    },
-    {
-        "id": "1055",
-        "name": "cardigan880",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "293.16",
-        "amount": 3,
-        "description": "Provident cohaero verus accedo pecus sub. Colligo conitor magni impedit velociter ademptio. Tunc stella ab cena.",
-        "imgUrlArray": [
-            "/keyboards1.jpg",
-            "/keyboards3.jpg",
-            "/keyboards2.jpg",
-            "/keyboards5.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "manner",
-                "value": "bustling"
-            },
-            {
-                "key": "cassava",
-                "value": "phony"
-            },
-            {
-                "key": "condition",
-                "value": "thrifty"
-            },
-            {
-                "key": "albatross",
-                "value": "ruddy"
-            },
-            {
-                "key": "conga",
-                "value": "polite"
-            },
-            {
-                "key": "prosecution",
-                "value": "ill"
-            },
-            {
-                "key": "movement",
-                "value": "plastic"
-            },
-            {
-                "key": "unblinking",
-                "value": "same"
-            }
-        ]
-    },
-    {
-        "id": "1056",
-        "name": "ratepayer164",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "668.46",
-        "amount": 5,
-        "description": "Urbanus natus asperiores nihil denuncio bos. Creber teneo tardus thema cogo casus ancilla coepi vita adsuesco. Sapiente totus antiquus maxime abbas tot confero doloribus infit uter.",
-        "imgUrlArray": [
-            "/keyboards4.jpg",
-            "/keyboards3.jpg",
-            "/keyboards2.jpg",
-            "/keyboards5.jpg",
-            "/keyboards1.jpg"
-        ],
-        "details": [
-            {
-                "key": "ambition",
-                "value": "clean"
-            },
-            {
-                "key": "pollution",
-                "value": "junior"
-            },
-            {
-                "key": "howard",
-                "value": "corrupt"
-            },
-            {
-                "key": "butter",
-                "value": "hidden"
-            },
-            {
-                "key": "cross-stitch",
-                "value": "constant"
-            },
-            {
-                "key": "cent",
-                "value": "every"
-            },
-            {
-                "key": "setting",
-                "value": "shady"
-            },
-            {
-                "key": "inconvenience",
-                "value": "humble"
-            }
-        ]
-    },
-    {
-        "id": "1057",
-        "name": "dressing552",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "671.45",
-        "amount": 3,
-        "description": "Caritas utilis sollicito cinis. Spiculum varietas vetus attero. Alo tandem deorsum acidus consectetur curvo atrocitas.",
-        "imgUrlArray": [
-            "/keyboards5.jpg",
-            "/keyboards1.jpg",
-            "/keyboards3.jpg",
-            "/keyboards4.jpg",
-            "/keyboards2.jpg"
-        ],
-        "details": [
-            {
-                "key": "tenet",
-                "value": "blank"
-            },
-            {
-                "key": "group",
-                "value": "forked"
-            },
-            {
-                "key": "precedent",
-                "value": "heavenly"
-            },
-            {
-                "key": "chit-chat",
-                "value": "attentive"
-            },
-            {
-                "key": "sundial",
-                "value": "kindly"
-            },
-            {
-                "key": "curl",
-                "value": "rich"
-            },
-            {
-                "key": "insect",
-                "value": "fickle"
-            },
-            {
-                "key": "spice",
-                "value": "tedious"
-            }
-        ]
-    },
-    {
-        "id": "1058",
-        "name": "width128",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "788.36",
-        "amount": 5,
-        "description": "Vetus cura crinis curo tibi tollo cilicium versus soleo suscipio. Nihil cogito tribuo. Antiquus tot eius vito deficio ulciscor tergiversatio comes.",
-        "imgUrlArray": [
-            "/keyboards2.jpg",
-            "/keyboards1.jpg",
-            "/keyboards5.jpg",
-            "/keyboards3.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "subconscious",
-                "value": "amazing"
-            },
-            {
-                "key": "lipstick",
-                "value": "urban"
-            },
-            {
-                "key": "blame",
-                "value": "bountiful"
-            },
-            {
-                "key": "garb",
-                "value": "criminal"
-            },
-            {
-                "key": "argument",
-                "value": "serene"
-            },
-            {
-                "key": "vault",
-                "value": "quizzical"
-            },
-            {
-                "key": "union",
-                "value": "jubilant"
-            },
-            {
-                "key": "legitimacy",
-                "value": "careless"
-            }
-        ]
-    },
-    {
-        "id": "1059",
-        "name": "latte206",
-        "category": "keyboards",
-        "subcategory": "synthesizers",
-        "price": "504.91",
-        "amount": 1,
-        "description": "Iste capio creator cupiditas corroboro corona coaegresco velut confugo beatus. Comburo aperiam desidero carpo inventore. Abundans ascisco tristis distinctio thymum.",
-        "imgUrlArray": [
-            "/keyboards5.jpg",
-            "/keyboards1.jpg",
-            "/keyboards3.jpg",
-            "/keyboards2.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "urge",
-                "value": "writhing"
-            },
-            {
-                "key": "preserves",
-                "value": "appropriate"
-            },
-            {
-                "key": "storm",
-                "value": "shy"
-            },
-            {
-                "key": "cholesterol",
-                "value": "snoopy"
-            },
-            {
-                "key": "helo",
-                "value": "sweltering"
-            },
-            {
-                "key": "worm",
-                "value": "puzzling"
-            },
-            {
-                "key": "second",
-                "value": "determined"
-            },
-            {
-                "key": "midden",
-                "value": "honored"
-            }
-        ]
-    },
-    {
-        "id": "1060",
-        "name": "reparation199",
-        "category": "keyboards",
-        "subcategory": "stage pianos",
-        "price": "431.08",
-        "amount": 10,
-        "description": "Artificiose tametsi terebro cimentarius voco quos tibi arcesso. Necessitatibus taceo tamisium alioqui candidus claro sublime quae vesper quod. Suffoco quis tamdiu umerus.",
-        "imgUrlArray": [
-            "/keyboards1.jpg",
-            "/keyboards4.jpg",
-            "/keyboards2.jpg",
-            "/keyboards5.jpg",
-            "/keyboards3.jpg"
-        ],
-        "details": [
-            {
-                "key": "accounting",
-                "value": "slim"
-            },
-            {
-                "key": "sesame",
-                "value": "wet"
-            },
-            {
-                "key": "reboot",
-                "value": "embellished"
-            },
-            {
-                "key": "bout",
-                "value": "both"
-            },
-            {
-                "key": "balalaika",
-                "value": "creamy"
-            },
-            {
-                "key": "package",
-                "value": "pessimistic"
-            },
-            {
-                "key": "deep",
-                "value": "dear"
-            },
-            {
-                "key": "double",
-                "value": "ruddy"
-            }
-        ]
-    },
-    {
-        "id": "1061",
-        "name": "polenta390",
-        "category": "keyboards",
-        "subcategory": "stage pianos",
-        "price": "244.96",
-        "amount": 9,
-        "description": "Desolo tenuis caterva tempora unde repellendus verecundia. Spes bellicus porro suggero sodalitas arcesso creo vulgus cervus. Aranea defetiscor defluo pax acquiro decor voco basium quae.",
-        "imgUrlArray": [
-            "/keyboards3.jpg",
-            "/keyboards5.jpg",
-            "/keyboards2.jpg",
-            "/keyboards1.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "jot",
-                "value": "trustworthy"
-            },
-            {
-                "key": "lecture",
-                "value": "tremendous"
-            },
-            {
-                "key": "enclave",
-                "value": "humongous"
-            },
-            {
-                "key": "sustainment",
-                "value": "every"
-            },
-            {
-                "key": "fry",
-                "value": "spicy"
-            },
-            {
-                "key": "edger",
-                "value": "embellished"
-            },
-            {
-                "key": "sneeze",
-                "value": "virtuous"
-            },
-            {
-                "key": "geyser",
-                "value": "minty"
-            }
-        ]
-    },
-    {
-        "id": "1062",
-        "name": "excerpt971",
-        "category": "keyboards",
-        "subcategory": "stage pianos",
-        "price": "109.79",
-        "amount": 2,
-        "description": "Arbor sapiente dolore. Brevis commodi tempus subseco nihil arbitro abundans. Nemo velut reprehenderit deludo vitium amor officiis sono.",
-        "imgUrlArray": [
-            "/keyboards5.jpg",
-            "/keyboards4.jpg",
-            "/keyboards2.jpg",
-            "/keyboards3.jpg",
-            "/keyboards1.jpg"
-        ],
-        "details": [
-            {
-                "key": "table",
-                "value": "vain"
-            },
-            {
-                "key": "ultimatum",
-                "value": "avaricious"
-            },
-            {
-                "key": "ring",
-                "value": "second-hand"
-            },
-            {
-                "key": "alliance",
-                "value": "cultivated"
-            },
-            {
-                "key": "place",
-                "value": "studious"
-            },
-            {
-                "key": "recliner",
-                "value": "hateful"
-            },
-            {
-                "key": "shoreline",
-                "value": "flippant"
-            },
-            {
-                "key": "imprisonment",
-                "value": "downright"
-            }
-        ]
-    },
-    {
-        "id": "1063",
-        "name": "association122",
-        "category": "keyboards",
-        "subcategory": "stage pianos",
-        "price": "777.66",
-        "amount": 8,
-        "description": "Delego ambulo dedico velit tracto derelinquo nisi vinco ventosus. Caecus consectetur curis vulticulus aer dapifer. Caute possimus titulus sodalitas tibi.",
-        "imgUrlArray": [
-            "/keyboards3.jpg",
-            "/keyboards5.jpg",
-            "/keyboards4.jpg",
-            "/keyboards2.jpg",
-            "/keyboards1.jpg"
-        ],
-        "details": [
-            {
-                "key": "fence",
-                "value": "lovable"
-            },
-            {
-                "key": "prosperity",
-                "value": "qualified"
-            },
-            {
-                "key": "guitarist",
-                "value": "greedy"
-            },
-            {
-                "key": "eligibility",
-                "value": "powerless"
-            },
-            {
-                "key": "blackness",
-                "value": "clean"
-            },
-            {
-                "key": "schnitzel",
-                "value": "blind"
-            },
-            {
-                "key": "railway",
-                "value": "pricey"
-            },
-            {
-                "key": "chrysalis",
-                "value": "wet"
-            }
-        ]
-    },
-    {
-        "id": "1064",
-        "name": "spreadsheet478",
-        "category": "keyboards",
-        "subcategory": "stage pianos",
-        "price": "167.03",
-        "amount": 5,
-        "description": "Aggero curatio comprehendo. Defetiscor aegrotatio adulescens crapula tunc defaeco. Tricesimus despecto aufero vehemens aestus conturbo subvenio defungo careo.",
-        "imgUrlArray": [
-            "/keyboards5.jpg",
-            "/keyboards4.jpg",
-            "/keyboards1.jpg",
-            "/keyboards2.jpg",
-            "/keyboards3.jpg"
-        ],
-        "details": [
-            {
-                "key": "breakfast",
-                "value": "naughty"
-            },
-            {
-                "key": "loggia",
-                "value": "murky"
-            },
-            {
-                "key": "loafer",
-                "value": "pointed"
-            },
-            {
-                "key": "eviction",
-                "value": "hairy"
-            },
-            {
-                "key": "lab",
-                "value": "unkempt"
-            },
-            {
-                "key": "ecumenist",
-                "value": "fatal"
-            },
-            {
-                "key": "pith",
-                "value": "candid"
-            },
-            {
-                "key": "sonnet",
-                "value": "musty"
-            }
-        ]
-    },
-    {
-        "id": "1065",
-        "name": "yoke455",
-        "category": "keyboards",
-        "subcategory": "digital pianos",
-        "price": "407.46",
-        "amount": 0,
-        "description": "Vitiosus patria conduco agnosco vilicus aveho. Tubineus aptus atqui tunc timor cras facere tantum brevis. Uredo demitto aegrus abbas.",
-        "imgUrlArray": [
-            "/keyboards1.jpg",
-            "/keyboards5.jpg",
-            "/keyboards3.jpg",
-            "/keyboards2.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "autoimmunity",
-                "value": "unconscious"
-            },
-            {
-                "key": "veal",
-                "value": "humble"
-            },
-            {
-                "key": "sleuth",
-                "value": "strident"
-            },
-            {
-                "key": "scalp",
-                "value": "sunny"
-            },
-            {
-                "key": "nasal",
-                "value": "gorgeous"
-            },
-            {
-                "key": "choice",
-                "value": "pleased"
-            },
-            {
-                "key": "lute",
-                "value": "snoopy"
-            },
-            {
-                "key": "basketball",
-                "value": "grateful"
-            }
-        ]
-    },
-    {
-        "id": "1066",
-        "name": "ceramic61",
-        "category": "keyboards",
-        "subcategory": "digital pianos",
-        "price": "523.92",
-        "amount": 1,
-        "description": "Iure vapulus arto cupressus decumbo cavus. Enim sponte vereor degusto tepesco casus virgo credo. Unus velociter cibus complectus nostrum absens.",
-        "imgUrlArray": [
-            "/keyboards5.jpg",
-            "/keyboards3.jpg",
-            "/keyboards2.jpg",
-            "/keyboards1.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "smog",
-                "value": "internal"
-            },
-            {
-                "key": "pants",
-                "value": "mediocre"
-            },
-            {
-                "key": "maelstrom",
-                "value": "thirsty"
-            },
-            {
-                "key": "wage",
-                "value": "imaginary"
-            },
-            {
-                "key": "strawman",
-                "value": "other"
-            },
-            {
-                "key": "taxicab",
-                "value": "sleepy"
-            },
-            {
-                "key": "capon",
-                "value": "infantile"
-            },
-            {
-                "key": "hostess",
-                "value": "squiggly"
-            }
-        ]
-    },
-    {
-        "id": "1067",
-        "name": "lightscreen538",
-        "category": "keyboards",
-        "subcategory": "digital pianos",
-        "price": "880.08",
+        "id": "12",
+        "name": "beet575",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "cymbals",
+        "subcategoryId": "3",
+        "price": "424.38",
         "amount": 4,
-        "description": "Ultra tendo civis ubi articulus commodo triumphus sollicito enim arma. Adflicto comptus tribuo vitiosus adduco. Vitae tempore articulus sodalitas tabula patrocinor vae verbera soleo.",
+        "description": "Crinis adulescens vulariter curia pectus. Deficio vester deorsum conitor cupio ipsa apparatus surculus cognomen. Complectus demens defluo. Delego explicabo solium. Derelinquo deduco accendo cohors. Baiulus aufero vestrum adfectus caries. Contra auxilium laudantium. Studio substantia adulatio omnis patruus sol vito. Nobis somniculosus tonsor laborum ulciscor desidero. Deleo eveniet verecundia trans demulceo strues contra adeptio. Quia in atqui asperiores deficio eaque. Depraedor angustus sumo aegre consequuntur cumque. Tertius carmen bonus sit aegrus reprehenderit amiculum. Ademptio tumultus cruciamentum quisquam caterva bellum cena desipio. Truculenter ara atqui. Vorax urbs amet. Theologus eveniet canto absens voluptate abeo depulso quia ustulo. Tabula surculus eos incidunt turpis benevolentia candidus. Conspergo cernuus deprimo. Vicissitudo asporto sequi titulus studio uredo super copia calco demonstro. Atqui sapiente ustulo minima. Teneo comparo toties aperte depraedor sophismata celer. Universe ad qui decerno creptio aurum socius acerbitas. Cubo vitae attollo approbo ipsa volaticus succurro magni. Tempora molestias copia. Tribuo amissio a. Sortitus cur quia. Celo amoveo vaco traho. Conforto defleo vesco. Uterque comprehendo vesco confugo tristis dolorum crebro allatus.",
         "imgUrlArray": [
-            "/keyboards1.jpg",
-            "/keyboards2.jpg",
-            "/keyboards4.jpg",
-            "/keyboards3.jpg",
-            "/keyboards5.jpg"
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg"
         ],
         "details": [
             {
-                "key": "ridge",
-                "value": "runny"
+                "key": "emergent",
+                "value": "mixed"
             },
             {
-                "key": "mRNA",
-                "value": "tall"
-            },
-            {
-                "key": "particle",
-                "value": "lost"
-            },
-            {
-                "key": "teacher",
-                "value": "truthful"
-            },
-            {
-                "key": "glen",
-                "value": "right"
-            },
-            {
-                "key": "terrarium",
-                "value": "harmless"
-            },
-            {
-                "key": "pet",
-                "value": "astonishing"
-            },
-            {
-                "key": "chowder",
-                "value": "safe"
-            }
-        ]
-    },
-    {
-        "id": "1068",
-        "name": "timer400",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "960.88",
-        "amount": 2,
-        "description": "Accusator aedificium universe. Trado alius tenus exercitationem terebro testimonium dens terra acies. Sollicito viriliter voro claro utpote contego suggero caecus.",
-        "imgUrlArray": [
-            "/keyboards3.jpg",
-            "/keyboards4.jpg",
-            "/keyboards5.jpg",
-            "/keyboards1.jpg",
-            "/keyboards2.jpg"
-        ],
-        "details": [
-            {
-                "key": "pacemaker",
-                "value": "poised"
-            },
-            {
-                "key": "yarmulke",
-                "value": "knowledgeable"
-            },
-            {
-                "key": "bath",
-                "value": "flat"
-            },
-            {
-                "key": "gate",
-                "value": "remote"
-            },
-            {
-                "key": "dictator",
-                "value": "mature"
-            },
-            {
-                "key": "monster",
-                "value": "friendly"
-            },
-            {
-                "key": "sorghum",
-                "value": "essential"
-            },
-            {
-                "key": "mambo",
-                "value": "hidden"
-            }
-        ]
-    },
-    {
-        "id": "1069",
-        "name": "music514",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "97.43",
-        "amount": 7,
-        "description": "Subiungo tui aptus libero cultellus thesis cura perferendis decet volutabrum. Aliqua ancilla umerus. Armarium ver minima tubineus callide viridis arcus pauper.",
-        "imgUrlArray": [
-            "/keyboards2.jpg",
-            "/keyboards3.jpg",
-            "/keyboards1.jpg",
-            "/keyboards5.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "infiltration",
-                "value": "memorable"
-            },
-            {
-                "key": "humanity",
-                "value": "reasonable"
-            },
-            {
-                "key": "dirt",
-                "value": "lone"
-            },
-            {
-                "key": "headlight",
-                "value": "self-assured"
-            },
-            {
-                "key": "lion",
-                "value": "advanced"
-            },
-            {
-                "key": "issue",
-                "value": "muffled"
-            },
-            {
-                "key": "snowflake",
-                "value": "artistic"
-            },
-            {
-                "key": "decline",
-                "value": "weighty"
-            }
-        ]
-    },
-    {
-        "id": "1070",
-        "name": "criminal405",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "866.01",
-        "amount": 6,
-        "description": "Delicate tolero quidem sumptus conitor textus aegrus aduro conitor textilis. Cunctatio vox delinquo deorsum cunabula taceo qui deporto civis temptatio. Verbum terreo bene stella.",
-        "imgUrlArray": [
-            "/keyboards4.jpg",
-            "/keyboards1.jpg",
-            "/keyboards2.jpg",
-            "/keyboards5.jpg",
-            "/keyboards3.jpg"
-        ],
-        "details": [
-            {
-                "key": "representative",
-                "value": "low"
-            },
-            {
-                "key": "patent",
-                "value": "euphoric"
-            },
-            {
-                "key": "acknowledgment",
-                "value": "tinted"
-            },
-            {
-                "key": "scalp",
-                "value": "compassionate"
-            },
-            {
-                "key": "mixer",
-                "value": "caring"
-            },
-            {
-                "key": "sweatshop",
-                "value": "electric"
-            },
-            {
-                "key": "flight",
-                "value": "famous"
-            },
-            {
-                "key": "mid-course",
-                "value": "extra-small"
-            }
-        ]
-    },
-    {
-        "id": "1071",
-        "name": "purchase989",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "419.04",
-        "amount": 5,
-        "description": "Desipio comburo iste alias acer quasi amitto aqua. Velut ars quisquam tolero audax pauper conspergo beatus adulatio annus. Arceo chirographum tamen curia crebro voluptates allatus tardus beatae patruus.",
-        "imgUrlArray": [
-            "/keyboards2.jpg",
-            "/keyboards5.jpg",
-            "/keyboards3.jpg",
-            "/keyboards1.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "parallelogram",
-                "value": "physical"
-            },
-            {
-                "key": "automaton",
-                "value": "woeful"
-            },
-            {
-                "key": "norm",
-                "value": "murky"
-            },
-            {
-                "key": "licensing",
-                "value": "equal"
-            },
-            {
-                "key": "amazon",
-                "value": "stale"
-            },
-            {
-                "key": "bowling",
-                "value": "baggy"
-            },
-            {
-                "key": "lightscreen",
-                "value": "double"
-            },
-            {
-                "key": "moat",
-                "value": "bulky"
-            }
-        ]
-    },
-    {
-        "id": "1072",
-        "name": "maternity524",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "752.13",
-        "amount": 1,
-        "description": "Coniecto tempus patria vobis delego anser civis cursus cupio. Aeger crastinus cunctatio nostrum charisma. Nesciunt aduro dolorum tabesco.",
-        "imgUrlArray": [
-            "/keyboards1.jpg",
-            "/keyboards4.jpg",
-            "/keyboards5.jpg",
-            "/keyboards3.jpg",
-            "/keyboards2.jpg"
-        ],
-        "details": [
-            {
-                "key": "tonight",
-                "value": "ancient"
-            },
-            {
-                "key": "naturalisation",
-                "value": "attentive"
-            },
-            {
-                "key": "cleaner",
-                "value": "impolite"
-            },
-            {
-                "key": "campaigning",
-                "value": "unknown"
-            },
-            {
-                "key": "skylight",
-                "value": "energetic"
-            },
-            {
-                "key": "pimple",
-                "value": "alarmed"
-            },
-            {
-                "key": "counter",
-                "value": "wise"
-            },
-            {
-                "key": "jasmine",
-                "value": "single"
-            }
-        ]
-    },
-    {
-        "id": "1073",
-        "name": "congo604",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "155.63",
-        "amount": 3,
-        "description": "Audax amiculum depromo conservo. Centum confero culpa copiose abundans. Comis theatrum valde.",
-        "imgUrlArray": [
-            "/keyboards1.jpg",
-            "/keyboards3.jpg",
-            "/keyboards5.jpg",
-            "/keyboards2.jpg",
-            "/keyboards4.jpg"
-        ],
-        "details": [
-            {
-                "key": "sister-in-law",
-                "value": "harmonious"
-            },
-            {
-                "key": "overflight",
-                "value": "known"
-            },
-            {
-                "key": "turmeric",
-                "value": "flawed"
-            },
-            {
-                "key": "beech",
-                "value": "pushy"
-            },
-            {
-                "key": "application",
-                "value": "round"
-            },
-            {
-                "key": "knife",
-                "value": "solid"
-            },
-            {
-                "key": "egg",
-                "value": "dearest"
-            },
-            {
-                "key": "disguise",
-                "value": "sleepy"
-            }
-        ]
-    },
-    {
-        "id": "1074",
-        "name": "limestone163",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "290.15",
-        "amount": 8,
-        "description": "Tenuis venustas ipsam sunt condico. Stultus varius ante denego vergo cunae. Subseco quasi aeternus ab cernuus sophismata vereor tero.",
-        "imgUrlArray": [
-            "/keyboards3.jpg",
-            "/keyboards5.jpg",
-            "/keyboards4.jpg",
-            "/keyboards2.jpg",
-            "/keyboards1.jpg"
-        ],
-        "details": [
-            {
-                "key": "soda",
-                "value": "salty"
-            },
-            {
-                "key": "gazelle",
-                "value": "upbeat"
-            },
-            {
-                "key": "band",
-                "value": "limp"
-            },
-            {
-                "key": "butler",
-                "value": "enlightened"
-            },
-            {
-                "key": "accompanist",
-                "value": "relieved"
-            },
-            {
-                "key": "cottage",
-                "value": "tired"
-            },
-            {
-                "key": "home",
-                "value": "exhausted"
-            },
-            {
-                "key": "fleck",
-                "value": "curly"
-            }
-        ]
-    },
-    {
-        "id": "1075",
-        "name": "act949",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "659.43",
-        "amount": 1,
-        "description": "Vox valde conscendo valens undique vir. Vindico varietas apparatus tertius vereor cognomen cubitum censura. Atqui ulterius traho alter cattus arguo crapula tempus color.",
-        "imgUrlArray": [
-            "/keyboards5.jpg",
-            "/keyboards1.jpg",
-            "/keyboards4.jpg",
-            "/keyboards2.jpg",
-            "/keyboards3.jpg"
-        ],
-        "details": [
-            {
-                "key": "woodshed",
-                "value": "unlucky"
-            },
-            {
-                "key": "goodbye",
-                "value": "minor"
-            },
-            {
-                "key": "decoration",
-                "value": "soupy"
-            },
-            {
-                "key": "minute",
-                "value": "amusing"
-            },
-            {
-                "key": "lyre",
-                "value": "educated"
-            },
-            {
-                "key": "hellcat",
-                "value": "uneven"
-            },
-            {
-                "key": "broadcast",
-                "value": "ambitious"
-            },
-            {
-                "key": "professional",
-                "value": "frizzy"
-            }
-        ]
-    },
-    {
-        "id": "1076",
-        "name": "specialist483",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "280.55",
-        "amount": 7,
-        "description": "Suscipio canis libero caute umbra administratio ustilo. Adaugeo tamquam vaco adfectus. Terminatio solutio est ambitus aro atavus denique adficio conicio.",
-        "imgUrlArray": [
-            "/keyboards4.jpg",
-            "/keyboards3.jpg",
-            "/keyboards5.jpg",
-            "/keyboards2.jpg",
-            "/keyboards1.jpg"
-        ],
-        "details": [
-            {
-                "key": "geranium",
-                "value": "unsteady"
-            },
-            {
-                "key": "chub",
-                "value": "tiny"
-            },
-            {
-                "key": "channel",
-                "value": "well-groomed"
+                "key": "zebra",
+                "value": "quarterly"
             },
             {
                 "key": "ascend",
-                "value": "arid"
+                "value": "educated"
             },
             {
-                "key": "messenger",
-                "value": "modern"
-            },
-            {
-                "key": "ecclesia",
-                "value": "handy"
-            },
-            {
-                "key": "apse",
-                "value": "elated"
-            },
-            {
-                "key": "probation",
-                "value": "vigorous"
-            }
-        ]
-    },
-    {
-        "id": "1077",
-        "name": "waist168",
-        "category": "keyboards",
-        "subcategory": "keyboard hardware",
-        "price": "973.52",
-        "amount": 1,
-        "description": "Speculum angelus spoliatio sol angustus tot ascisco aranea defero. Cognatus ad aduro. Crinis pecco attero.",
-        "imgUrlArray": [
-            "/keyboards3.jpg",
-            "/keyboards5.jpg",
-            "/keyboards4.jpg",
-            "/keyboards2.jpg",
-            "/keyboards1.jpg"
-        ],
-        "details": [
-            {
-                "key": "cloudburst",
-                "value": "delicious"
-            },
-            {
-                "key": "harpsichord",
-                "value": "each"
-            },
-            {
-                "key": "notice",
-                "value": "good-natured"
-            },
-            {
-                "key": "filing",
-                "value": "sardonic"
-            },
-            {
-                "key": "trial",
-                "value": "unlined"
-            },
-            {
-                "key": "self-confidence",
-                "value": "unfit"
-            },
-            {
-                "key": "medication",
-                "value": "suspicious"
-            },
-            {
-                "key": "exit",
-                "value": "alienated"
-            }
-        ]
-    },
-    {
-        "id": "1078",
-        "name": "sash593",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "321.87",
-        "amount": 4,
-        "description": "Cervus cruciamentum adversus at deporto balbus angustus. Viriliter error celo error vae. Aegre comprehendo decimus.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones1.jpg",
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "swimming",
-                "value": "giant"
-            },
-            {
-                "key": "reconsideration",
-                "value": "exalted"
-            },
-            {
-                "key": "amendment",
-                "value": "general"
-            },
-            {
-                "key": "survivor",
-                "value": "scared"
-            },
-            {
-                "key": "strife",
-                "value": "winding"
-            },
-            {
-                "key": "yahoo",
-                "value": "perfect"
-            },
-            {
-                "key": "goodnight",
-                "value": "chief"
-            },
-            {
-                "key": "impudence",
-                "value": "neighboring"
-            }
-        ]
-    },
-    {
-        "id": "1079",
-        "name": "alb535",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "569.60",
-        "amount": 5,
-        "description": "Inflammatio carpo dolor despecto theatrum paulatim. Admiratio conturbo infit claustrum. Tamdiu quasi auctor spes repellendus conventus.",
-        "imgUrlArray": [
-            "/headphones3.jpg",
-            "/headphones1.jpg",
-            "/headphones5.jpg",
-            "/headphones4.jpg",
-            "/headphones2.jpg"
-        ],
-        "details": [
-            {
-                "key": "project",
-                "value": "dim"
-            },
-            {
-                "key": "bog",
-                "value": "impure"
-            },
-            {
-                "key": "visual",
-                "value": "broken"
-            },
-            {
-                "key": "brick",
-                "value": "attached"
-            },
-            {
-                "key": "interject",
-                "value": "steep"
-            },
-            {
-                "key": "audience",
-                "value": "quixotic"
-            },
-            {
-                "key": "collectivization",
-                "value": "lumbering"
-            },
-            {
-                "key": "beat",
-                "value": "opulent"
-            }
-        ]
-    },
-    {
-        "id": "1080",
-        "name": "coverage182",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "641.51",
-        "amount": 9,
-        "description": "Antiquus caste defluo talio decor angelus varius. Demo talio vapulus vulgus desidero. Bene annus quae utique conqueror vulpes tracto adulatio nobis crepusculum.",
-        "imgUrlArray": [
-            "/headphones1.jpg",
-            "/headphones5.jpg",
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "corner",
-                "value": "medium"
-            },
-            {
-                "key": "contract",
-                "value": "different"
-            },
-            {
-                "key": "cardigan",
-                "value": "unlawful"
-            },
-            {
-                "key": "butler",
-                "value": "flashy"
-            },
-            {
-                "key": "end",
-                "value": "which"
-            },
-            {
-                "key": "deficit",
-                "value": "stale"
-            },
-            {
-                "key": "excerpt",
-                "value": "adept"
-            },
-            {
-                "key": "vogue",
-                "value": "twin"
-            }
-        ]
-    },
-    {
-        "id": "1081",
-        "name": "trove33",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "638.29",
-        "amount": 0,
-        "description": "Talus quia aureus bardus vito ait thesaurus. Annus aspernatur sit cui xiphias cubo tersus vilicus. Peccatus adsuesco vergo charisma thalassinus voveo cariosus.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones1.jpg",
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "harp",
-                "value": "hateful"
-            },
-            {
-                "key": "bore",
-                "value": "needy"
-            },
-            {
-                "key": "capitulation",
-                "value": "whole"
-            },
-            {
-                "key": "consistency",
-                "value": "bony"
-            },
-            {
-                "key": "sniffle",
-                "value": "calculating"
-            },
-            {
-                "key": "shallows",
-                "value": "needy"
-            },
-            {
-                "key": "net",
-                "value": "soggy"
-            },
-            {
-                "key": "rainy",
-                "value": "wrong"
-            }
-        ]
-    },
-    {
-        "id": "1082",
-        "name": "flood249",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "66.88",
-        "amount": 6,
-        "description": "Accusator sublime perferendis demum adsuesco torqueo aranea aliquam caelestis. Vix contabesco termes. Averto allatus annus cornu debilito amaritudo complectus.",
-        "imgUrlArray": [
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones3.jpg",
-            "/headphones5.jpg",
-            "/headphones1.jpg"
-        ],
-        "details": [
-            {
-                "key": "symbol",
-                "value": "pretty"
-            },
-            {
-                "key": "publishing",
-                "value": "impressionable"
-            },
-            {
-                "key": "singing",
-                "value": "shocking"
-            },
-            {
-                "key": "character",
-                "value": "present"
-            },
-            {
-                "key": "behavior",
-                "value": "dizzy"
-            },
-            {
-                "key": "disposition",
-                "value": "disgusting"
-            },
-            {
-                "key": "chip",
-                "value": "favorable"
-            },
-            {
-                "key": "insurrection",
-                "value": "moist"
-            }
-        ]
-    },
-    {
-        "id": "1083",
-        "name": "apse13",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "477.96",
-        "amount": 6,
-        "description": "Circumvenio admitto aequitas adfectus amor. Nostrum veritas cariosus quis atrox totus coma iure. Error verto architecto quidem.",
-        "imgUrlArray": [
-            "/headphones4.jpg",
-            "/headphones2.jpg",
-            "/headphones1.jpg",
-            "/headphones5.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "share",
-                "value": "periodic"
-            },
-            {
-                "key": "leg",
-                "value": "junior"
-            },
-            {
-                "key": "rider",
-                "value": "criminal"
-            },
-            {
-                "key": "fork",
-                "value": "esteemed"
-            },
-            {
-                "key": "cohort",
-                "value": "musty"
-            },
-            {
-                "key": "diver",
-                "value": "nonstop"
-            },
-            {
-                "key": "design",
-                "value": "cheery"
-            },
-            {
-                "key": "loading",
-                "value": "yawning"
-            }
-        ]
-    },
-    {
-        "id": "1084",
-        "name": "macro691",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "859.29",
-        "amount": 9,
-        "description": "Volubilis deficio tripudio taedium vaco capio aetas cupiditas. Deporto audax sto amplitudo adfectus arca dolor. Cubo sophismata laboriosam thorax tot clamo bardus dolorem.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones1.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "replication",
-                "value": "limping"
-            },
-            {
-                "key": "chalice",
-                "value": "helpful"
-            },
-            {
-                "key": "foal",
-                "value": "hard"
-            },
-            {
-                "key": "angel",
-                "value": "tart"
-            },
-            {
-                "key": "technology",
-                "value": "alienated"
-            },
-            {
-                "key": "shore",
-                "value": "pretty"
-            },
-            {
-                "key": "litigation",
-                "value": "tragic"
-            },
-            {
-                "key": "anthropology",
-                "value": "dreary"
-            }
-        ]
-    },
-    {
-        "id": "1085",
-        "name": "step-brother330",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "470.99",
-        "amount": 1,
-        "description": "Crinis demoror molestias cena vorago thermae validus advoco utilis. Pel adipiscor talus. Chirographum cibo optio urbanus vicissitudo.",
-        "imgUrlArray": [
-            "/headphones4.jpg",
-            "/headphones3.jpg",
-            "/headphones5.jpg",
-            "/headphones1.jpg",
-            "/headphones2.jpg"
-        ],
-        "details": [
-            {
-                "key": "seaweed",
-                "value": "important"
-            },
-            {
-                "key": "lighting",
-                "value": "bruised"
-            },
-            {
-                "key": "pressure",
-                "value": "perky"
-            },
-            {
-                "key": "call",
-                "value": "agile"
-            },
-            {
-                "key": "oldie",
-                "value": "obvious"
-            },
-            {
-                "key": "banjo",
-                "value": "aggressive"
-            },
-            {
-                "key": "quota",
-                "value": "joyous"
-            },
-            {
-                "key": "napkin",
-                "value": "offbeat"
-            }
-        ]
-    },
-    {
-        "id": "1086",
-        "name": "cardigan558",
-        "category": "headphones",
-        "subcategory": "studio headphones",
-        "price": "387.33",
-        "amount": 5,
-        "description": "Adhaero derelinquo venio aequus deprecator sumo. Eum brevis vitae curiositas quos. Conculco conicio animadverto tabula crux templum uredo claustrum inventore.",
-        "imgUrlArray": [
-            "/headphones1.jpg",
-            "/headphones5.jpg",
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "polyp",
-                "value": "wealthy"
-            },
-            {
-                "key": "frontier",
-                "value": "bowed"
-            },
-            {
-                "key": "rugby",
-                "value": "rural"
-            },
-            {
-                "key": "passage",
-                "value": "unfolded"
-            },
-            {
-                "key": "borrower",
-                "value": "tempting"
-            },
-            {
-                "key": "newsstand",
-                "value": "frayed"
-            },
-            {
-                "key": "upward",
-                "value": "gleaming"
-            },
-            {
-                "key": "bonsai",
-                "value": "numb"
-            }
-        ]
-    },
-    {
-        "id": "1087",
-        "name": "twister342",
-        "category": "headphones",
-        "subcategory": "bluetooth headphones",
-        "price": "658.84",
-        "amount": 0,
-        "description": "Suadeo deripio nesciunt solus caecus cometes sumptus cogito cur. Vix ater odio vulnero clementia tempora unde ancilla. Conicio creo curatio ullam absum suggero vomito textilis consequuntur.",
-        "imgUrlArray": [
-            "/headphones4.jpg",
-            "/headphones5.jpg",
-            "/headphones1.jpg",
-            "/headphones3.jpg",
-            "/headphones2.jpg"
-        ],
-        "details": [
-            {
-                "key": "diadem",
-                "value": "carefree"
-            },
-            {
-                "key": "lollipop",
-                "value": "quarrelsome"
-            },
-            {
-                "key": "census",
-                "value": "emotional"
-            },
-            {
-                "key": "event",
-                "value": "angelic"
-            },
-            {
-                "key": "dearest",
-                "value": "outgoing"
-            },
-            {
-                "key": "show-stopper",
-                "value": "tempting"
-            },
-            {
-                "key": "sherry",
-                "value": "runny"
-            },
-            {
-                "key": "rutabaga",
-                "value": "joyful"
-            }
-        ]
-    },
-    {
-        "id": "1088",
-        "name": "hesitation403",
-        "category": "headphones",
-        "subcategory": "bluetooth headphones",
-        "price": "70.64",
-        "amount": 8,
-        "description": "Summisse ulciscor cognomen cumque et. Sopor tendo aspernatur. Voluptates demulceo sordeo videlicet sapiente.",
-        "imgUrlArray": [
-            "/headphones1.jpg",
-            "/headphones3.jpg",
-            "/headphones5.jpg",
-            "/headphones2.jpg",
-            "/headphones4.jpg"
-        ],
-        "details": [
-            {
-                "key": "lunge",
-                "value": "selfish"
-            },
-            {
-                "key": "result",
-                "value": "frail"
-            },
-            {
-                "key": "tracksuit",
-                "value": "plaintive"
-            },
-            {
-                "key": "website",
-                "value": "starchy"
-            },
-            {
-                "key": "bassinet",
-                "value": "snarling"
-            },
-            {
-                "key": "plot",
-                "value": "giant"
-            },
-            {
-                "key": "sculpting",
-                "value": "precious"
-            },
-            {
-                "key": "goodnight",
-                "value": "faint"
-            }
-        ]
-    },
-    {
-        "id": "1089",
-        "name": "laparoscope593",
-        "category": "headphones",
-        "subcategory": "bluetooth headphones",
-        "price": "254.19",
-        "amount": 5,
-        "description": "Aegre sequi addo. Annus ab defluo cras bene conduco amet voluntarius. Tabula cohibeo sui.",
-        "imgUrlArray": [
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones5.jpg",
-            "/headphones1.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "bratwurst",
-                "value": "buzzing"
-            },
-            {
-                "key": "secretion",
-                "value": "subdued"
-            },
-            {
-                "key": "leg",
-                "value": "bustling"
-            },
-            {
-                "key": "presume",
-                "value": "austere"
-            },
-            {
-                "key": "yang",
-                "value": "supportive"
-            },
-            {
-                "key": "footage",
-                "value": "slushy"
-            },
-            {
-                "key": "computer",
-                "value": "self-assured"
-            },
-            {
-                "key": "appointment",
-                "value": "female"
-            }
-        ]
-    },
-    {
-        "id": "1090",
-        "name": "bolt82",
-        "category": "headphones",
-        "subcategory": "bluetooth headphones",
-        "price": "502.33",
-        "amount": 4,
-        "description": "Aro temptatio dedico derideo vae defetiscor sollicito. Urbs umerus complectus casso studio deludo cursus aspernatur. Aequitas vomer curatio comptus carcer pecto.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones3.jpg",
-            "/headphones4.jpg",
-            "/headphones2.jpg",
-            "/headphones1.jpg"
-        ],
-        "details": [
-            {
-                "key": "resident",
-                "value": "innocent"
-            },
-            {
-                "key": "iris",
-                "value": "subtle"
-            },
-            {
-                "key": "differential",
-                "value": "official"
-            },
-            {
-                "key": "savory",
-                "value": "disgusting"
-            },
-            {
-                "key": "pantology",
-                "value": "cool"
-            },
-            {
-                "key": "filing",
-                "value": "grumpy"
-            },
-            {
-                "key": "restroom",
-                "value": "pastel"
-            },
-            {
-                "key": "hellcat",
-                "value": "spiteful"
-            }
-        ]
-    },
-    {
-        "id": "1091",
-        "name": "air843",
-        "category": "headphones",
-        "subcategory": "bluetooth headphones",
-        "price": "182.70",
-        "amount": 4,
-        "description": "Ager bene delectatio blandior umerus adsum. Defaeco deserunt thesis. Supellex villa vomer utroque accommodo vereor clamo creber tollo ars.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones3.jpg",
-            "/headphones4.jpg",
-            "/headphones1.jpg",
-            "/headphones2.jpg"
-        ],
-        "details": [
-            {
-                "key": "attic",
-                "value": "overcooked"
-            },
-            {
-                "key": "head",
-                "value": "honest"
-            },
-            {
-                "key": "current",
-                "value": "brave"
-            },
-            {
-                "key": "breakfast",
-                "value": "gullible"
-            },
-            {
-                "key": "nutrient",
-                "value": "corrupt"
-            },
-            {
-                "key": "flatboat",
-                "value": "confused"
-            },
-            {
-                "key": "gorilla",
-                "value": "shameless"
-            },
-            {
-                "key": "mouser",
-                "value": "sinful"
-            }
-        ]
-    },
-    {
-        "id": "1092",
-        "name": "survivor422",
-        "category": "headphones",
-        "subcategory": "bluetooth headphones",
-        "price": "894.47",
-        "amount": 8,
-        "description": "Suppellex labore advenio debitis spes impedit desidero sumptus utilis suscipio. Coruscus cado suscipit statim acer aedificium cum contego. Absum cimentarius thesis suggero sperno audentia assentator teres.",
-        "imgUrlArray": [
-            "/headphones4.jpg",
-            "/headphones2.jpg",
-            "/headphones3.jpg",
-            "/headphones5.jpg",
-            "/headphones1.jpg"
-        ],
-        "details": [
-            {
-                "key": "best-seller",
-                "value": "noted"
-            },
-            {
-                "key": "guitar",
-                "value": "suspicious"
-            },
-            {
-                "key": "gram",
-                "value": "trusting"
-            },
-            {
-                "key": "survival",
-                "value": "extra-large"
-            },
-            {
-                "key": "gym",
-                "value": "tragic"
-            },
-            {
-                "key": "voting",
-                "value": "gripping"
-            },
-            {
-                "key": "ritual",
-                "value": "harmless"
-            },
-            {
-                "key": "billing",
-                "value": "appropriate"
-            }
-        ]
-    },
-    {
-        "id": "1093",
-        "name": "pickax309",
-        "category": "headphones",
-        "subcategory": "bluetooth headphones",
-        "price": "522.04",
-        "amount": 1,
-        "description": "Corona vulgo cicuta harum averto aperiam amitto. Teres comburo teres creptio congregatio valetudo. Adopto accendo crebro vulgo conscendo summisse decor.",
-        "imgUrlArray": [
-            "/headphones4.jpg",
-            "/headphones5.jpg",
-            "/headphones3.jpg",
-            "/headphones2.jpg",
-            "/headphones1.jpg"
-        ],
-        "details": [
-            {
-                "key": "swell",
-                "value": "muffled"
-            },
-            {
-                "key": "baobab",
-                "value": "brave"
-            },
-            {
-                "key": "frustration",
-                "value": "sinful"
-            },
-            {
-                "key": "redirect",
-                "value": "orderly"
-            },
-            {
-                "key": "gym",
-                "value": "powerless"
-            },
-            {
-                "key": "porcelain",
-                "value": "overlooked"
-            },
-            {
-                "key": "seafood",
-                "value": "wet"
-            },
-            {
-                "key": "swim",
-                "value": "expert"
-            }
-        ]
-    },
-    {
-        "id": "1094",
-        "name": "armchair904",
-        "category": "headphones",
-        "subcategory": "bluetooth headphones",
-        "price": "409.29",
-        "amount": 7,
-        "description": "Ara tantillus aggero. Delectatio conduco tredecim defendo aestas vitium. Corrumpo talio contra sordeo condico creo constans dolores temporibus summisse.",
-        "imgUrlArray": [
-            "/headphones2.jpg",
-            "/headphones3.jpg",
-            "/headphones5.jpg",
-            "/headphones4.jpg",
-            "/headphones1.jpg"
-        ],
-        "details": [
-            {
-                "key": "pole",
-                "value": "outlandish"
-            },
-            {
-                "key": "shoehorn",
-                "value": "gray"
-            },
-            {
-                "key": "inauguration",
-                "value": "fond"
-            },
-            {
-                "key": "shrimp",
-                "value": "growling"
-            },
-            {
-                "key": "directory",
-                "value": "false"
-            },
-            {
-                "key": "raven",
-                "value": "purple"
-            },
-            {
-                "key": "discourse",
-                "value": "shallow"
-            },
-            {
-                "key": "camper",
-                "value": "loud"
-            }
-        ]
-    },
-    {
-        "id": "1095",
-        "name": "cayenne846",
-        "category": "headphones",
-        "subcategory": "in-ear headphones",
-        "price": "897.49",
-        "amount": 9,
-        "description": "Tracto aequus tergiversatio crinis dapifer. Aequitas tenus consequatur tero. Curriculum testimonium communis tardus.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones4.jpg",
-            "/headphones1.jpg",
-            "/headphones3.jpg",
-            "/headphones2.jpg"
-        ],
-        "details": [
-            {
-                "key": "hobbit",
-                "value": "realistic"
-            },
-            {
-                "key": "dark",
-                "value": "unacceptable"
-            },
-            {
-                "key": "trash",
-                "value": "distinct"
-            },
-            {
-                "key": "biosphere",
-                "value": "untimely"
-            },
-            {
-                "key": "freckle",
-                "value": "unfolded"
-            },
-            {
-                "key": "bratwurst",
-                "value": "soft"
-            },
-            {
-                "key": "jailhouse",
-                "value": "dead"
-            },
-            {
-                "key": "infusion",
-                "value": "damp"
-            }
-        ]
-    },
-    {
-        "id": "1096",
-        "name": "goodwill58",
-        "category": "headphones",
-        "subcategory": "in-ear headphones",
-        "price": "99.23",
-        "amount": 6,
-        "description": "Ventito vulnero aequitas vetus aiunt terebro uter. Libero curia soleo considero ars unus defleo. Ara callide veritatis caecus coniecto.",
-        "imgUrlArray": [
-            "/headphones1.jpg",
-            "/headphones5.jpg",
-            "/headphones2.jpg",
-            "/headphones3.jpg",
-            "/headphones4.jpg"
-        ],
-        "details": [
-            {
-                "key": "litmus",
-                "value": "shabby"
-            },
-            {
-                "key": "anise",
-                "value": "livid"
-            },
-            {
-                "key": "hand",
-                "value": "lumpy"
-            },
-            {
-                "key": "patentee",
-                "value": "questionable"
-            },
-            {
-                "key": "equality",
-                "value": "questionable"
-            },
-            {
-                "key": "abolishment",
-                "value": "colossal"
-            },
-            {
-                "key": "fedora",
-                "value": "hefty"
-            },
-            {
-                "key": "aftershave",
-                "value": "grotesque"
-            }
-        ]
-    },
-    {
-        "id": "1097",
-        "name": "commission668",
-        "category": "headphones",
-        "subcategory": "in-ear headphones",
-        "price": "582.20",
-        "amount": 8,
-        "description": "Bibo tergum amissio verumtamen cenaculum tactus substantia video arx terebro. Beneficium demitto caries tabgo. Eum subvenio pel.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones1.jpg",
-            "/headphones4.jpg",
-            "/headphones3.jpg",
-            "/headphones2.jpg"
-        ],
-        "details": [
-            {
-                "key": "newsprint",
-                "value": "puny"
-            },
-            {
-                "key": "somersault",
-                "value": "these"
-            },
-            {
-                "key": "placode",
-                "value": "linear"
-            },
-            {
-                "key": "ribbon",
-                "value": "third"
-            },
-            {
-                "key": "salary",
-                "value": "upright"
-            },
-            {
-                "key": "lace",
-                "value": "jolly"
-            },
-            {
-                "key": "bake",
-                "value": "boring"
-            },
-            {
-                "key": "area",
-                "value": "growling"
-            }
-        ]
-    },
-    {
-        "id": "1098",
-        "name": "pruner225",
-        "category": "headphones",
-        "subcategory": "in-ear headphones",
-        "price": "86.85",
-        "amount": 3,
-        "description": "Cuppedia aufero maxime accedo adinventitias quod modi spoliatio versus. Valde architecto absconditus cerno celer cotidie ex crapula carmen. Tabernus copiose thymbra compello vacuus cur tergeo compello.",
-        "imgUrlArray": [
-            "/headphones3.jpg",
-            "/headphones5.jpg",
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones1.jpg"
-        ],
-        "details": [
-            {
-                "key": "boat",
-                "value": "understated"
-            },
-            {
-                "key": "diadem",
-                "value": "fantastic"
-            },
-            {
-                "key": "promenade",
-                "value": "irresponsible"
-            },
-            {
-                "key": "mower",
-                "value": "required"
-            },
-            {
-                "key": "entertainment",
-                "value": "well-informed"
-            },
-            {
-                "key": "symptom",
-                "value": "likable"
-            },
-            {
-                "key": "backdrop",
-                "value": "tasty"
-            },
-            {
-                "key": "drink",
-                "value": "famous"
-            }
-        ]
-    },
-    {
-        "id": "1099",
-        "name": "rancher390",
-        "category": "headphones",
-        "subcategory": "in-ear headphones",
-        "price": "900.03",
-        "amount": 1,
-        "description": "Taedium nam volubilis adulatio debitis alo. Cumque currus iste comprehendo comprehendo asper illum uterque clamo canis. Comptus vehemens strues adipisci.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones1.jpg",
-            "/headphones4.jpg",
-            "/headphones2.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "manifestation",
-                "value": "disguised"
-            },
-            {
-                "key": "forearm",
-                "value": "unlawful"
-            },
-            {
-                "key": "reactant",
-                "value": "weak"
-            },
-            {
-                "key": "neuropathologist",
-                "value": "fragrant"
-            },
-            {
-                "key": "herbs",
-                "value": "artistic"
-            },
-            {
-                "key": "equation",
-                "value": "aged"
-            },
-            {
-                "key": "presentation",
-                "value": "hurtful"
-            },
-            {
-                "key": "quit",
-                "value": "zealous"
-            }
-        ]
-    },
-    {
-        "id": "1100",
-        "name": "yawl963",
-        "category": "headphones",
-        "subcategory": "in-ear headphones",
-        "price": "163.42",
-        "amount": 9,
-        "description": "Conicio soluta angelus vestrum caste vilicus amet. Stultus bestia quisquam reiciendis canto cicuta aspicio suggero theologus. Creator nisi utor defungo statim.",
-        "imgUrlArray": [
-            "/headphones1.jpg",
-            "/headphones3.jpg",
-            "/headphones2.jpg",
-            "/headphones4.jpg",
-            "/headphones5.jpg"
-        ],
-        "details": [
-            {
-                "key": "cirrus",
-                "value": "worn"
-            },
-            {
-                "key": "sarong",
-                "value": "pointed"
-            },
-            {
-                "key": "deal",
-                "value": "soupy"
-            },
-            {
-                "key": "innervation",
-                "value": "worldly"
-            },
-            {
-                "key": "policeman",
-                "value": "genuine"
-            },
-            {
-                "key": "pard",
-                "value": "testy"
-            },
-            {
-                "key": "redesign",
-                "value": "stupendous"
-            },
-            {
-                "key": "sousaphone",
-                "value": "common"
-            }
-        ]
-    },
-    {
-        "id": "1101",
-        "name": "antler167",
-        "category": "headphones",
-        "subcategory": "overhead headphones",
-        "price": "650.65",
-        "amount": 1,
-        "description": "Clibanus necessitatibus vilicus denique cuppedia balbus summisse cogo stultus nam. Vesper aggero corroboro conturbo vulpes adsum. Cibus ad dignissimos angulus fugit virga earum cibus.",
-        "imgUrlArray": [
-            "/headphones3.jpg",
-            "/headphones4.jpg",
-            "/headphones2.jpg",
-            "/headphones5.jpg",
-            "/headphones1.jpg"
-        ],
-        "details": [
-            {
-                "key": "bail",
-                "value": "careful"
-            },
-            {
-                "key": "kitty",
-                "value": "strident"
-            },
-            {
-                "key": "quart",
-                "value": "modern"
-            },
-            {
-                "key": "bulldozer",
-                "value": "mild"
-            },
-            {
-                "key": "limb",
-                "value": "married"
-            },
-            {
-                "key": "cub",
-                "value": "wordy"
-            },
-            {
-                "key": "rivulet",
-                "value": "pleased"
-            },
-            {
-                "key": "deodorant",
+                "key": "sand",
                 "value": "glossy"
+            },
+            {
+                "key": "embryo",
+                "value": "sleepy"
+            },
+            {
+                "key": "horizon",
+                "value": "acclaimed"
+            },
+            {
+                "key": "weapon",
+                "value": "quirky"
+            },
+            {
+                "key": "taxi",
+                "value": "bronze"
             }
         ]
     },
     {
-        "id": "1102",
-        "name": "agreement293",
-        "category": "headphones",
-        "subcategory": "overhead headphones",
-        "price": "324.45",
-        "amount": 4,
-        "description": "Surgo ambulo totus. Thalassinus vehemens civis pariatur copia sum harum. Error doloremque aestas.",
+        "id": "13",
+        "name": "polish388",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "drumheads",
+        "subcategoryId": "4",
+        "price": "499.81",
+        "amount": 3,
+        "description": "Cinis curatio approbo demum cohors vomito amplitudo auctus delibero averto. Suppono alter validus demitto decor civis cervus suasoria attollo deprimo. Aliqua dens amita undique volubilis acidus viduo. Aggero substantia sordeo taceo subito umerus libero curatio benevolentia. Absque magni decens atqui validus arto. Asporto crebro arcesso cerno conventus summa umquam reprehenderit animus excepturi. Autus consuasor quia uterque appositus abbas ater trans currus. Dens dolore ultra thymbra amplus temeritas consequatur. Ascisco sodalitas bos defessus arceo victus. Aptus solvo totidem spargo benevolentia. Apto labore temeritas sopor coadunatio apud conduco tepidus. Tempora ventito cetera. Cresco ventito sit. Decumbo tertius coadunatio. Adfero culpa sapiente. Desidero arbustum bos conculco spes. Aggero cohibeo cohaero. Dicta adfero custodia molestias thymbra teneo aestivus defaeco acquiro. Attollo ager concedo vita claro bis vicinus qui veniam quia. Alii adduco paens vespillo spiritus volaticus spectaculum viscus omnis. Spectaculum allatus barba exercitationem ambulo sopor curtus tredecim alii acquiro. Tamquam usus viduo censura ad. Tutamen ciminatio apud officiis animus ustulo appositus arguo. Spoliatio varietas vesica. Curo tergeo provident currus arca a. Ducimus libero fugit commodi cursus earum cunctatio. Decerno civis vehemens. Tandem titulus quam tum. Celer spargo capto. Vereor spiritus cultura aperio demonstro tui annus debitis.",
         "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones3.jpg",
-            "/headphones4.jpg",
-            "/headphones2.jpg",
-            "/headphones1.jpg"
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg"
         ],
         "details": [
             {
-                "key": "garter",
-                "value": "hard-to-find"
+                "key": "meal",
+                "value": "tough"
             },
             {
-                "key": "laryngitis",
-                "value": "brown"
+                "key": "littleneck",
+                "value": "specific"
             },
             {
-                "key": "schnitzel",
-                "value": "jagged"
-            },
-            {
-                "key": "click",
-                "value": "outgoing"
-            },
-            {
-                "key": "orange",
-                "value": "drafty"
-            },
-            {
-                "key": "amusement",
-                "value": "staid"
-            },
-            {
-                "key": "foal",
-                "value": "sore"
-            },
-            {
-                "key": "vignette",
-                "value": "likely"
-            }
-        ]
-    },
-    {
-        "id": "1103",
-        "name": "heavy807",
-        "category": "headphones",
-        "subcategory": "overhead headphones",
-        "price": "857.40",
-        "amount": 8,
-        "description": "Defaeco virga solutio delibero decor alioqui careo inventore possimus. Valde vinculum aestus tametsi vigor vulariter arbustum adicio decet tutamen. Adfectus tollo speciosus condico terror vulticulus delego audeo conduco.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones1.jpg",
-            "/headphones4.jpg",
-            "/headphones3.jpg",
-            "/headphones2.jpg"
-        ],
-        "details": [
-            {
-                "key": "backburn",
-                "value": "unused"
-            },
-            {
-                "key": "accuracy",
-                "value": "trustworthy"
-            },
-            {
-                "key": "attendant",
-                "value": "blushing"
-            },
-            {
-                "key": "passive",
-                "value": "striking"
-            },
-            {
-                "key": "revenant",
-                "value": "expensive"
-            },
-            {
-                "key": "warning",
-                "value": "inexperienced"
-            },
-            {
-                "key": "wave",
-                "value": "both"
-            },
-            {
-                "key": "online",
-                "value": "fat"
-            }
-        ]
-    },
-    {
-        "id": "1104",
-        "name": "beanie866",
-        "category": "headphones",
-        "subcategory": "overhead headphones",
-        "price": "667.65",
-        "amount": 2,
-        "description": "Callide velut tertius adnuo impedit tristis. Deserunt amo vulticulus. Summisse trucido aliquid venio tardus crapula usus totam cubitum.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones4.jpg",
-            "/headphones2.jpg",
-            "/headphones3.jpg",
-            "/headphones1.jpg"
-        ],
-        "details": [
-            {
-                "key": "virus",
-                "value": "sudden"
-            },
-            {
-                "key": "onset",
-                "value": "sunny"
-            },
-            {
-                "key": "deformation",
-                "value": "sudden"
-            },
-            {
-                "key": "arrangement",
-                "value": "guilty"
-            },
-            {
-                "key": "gelatin",
-                "value": "secret"
-            },
-            {
-                "key": "sausage",
-                "value": "hospitable"
-            },
-            {
-                "key": "pilot",
-                "value": "each"
-            },
-            {
-                "key": "existence",
-                "value": "impish"
-            }
-        ]
-    },
-    {
-        "id": "1105",
-        "name": "dash618",
-        "category": "headphones",
-        "subcategory": "overhead headphones",
-        "price": "765.61",
-        "amount": 7,
-        "description": "Vulgaris commodi voluptatem cohibeo una tertius ager despecto numquam. Suppono crinis atrocitas tres eaque suppono corrigo tricesimus absorbeo. Patruus ager necessitatibus voluptate acervus adicio.",
-        "imgUrlArray": [
-            "/headphones1.jpg",
-            "/headphones2.jpg",
-            "/headphones5.jpg",
-            "/headphones3.jpg",
-            "/headphones4.jpg"
-        ],
-        "details": [
-            {
-                "key": "monitor",
-                "value": "ragged"
-            },
-            {
-                "key": "breadfruit",
-                "value": "arid"
-            },
-            {
-                "key": "cytoplasm",
-                "value": "sympathetic"
-            },
-            {
-                "key": "obsidian",
-                "value": "that"
-            },
-            {
-                "key": "coach",
-                "value": "unnatural"
-            },
-            {
-                "key": "grease",
-                "value": "artistic"
-            },
-            {
-                "key": "tofu",
-                "value": "unruly"
-            },
-            {
-                "key": "priesthood",
-                "value": "sinful"
-            }
-        ]
-    },
-    {
-        "id": "1106",
-        "name": "pit75",
-        "category": "headphones",
-        "subcategory": "overhead headphones",
-        "price": "995.43",
-        "amount": 10,
-        "description": "Communis molestiae theologus adeptio absconditus. Conspergo adeptio ut consectetur eaque. Vigilo abutor venustas repudiandae suspendo tabesco vomer.",
-        "imgUrlArray": [
-            "/headphones5.jpg",
-            "/headphones2.jpg",
-            "/headphones1.jpg",
-            "/headphones4.jpg",
-            "/headphones3.jpg"
-        ],
-        "details": [
-            {
-                "key": "pressurization",
+                "key": "freight",
                 "value": "rich"
             },
             {
-                "key": "broad",
-                "value": "awesome"
+                "key": "film",
+                "value": "actual"
             },
             {
-                "key": "quicksand",
-                "value": "few"
+                "key": "bibliography",
+                "value": "bruised"
             },
             {
-                "key": "justice",
-                "value": "plain"
+                "key": "soulmate",
+                "value": "gray"
             },
             {
-                "key": "workforce",
-                "value": "alive"
+                "key": "veil",
+                "value": "cuddly"
             },
             {
-                "key": "mirror",
-                "value": "idolized"
+                "key": "warrior",
+                "value": "giving"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "name": "nuke527",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "drumheads",
+        "subcategoryId": "4",
+        "price": "755.29",
+        "amount": 10,
+        "description": "Bos textor vestrum considero. Spoliatio aeneus damno avarus conservo vicinus. A villa rerum. Adimpleo terminatio congregatio. Thymbra aggero vinum alius solvo decor confido. Territo cunctatio timor brevis cavus mollitia approbo quisquam. Thorax cursus dedico astrum explicabo tabula adipiscor crudelis ager demum. Aegrotatio reiciendis crinis. Adfectus tabella animi temptatio quas creta tepidus blandior. Ago corroboro umquam canis altus blandior tracto corroboro. Solus sortitus subseco subnecto toties sumo apparatus. Aureus assentator color confido incidunt socius cauda apud volubilis. Quam contego cernuus vita beatae. Viduo ulciscor in defluo omnis bestia. Usque appono decet utroque quo. Torrens colo tabesco vulgivagus adhuc. Sublime teres velum pecco caritas hic tamdiu ipsam alius color. Cauda debeo deripio aer. Velut textus tabella ventus vomer quibusdam talis pauper bellicus correptius. Angulus aeger consuasor velit. Curto vel pauper sui surculus similique patior sollicito coepi mollitia. Curo derelinquo suppellex caritas catena tero voluptate cohibeo speciosus error. Amicitia civis temptatio textus aperte atavus pariatur ea vestrum cupiditas. Doloribus adsuesco cunabula eius spargo. Vulpes antea circumvenio ex summopere. Peccatus vomer attero agnosco comes ambitus truculenter deduco trans valens. Deduco ademptio repellat possimus. Atavus aliquid cupiditate aetas auctus via voluptatem deporto cerno calculus. Subnecto volup utpote eaque. Creptio repellendus desidero.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg"
+        ],
+        "details": [
+            {
+                "key": "spectacle",
+                "value": "kosher"
             },
             {
-                "key": "macaroon",
-                "value": "clear"
+                "key": "entertainment",
+                "value": "sparkling"
             },
             {
-                "key": "ambiguity",
-                "value": "well-made"
+                "key": "lentil",
+                "value": "boiling"
+            },
+            {
+                "key": "eye",
+                "value": "dearest"
+            },
+            {
+                "key": "selling",
+                "value": "peppery"
+            },
+            {
+                "key": "sorrel",
+                "value": "elegant"
+            },
+            {
+                "key": "surge",
+                "value": "wiry"
+            },
+            {
+                "key": "location",
+                "value": "luxurious"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "name": "battery452",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "drumheads",
+        "subcategoryId": "4",
+        "price": "95.37",
+        "amount": 4,
+        "description": "Accedo creta advoco absorbeo. Spes traho vinco agnitio torqueo beatus apud hic ustilo complectus. Solutio architecto tersus ademptio reprehenderit pectus adflicto sufficio. Nam vicissitudo est adopto odio coepi stultus suffoco. Audentia sumptus utor deprimo conforto officia. Defetiscor valeo similique antiquus adinventitias comburo suffragium. Basium vero fugiat ars audeo colo turbo vilis cilicium. Conservo alioqui vespillo adsuesco derelinquo. Clibanus curto candidus arbor adficio considero. Alveus tantum suscipit contabesco quibusdam cupressus comes comburo aiunt cervus. Vorago arguo tendo. Angelus tutis cogito solitudo. Constans apud celo cunabula bardus capitulus subvenio amicitia iure. Neque degenero tametsi coma aequus quia vero degero velit teneo. Turpis nobis colligo ulciscor. Harum admiratio totus volo cultura cernuus acerbitas tabgo combibo convoco. Odio explicabo delibero. Assumenda crepusculum celo atrocitas aegrotatio tempore eveniet. Cinis absum facilis. Comparo tres adaugeo communis ea vestigium taceo totidem. Cetera tamquam aqua deficio claustrum demum suffoco pauper. Tandem statim trucido contra delego dolore defungo deprecator vinco crur. Curtus thesis comminor. Vulpes theologus talio tolero trepide astrum. Coruscus commodi id consuasor iste. Atrocitas sonitus provident corrupti capto patrocinor avarus cupiditas. Templum defungo vaco aufero totidem aut cupressus coruscus. Candidus eligendi ulciscor chirographum sint abduco trans depereo saepe caelum. Cubo deduco temeritas texo tunc. Cruentus centum contra tantillus doloremque defluo repellat conservo ambitus.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg"
+        ],
+        "details": [
+            {
+                "key": "cash",
+                "value": "shrill"
+            },
+            {
+                "key": "artist",
+                "value": "handy"
+            },
+            {
+                "key": "skull",
+                "value": "rosy"
+            },
+            {
+                "key": "garlic",
+                "value": "obedient"
+            },
+            {
+                "key": "power",
+                "value": "clever"
+            },
+            {
+                "key": "nightingale",
+                "value": "unfit"
+            },
+            {
+                "key": "material",
+                "value": "single"
+            },
+            {
+                "key": "triad",
+                "value": "plastic"
+            }
+        ]
+    },
+    {
+        "id": "16",
+        "name": "armoire601",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "drumheads",
+        "subcategoryId": "4",
+        "price": "804.21",
+        "amount": 4,
+        "description": "Derideo claustrum termes corroboro artificiose saepe adficio vacuus. Cibus vaco calco patior cruciamentum repudiandae asperiores. Deporto varius quod solum celebrer. Soleo comprehendo cito consequatur coruscus deleniti accommodo. Quidem timor verto sperno calamitas argentum vaco succedo. Adicio calcar collum vorax canto ambulo cultellus. Libero compello averto suppellex conspergo suadeo. Benigne administratio usitas unde tergeo architecto dicta ustilo. Thorax aurum decipio acidus titulus taceo conor cunae cariosus. Amor ambulo corpus ciminatio benevolentia. Maxime eius careo dignissimos absque abscido tendo magni super. Tibi cribro supplanto. Quisquam tergum assumenda coma arcus votum. Clam acervus delectatio. Charisma coadunatio aequus arceo adflicto ustilo ambulo atrox valde debilito. Ancilla aeger inventore undique congregatio amaritudo coaegresco. Tepidus creo defessus. Tracto attonbitus solio crapula solvo trado. Animi utor sopor deinde adficio caste cena demoror cupiditate. Vita vaco velum considero comprehendo iusto soluta. Alioqui aeger vulgus. Creator curtus blandior adhuc torqueo aeger. Chirographum ara ambulo compello votum terra. Solutio clamo votum accendo cilicium tres doloremque casus ait appositus. Cotidie saepe civis tandem demo deripio coniecto valetudo. Demoror fugiat ab. Absens apto textus ventosus arx atque cinis derideo tardus. Comburo sumo terreo sto ex rerum. Totus casso urbanus administratio arma aufero demoror curtus. Reprehenderit campana conventus capillus thymbra cupiditas cupiditate ventus.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg"
+        ],
+        "details": [
+            {
+                "key": "broom",
+                "value": "bewitched"
+            },
+            {
+                "key": "armoire",
+                "value": "rash"
+            },
+            {
+                "key": "appreciation",
+                "value": "prudent"
+            },
+            {
+                "key": "portrait",
+                "value": "unconscious"
+            },
+            {
+                "key": "radar",
+                "value": "tragic"
+            },
+            {
+                "key": "dialect",
+                "value": "dutiful"
+            },
+            {
+                "key": "liner",
+                "value": "hateful"
+            },
+            {
+                "key": "plate",
+                "value": "dismal"
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "name": "tract546",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "drumheads",
+        "subcategoryId": "4",
+        "price": "999.15",
+        "amount": 1,
+        "description": "Suasoria centum adnuo calculus traho cenaculum deserunt. Blandior fuga commodo conqueror cuppedia venio votum debeo. Tondeo venia umbra laudantium uxor. Cubicularis dapifer arbustum vitae. Arbor itaque synagoga officia vulnero canto aduro accedo patrocinor universe. Concido natus defero catena avaritia vacuus cum aeternus. Colo vesica audentia alias caelum facere cursus dapifer. Ipsa necessitatibus animadverto voluntarius depopulo curiositas. Curto credo desino terga terreo cum bibo sulum. Curatio titulus tergiversatio trado vilis appello thalassinus. Coerceo clam chirographum ipsum tandem. Synagoga soleo caritas calamitas desino amitto tergiversatio triumphus virtus. Curiositas ventus inventore decet. Subnecto ipsam verto depraedor sulum arbitro aequus ullam tenuis. Carbo explicabo vomito pariatur abeo cunae tamdiu. Coniecto uxor addo aestus. Tergum thalassinus censura suasoria copiose sunt tamquam debilito. Comprehendo trado uberrime. Volubilis aeternus cunabula vindico appello paens curtus odio coerceo. Volutabrum ara quaerat doloremque praesentium caute combibo tristis caute aeger. Defungo harum appello cunabula fuga sursum talio carcer volva. Fugit adhuc in arceo. Itaque spectaculum tenuis temperantia celo. Viriliter addo vorax animus volup suadeo. Cursus sordeo sui adaugeo stipes stabilis. Pecus averto adeptio sollers vilitas quam desino similique sordeo. Decor vinco caelestis. Depulso aufero vaco abscido temeritas anser vomer. Cura aggero tunc sunt aspernatur paens urbanus aro. Conspergo blanditiis adsum turbo vilitas admiratio socius labore.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg"
+        ],
+        "details": [
+            {
+                "key": "bit",
+                "value": "knotty"
+            },
+            {
+                "key": "poster",
+                "value": "different"
+            },
+            {
+                "key": "partner",
+                "value": "slow"
+            },
+            {
+                "key": "inventor",
+                "value": "stylish"
+            },
+            {
+                "key": "side",
+                "value": "bowed"
+            },
+            {
+                "key": "apparel",
+                "value": "turbulent"
+            },
+            {
+                "key": "young",
+                "value": "ecstatic"
+            },
+            {
+                "key": "robin",
+                "value": "writhing"
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "name": "pace528",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "drumheads",
+        "subcategoryId": "4",
+        "price": "781.89",
+        "amount": 4,
+        "description": "Molestias amita harum et officiis. Damno damnatio aurum una socius odit audio infit. Taceo sollicito tamquam congregatio accendo suffragium. Surgo volo tubineus talus. Vae addo triduana creber ara. Culpo angelus arto dolor angulus adeo. Aureus quaerat cuius. Volo ambulo velociter carcer contego tego tandem. Animadverto ustilo aperio spero arcus. Doloremque corrigo dens ventito utique ager demum vilis. Tabula utrum certe tunc barba totus uterque peior tergo. Vel bonus summisse aliquam vox studio denique causa aranea cognomen. Odit impedit quidem. Charisma averto tricesimus demoror. Credo tamen tabernus. Absum tenax umerus crapula angustus vilicus patruus admoveo. Quod tabella sordeo. Clamo tam vulticulus torrens enim. Crux vero repudiandae. Dens adeo dolores arca thalassinus. Tempora viduo supellex. Demoror vomer terra depopulo. Vigor arca dolor velut centum. Asper rerum studio vae convoco solvo. Vae cimentarius comis. Corrigo quasi vigor vociferor abeo pel. Adulescens civis asporto molestiae ver supra suscipit. Thymbra arcus velociter nesciunt communis. Bonus vel adipisci quasi uxor accedo cohibeo adsum. Contego celer sumo tantum derideo dens cauda aegrotatio minima.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg"
+        ],
+        "details": [
+            {
+                "key": "antechamber",
+                "value": "rapid"
+            },
+            {
+                "key": "producer",
+                "value": "delirious"
+            },
+            {
+                "key": "appetizer",
+                "value": "whole"
+            },
+            {
+                "key": "hate",
+                "value": "fearful"
+            },
+            {
+                "key": "television",
+                "value": "joyful"
+            },
+            {
+                "key": "feeding",
+                "value": "quintessential"
+            },
+            {
+                "key": "bronze",
+                "value": "delectable"
+            },
+            {
+                "key": "enthusiasm",
+                "value": "electric"
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "name": "founder598",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "drumheads",
+        "subcategoryId": "4",
+        "price": "337.95",
+        "amount": 1,
+        "description": "Necessitatibus numquam alias cedo curatio solutio campana pel odit currus. Attero ullam excepturi. Curriculum ter explicabo suggero accommodo degusto tergeo urbanus. Substantia vindico certus derideo id beatae aeger tabella canis creber. Valeo fugiat uredo commodo attonbitus veniam vitiosus supra verus ut. Theatrum candidus sub uredo cursim armarium crur cattus. Voluptatem uberrime ad arca ultio. Audax una tamdiu caelestis conspergo strues congregatio. Temeritas utrum temptatio cupio teres. Odio solium modi sol. Cariosus caecus veniam valens. Teneo alo cerno doloremque suppono crudelis suasoria vestigium cilicium. Vilis vinitor placeat acidus certus magnam. Tabgo denego vitiosus valetudo basium cura alius abscido suscipio careo. Crudelis animi crinis una ocer rem amissio vulgaris. Ademptio suffoco creber. Tutis utor dolorum uterque molestias somnus alter charisma enim. Concido delicate vergo cimentarius alveus. Demoror communis clam quis creptio. Carus qui caries alias utor trucido adversus ater constans. Voluntarius suasoria vulpes. Commemoro assentator iusto odio tripudio excepturi compono. Patrocinor dignissimos tubineus volva aggero decet concedo. Demulceo vae candidus confugo turba coerceo urbanus demitto versus. Balbus denuncio conqueror dapifer suffoco charisma cunctatio. Amo stabilis coniuratio aveho aiunt. At speculum vulgaris ago cetera verbum. Soleo illo cerno sursum contego accusantium veritas. Cibus comparo summa sublime animadverto earum vulariter. Eius pecto adhuc tamdiu conor demergo depraedor absens constans.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg"
+        ],
+        "details": [
+            {
+                "key": "necktie",
+                "value": "buzzing"
+            },
+            {
+                "key": "hydrant",
+                "value": "piercing"
+            },
+            {
+                "key": "smelting",
+                "value": "fixed"
+            },
+            {
+                "key": "twilight",
+                "value": "unaware"
+            },
+            {
+                "key": "caviar",
+                "value": "quiet"
+            },
+            {
+                "key": "peace",
+                "value": "gray"
+            },
+            {
+                "key": "expertise",
+                "value": "pertinent"
+            },
+            {
+                "key": "plastic",
+                "value": "monstrous"
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "name": "doorknob877",
+        "category": "drums",
+        "categoryId": "1",
+        "subcategory": "drumheads",
+        "subcategoryId": "4",
+        "price": "108.77",
+        "amount": 0,
+        "description": "Considero ultra dignissimos aranea capto. Coepi dedico adsum denego. Id cunabula vallum demergo canto derideo celebrer. Amplitudo compello constans tamen soluta venustas accusamus. Ipsa tabula confido administratio. Timidus viridis succurro cum curvo defluo curso. Architecto coepi tandem fugit tamquam nisi derelinquo absque conventus. Aufero alias succedo speciosus aggero. Solutio creber possimus minus amissio carmen. Vos bonus ventosus arceo subito inflammatio atqui vinculum arma laborum. Curso aiunt caveo officia unus contabesco stultus. Capio tres abutor solium utrimque beneficium depraedor thesaurus. Dignissimos amiculum veritas. Voco vapulus amet vinculum. Surgo volaticus arbor acsi aeger corrigo patruus attollo voveo dolorum. Inflammatio civitas copiose aeneus dolor tollo colo vester cribro anser. Censura peior vomer. Totam absorbeo sequi urbs trucido est dignissimos articulus volutabrum crapula. Vere sum tenetur concido ascit. Dolorem amor capto consectetur cultura. Adficio commodi surculus sollers. Tumultus vulgivagus verbum thalassinus animi volva officiis thermae sub. Aiunt apparatus victus eaque laudantium angelus deleo animadverto acceptus. Vel aegre doloremque denique cohaero. Undique solio aggredior thymbra cohaero. Ulciscor fugit verbum cito deficio certe currus admiratio crux. Canonicus tamdiu despecto pecus culpa adiuvo. Tutis sint truculenter blandior eos. Aurum conservo ulciscor vulgo spargo pariatur tero. Cilicium auctus defendo civis angelus correptius.",
+        "imgUrlArray": [
+            "https://m-jurczuk.pl//uploads/drums1_3f66fa7a41.jpg",
+            "https://m-jurczuk.pl//uploads/drums3_3808d3d48b.jpg",
+            "https://m-jurczuk.pl//uploads/drums4_25c3751cde.jpg",
+            "https://m-jurczuk.pl//uploads/drums5_2a7ca187ff.jpg",
+            "https://m-jurczuk.pl//uploads/drums2_70173b03a0.jpg"
+        ],
+        "details": [
+            {
+                "key": "item",
+                "value": "everlasting"
+            },
+            {
+                "key": "timeout",
+                "value": "composed"
+            },
+            {
+                "key": "mob",
+                "value": "queasy"
+            },
+            {
+                "key": "workshop",
+                "value": "costly"
+            },
+            {
+                "key": "airline",
+                "value": "last"
+            },
+            {
+                "key": "painting",
+                "value": "canine"
+            },
+            {
+                "key": "base",
+                "value": "terrific"
+            },
+            {
+                "key": "clef",
+                "value": "satisfied"
             }
         ]
     }
-];
+]

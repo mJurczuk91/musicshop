@@ -1,4 +1,4 @@
-import { HttpLink } from "@apollo/client";
+/* import { HttpLink } from "@apollo/client";
 import {
   NextSSRInMemoryCache,
   NextSSRApolloClient,
@@ -26,4 +26,34 @@ export const { getClient } = registerApolloClient(() => {
       },
     }),
   });
+}); */
+
+import {
+  ApolloClient,
+  HttpLink,
+  InMemoryCache
+} from '@apollo/client';
+
+const client = new ApolloClient({
+  ssrMode: true,
+  link: new HttpLink({
+    uri: "https://m-jurczuk.pl/graphql",
+    headers: {
+      authorization: `Bearer ${process.env.API_TOKEN}`,
+    },
+  }
+  ),
+  cache: new InMemoryCache({
+    typePolicies: {
+      CategoryEntity: {
+        fields: {
+          attributes: {
+            merge: true,
+          }
+        }
+      }
+    }
+  }),
 });
+
+export default client;
