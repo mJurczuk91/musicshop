@@ -4,7 +4,7 @@ import { CartItem } from "@/app/(lib)/definitions"
 import { Dispatch } from "react"
 import { CartAction } from "../../context/cartContext"
 import Link from "next/link"
-import { getProductLink } from "@/app/(lib)/helpers"
+import { getProductSlug } from "@/app/(lib)/helpers"
 import { ProductCounter } from "./productCounter"
 import { RemoveElementButton } from "./removeElementButton"
 
@@ -23,7 +23,7 @@ export function ProductListElement({ item:{product, amount}, dispatch }: Props) 
                 alt="product image"
             />
 
-            <Link href={getProductLink(product)}>
+            <Link href={`/products/${getProductSlug(product)}`}>
                 <span className="">
                     {product.name}
                 </span>

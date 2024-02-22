@@ -41,7 +41,6 @@ async function getByCategory(categoryId: string, page: number = 0, pageSize: num
 }
 
 async function getBySubcategory(subcategoryId: string, page: number = 0, pageSize: number = 20):Promise<PaginatedData<Product>> {
-  const client = getClient();
   const resp = await client.query({
     query: queryProductsBySubcategory,
     variables: {
@@ -52,7 +51,6 @@ async function getBySubcategory(subcategoryId: string, page: number = 0, pageSiz
       subcategoryId,
     }
   });
-  console.log(resp.data.products);
   const dataArr = resp.data.products.data as any[];
   const products = dataArr.map(product => {
     const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
