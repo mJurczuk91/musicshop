@@ -1,17 +1,14 @@
-import { Dispatch } from "react"
-import { CartAction} from "../../context/cartContext"
-import { CartActionTypes } from "../../context/cartContext"
 import { CartItem } from "@/app/(lib)/definitions"
 
 type Props = {
-    dispatch: Dispatch<CartAction>,
+    removeFromCart: (item:CartItem)=>boolean,
     item: CartItem,
 }
 
-export function RemoveElementButton({dispatch, item}:Props){
+export function RemoveElementButton({removeFromCart, item}:Props){
     return (
         <div>
-            <button onClick={() => dispatch({type:CartActionTypes.remove, payload:item})}>REMOVE</button>
+            <button onClick={() => removeFromCart(item)}>REMOVE</button>
         </div>
     )
 }

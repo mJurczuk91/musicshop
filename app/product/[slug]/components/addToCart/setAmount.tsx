@@ -1,8 +1,8 @@
 'use client'
 
 import { Product } from "@/app/(lib)/definitions"
-import { CartContext, CartContextType } from "@/app/cart/context/cartContext"
-import { useContext, useState } from "react"
+import { CartContext, CartContextType, CartActionTypes } from "@/app/cart/context/cartContext"
+import { useContext, useEffect, useState } from "react"
 import { AddToCartButton } from "./addToCartButton"
 
 type Props = {
@@ -10,33 +10,39 @@ type Props = {
 }
 
 export function SetAmount({ product }: Props) {
-    const { cart, dispatch } = useContext(CartContext) as CartContextType;
-    const [amount, setAmount] = useState<number>(1);
+    const { cart, addToCart, getProductAmountMinusCart, isProductInCart } = useContext(CartContext) as CartContextType;
+    const [counterAmount, setCounterAmount] = useState<number>(1);
+
+    const [isAddToCartDisabled, setIsAddToCartDisabled] = useState<boolean>(false)
+
+    useEffect(() => {
+        if (isProductInCart(product.id)) {
+            if (getProductAmountMinusCart(product) < 1) setIsAddToCartDisabled(true);
+            else setIsAddToCartDisabled(false);
+        }
+    }, [cart]);
 
     const increaseAmount = () => {
-        if (amount < product.amount) setAmount(amount + 1);
+        if (counterAmount < getProductAmountMinusCart(product)) setCounterAmount(counterAmount + 1);
     }
 
     const decreaseAmount = () => {
-        if (amount > 1) setAmount(amount - 1);
+        if (counterAmount > 1) setCounterAmount(counterAmount - 1);
     }
 
-    const addToCart = () => {
-        dispatch({
-            type: "add",
-            payload: {
-                product,
-                amount: amount,
-            }
+    const handleAddToCartClick = () => {
+        addToCart({
+            product,
+            amount: counterAmount,
         })
     }
 
     return (
         <div className="w-fit flex m-2 p-2 select-none">
             <div className="w-fit flex">
-                <div className="flex justify-center items-center p-2 border-2 border-black border-opacity-40">
+                <div className="flex w-12 justify-center items-center p-2 border-2 border-black border-opacity-40">
                     <span>
-                        {amount}
+                        {counterAmount}
                     </span>
                 </div>
                 <div>
@@ -54,7 +60,7 @@ export function SetAmount({ product }: Props) {
                     </div>
                 </div>
             </div>
-            <AddToCartButton addToCart={addToCart} />
+            <AddToCartButton addToCart={handleAddToCartClick} disabled={isAddToCartDisabled} />
         </div>
     )
 }

@@ -10,10 +10,11 @@ import { RemoveElementButton } from "./removeElementButton"
 
 type Props = {
     item: CartItem,
-    dispatch: Dispatch<CartAction>,
+    addToCart: (item:CartItem)=>boolean,
+    removeFromCart: (item:CartItem)=>boolean,
 }
 
-export function ProductListElement({ item:{product, amount}, dispatch }: Props) {
+export function ProductListElement({ item:{product, amount}, addToCart, removeFromCart }: Props) {
     return (
         <div className="flex w-full max-w-6xl items-center justify-between">
 
@@ -29,7 +30,7 @@ export function ProductListElement({ item:{product, amount}, dispatch }: Props) 
                 </span>
             </Link>
 
-            <ProductCounter dispatch={dispatch} item={{product, amount}} />
+            <ProductCounter addToCart={addToCart} removeFromCart={removeFromCart} item={{product, amount}} />
 
             <div>
                 <span>
@@ -37,7 +38,7 @@ export function ProductListElement({ item:{product, amount}, dispatch }: Props) 
                 </span>
             </div>
 
-            <RemoveElementButton dispatch={dispatch} item={{product, amount}} />
+            <RemoveElementButton removeFromCart={removeFromCart} item={{product, amount}} />
         </div>
     )
 }

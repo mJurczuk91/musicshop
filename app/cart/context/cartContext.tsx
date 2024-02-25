@@ -53,7 +53,11 @@ export function cartReducer(state: CartState, action: CartAction|InitCart): Cart
 
 export type CartContextType = {
     cart: CartState,
-    dispatch: Dispatch<CartAction>,
+    addToCart: (item:CartItem)=>boolean,
+    removeFromCart: (item:CartItem)=>boolean,
+    getAmountInCart: (productId: string)=>number|undefined,
+    getProductAmountMinusCart: (product: Product) => number,
+    isProductInCart: (productId: string) => boolean,
 }
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);

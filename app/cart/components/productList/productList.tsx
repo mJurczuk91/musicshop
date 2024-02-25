@@ -6,11 +6,11 @@ import { ProductListElement } from "./productListElement";
 import { CartItem } from "@/app/(lib)/definitions";
 
 export function ProductList(){
-    const {cart, dispatch} = useContext(CartContext) as CartContextType;
+    const {cart, addToCart, removeFromCart} = useContext(CartContext) as CartContextType;
     return (
         <div>
             {!cart && <span>Empty</span>}
-            {cart && cart.map(el => <ProductListElement key={el.product.id} item={el} dispatch={dispatch} />)}
+            {cart && cart.map(el => <ProductListElement key={el.product.id} item={el} addToCart={addToCart} removeFromCart={removeFromCart}/>)}
         </div>
     )
 }
