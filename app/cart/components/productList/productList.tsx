@@ -1,9 +1,8 @@
 'use client'
 
-import { useContext, useEffect, useState } from "react"
-import { CartContext, CartContextType, CartAction, CartActionTypes } from "../../context/cartContext"
+import { useContext } from "react"
+import { CartContext, CartContextType } from "../../context/cartContext"
 import { ProductListElement } from "./productListElement";
-import { CartItem } from "@/app/(lib)/definitions";
 
 export function ProductList(){
     const {cart, addToCart, removeFromCart} = useContext(CartContext) as CartContextType;

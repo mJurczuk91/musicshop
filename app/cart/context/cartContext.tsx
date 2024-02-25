@@ -1,5 +1,5 @@
 import { CartItem, Product } from "@/app/(lib)/definitions";
-import { Dispatch, createContext, useReducer } from "react";
+import { createContext } from "react";
 
 export enum CartActionTypes {
     'add'='add', 'remove'="remove"
