@@ -1,3 +1,5 @@
+'use client'
+
 type Props = {
     addToCart: () => void,
     disabled: boolean,

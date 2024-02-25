@@ -9,7 +9,7 @@ type Props = {
     children: React.ReactNode,
 }
 
-export function Providers({ children }: Props) {
+export function CartProvider({ children }: Props) {
     const [cartState, cartDispatch] = useReducer(cartReducer, null);
 
     const getAmountInCart = (itemId: string): number | undefined => {
