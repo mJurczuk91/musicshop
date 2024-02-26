@@ -28,4 +28,4 @@ const loopOverKeys = (obj: any): any => {
     return result;
 }
 
-export const HOST:string = "https://m-jurczuk.pl/";
+export const HOST:string = "https://mjurczuk.pl/";
