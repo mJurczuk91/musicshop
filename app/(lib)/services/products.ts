@@ -18,16 +18,16 @@ async function getById(productId: string): Promise<Product> {
   return formatProductFromFlatResponse(flat);
 }
 
-async function getByCategory(categoryId: string, page: number = 0, pageSize: number = 20, sort = ['name:asc']):Promise<PaginatedData<Product>> {
+async function getByCategory(categoryId: string, page: number = 0, pageSize: number = 20, sort = ['id:asc']):Promise<PaginatedData<Product>> {
   const resp = await client.query({
-    query: queryProductsByCategorySort,
+    query: queryProductsByCategory,
     variables: {
       categoryId,
-      sort,
       pagination: {
         page,
         pageSize,
       },
+      sort,
     }
   });
   const dataArr = resp.data.products.data as any[];
@@ -41,9 +41,9 @@ async function getByCategory(categoryId: string, page: number = 0, pageSize: num
   }
 }
 
-async function getBySubcategory(subcategoryId: string, page: number = 0, pageSize: number = 20, sort=['name:asc']):Promise<PaginatedData<Product>> {
+async function getBySubcategory(subcategoryId: string, page: number = 0, pageSize: number = 20, sort=['id:asc']):Promise<PaginatedData<Product>> {
   const resp = await client.query({
-    query: queryProductsBySubcategorySort,
+    query: queryProductsBySubcategory,
     variables: {
       pagination: {
         page,
@@ -253,7 +253,7 @@ const queryProductById = gql`query productById($productId: ID) {
   }
 }` */
 
-const queryProductsByCategorySort = gql`query productsByCategorySort($categoryId: ID, $pagination: PaginationArg, $sort:[String]) {
+const queryProductsByCategory = gql`query productsByCategorySort($categoryId: ID, $pagination: PaginationArg, $sort:[String]) {
   products(
     pagination: $pagination,
     sort: $sort,
@@ -308,7 +308,7 @@ const queryProductsByCategorySort = gql`query productsByCategorySort($categoryId
   }
 }`
 
-const queryProductsBySubcategorySort = gql`query productsBySubcategorySort($subcategoryId: ID, $pagination: PaginationArg, $sort:[String]) {
+const queryProductsBySubcategory = gql`query productsBySubcategorySort($subcategoryId: ID, $pagination: PaginationArg, $sort:[String]) {
   products(
     pagination: $pagination,
     sort: $sort,

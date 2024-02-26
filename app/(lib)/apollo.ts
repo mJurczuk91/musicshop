@@ -27,6 +27,7 @@ export const { getClient } = registerApolloClient(() => {
     }),
   });
 }); */
+import { HOST } from './services/helpers';
 
 import {
   ApolloClient,
@@ -37,7 +38,7 @@ import {
 const client = new ApolloClient({
   ssrMode: true,
   link: new HttpLink({
-    uri: "https://m-jurczuk.pl/graphql",
+    uri: HOST.concat('graphql'),
     headers: {
       authorization: `Bearer ${process.env.API_TOKEN}`,
     },
