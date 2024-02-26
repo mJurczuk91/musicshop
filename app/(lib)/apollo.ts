@@ -37,7 +37,7 @@ import {
 const client = new ApolloClient({
   ssrMode: true,
   link: new HttpLink({
-    uri: "https://m-jurczuk.pl/graphql",
+    uri: "https://mjurczuk.pl/graphql",
     headers: {
       authorization: `Bearer ${process.env.API_TOKEN}`,
     },

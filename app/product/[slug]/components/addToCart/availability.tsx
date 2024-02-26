@@ -1,26 +1,40 @@
+'use client'
+
+import { Product } from "@/app/(lib)/definitions";
+import { CartContext, CartContextType } from "@/app/cart/context/cartContext";
+import { useContext } from "react";
+
 type Props = {
-    amount: number,
+    product: Product,
 }
 
-export function Availability({ amount }: Props) {
+export function Availability({ product }: Props) {
+    const { getProductAmountMinusCart } = useContext(CartContext) as CartContextType;
     return (
-        <div>
-            {amount > 0 ?
+        <div className="">
+            {product.amount > 0 ?
+                getProductAmountMinusCart(product) > 0 ?
+                    <div>
+                        <span className="text-green-700">
+                            Product available
+                        </span>
+                    </div>
+                    :
+                    <div className="">
+                        <span className=" text-orange-700 font-bold text-xl m-2">
+                            X
+                        </span>
+                        <span className=" text-orange-700">
+                            All available stock is in cart
+                        </span>
+                    </div>
+                :
                 <div>
-                    <span>
-                        OK ICON
-                    </span>
-                    <span>
-                        Product avaliable
-                    </span>
-                </div>
-            :
-                <div>
-                    <span>
+                    <span className="text-red-600 font-bold text-xl m-2">
                         X
                     </span>
                     <span className=" text-red-600">
-                        Product not avaliable
+                        Product not available
                     </span>
                 </div>
             }
