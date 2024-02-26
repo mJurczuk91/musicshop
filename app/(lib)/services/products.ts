@@ -4,6 +4,14 @@ import { PaginatedData, Product } from "../definitions";
 import { flattenStrapiResponse } from "./helpers";
 import { HOST } from "./helpers"
 
+export enum ProductQuerySort {
+  'nameAsc' = "name:asc",
+  'nameDesc' = "name:desc",
+  'priceAsc' = "price:asc",
+  'priceDesc' = "price:desc",
+  'default' = 'id'
+}
+
 export const products = {
   getPage, getById, getByCategory, getBySubcategory
 }
@@ -18,7 +26,14 @@ async function getById(productId: string): Promise<Product> {
   return formatProductFromFlatResponse(flat);
 }
 
-async function getByCategory(categoryId: string, page: number = 0, pageSize: number = 20, sort = ['id:asc']):Promise<PaginatedData<Product>> {
+type CategoryQueryParams = {
+  categoryId:string,
+  sort?: string,
+  page?: number,
+  pageSize?: number,
+}
+
+async function getByCategory({categoryId, page = 0, pageSize= 20, sort = ProductQuerySort.default}:CategoryQueryParams):Promise<PaginatedData<Product>> {
   const resp = await client.query({
     query: queryProductsByCategory,
     variables: {
@@ -41,7 +56,14 @@ async function getByCategory(categoryId: string, page: number = 0, pageSize: num
   }
 }
 
-async function getBySubcategory(subcategoryId: string, page: number = 0, pageSize: number = 20, sort=['id:asc']):Promise<PaginatedData<Product>> {
+type SubcategoryQueryParams = {
+  subcategoryId:string,
+  sort?: string,
+  page?: number,
+  pageSize?: number,
+}
+
+async function getBySubcategory({subcategoryId, page = 0, pageSize= 20, sort = ProductQuerySort.default}:SubcategoryQueryParams):Promise<PaginatedData<Product>> {
   const resp = await client.query({
     query: queryProductsBySubcategory,
     variables: {
