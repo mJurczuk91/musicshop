@@ -27,7 +27,6 @@ export const { getClient } = registerApolloClient(() => {
     }),
   });
 }); */
-import { HOST } from './services/helpers';
 
 import {
   ApolloClient,
@@ -38,7 +37,7 @@ import {
 const client = new ApolloClient({
   ssrMode: true,
   link: new HttpLink({
-    uri: HOST.concat('graphql'),
+    uri: process.env.HOST_GRAPHQL,
     headers: {
       authorization: `Bearer ${process.env.API_TOKEN}`,
     },

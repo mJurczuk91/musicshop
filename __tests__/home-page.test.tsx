@@ -11,7 +11,6 @@ import CategoryMenuItem from '../app/(ui)/navbar/categoryMenuItem';
 import CategoryMenu from '../app/(ui)/navbar/categoryMenu';
 import CategoryGrid from '../app/(ui)/categoryGrid';
 import OffersOfTheWeek from '../app/(ui)/offersOfTheWeek';
-import { HOST } from '@/app/(lib)/services/helpers';
 
 
 describe('product miniature', () => {
@@ -72,7 +71,7 @@ describe('blog articles section', () => {
         const images = screen.getAllByAltText("article image") as HTMLImageElement[];
         const imageSrcs = images.map(img => img.src);
         for (let article of blogArticles) {
-            expect(imageSrcs).toContain(`${HOST}${article.image_url}`);
+            expect(imageSrcs).toContain(`${process.env.HOST}${article.image_url}`);
         }
     })
 })
