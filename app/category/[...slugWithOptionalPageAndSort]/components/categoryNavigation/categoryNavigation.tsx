@@ -24,7 +24,7 @@ export default function CategoryNavigation({ categoriesJSONstring, currentCatego
     }
 
     return (
-        <div className="text-lg tracking-tight">
+        <div className="text-md md:text-lg tracking-tight">
             {categories.map(c => {
                 return (
                     <div key={c.id.concat(c.name)}>
