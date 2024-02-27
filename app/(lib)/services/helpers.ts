@@ -27,5 +27,3 @@ const loopOverKeys = (obj: any): any => {
     }
     return result;
 }
-
-export const HOST = "https://mjurczuk.pl/";
