@@ -46,7 +46,7 @@ export type Comment = {
 
 export type PaginatedData<T> = {
     data: T[],
-    pagination: Pagination | null,
+    pagination: Pagination | undefined,
 }
 
 export type Pagination = {

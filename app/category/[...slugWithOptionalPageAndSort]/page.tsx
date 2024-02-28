@@ -1,11 +1,12 @@
 import { categories } from "@/app/(lib)/services/categories";
 import CategoryNavigation from "./components/categoryNavigation/categoryNavigation";
-import SortablePaginatedResponsiveProductGrid from "./components/sortablePaginatedResponsiveProductGrid/sortablePaginatedResponsiveProductGrid";
+import SortablePaginatedResponsiveProductGrid from "./components/categoryProductGrid";
 import { parseCategorySlug } from "@/app/(lib)/helpers";
 import { CategorySlugType } from "@/app/(lib)/definitions";
 import { ProductQuerySort } from "@/app/(lib)/services/products";
 import { products as productsService } from "@/app/(lib)/services/products";
-import { SortSelector } from "./components/sortablePaginatedResponsiveProductGrid/sortSelector";
+import { SortSelector } from "./components/sortSelector";
+import { PageSelector } from "./components/pageSelector";
 
 type Props = {
     params: {
@@ -29,11 +30,11 @@ export default async function Page({ params }: Props) {
         :
         allCategories.find(c => c.subcategories.find(s => s.id === id))?.id;
 
-    const currentCategoryName = type === CategorySlugType.c ?
+    const currentTitle = type === CategorySlugType.c ?
         allCategories.find(c => c.id === id)?.name
         :
         allCategories.flatMap(el => el.subcategories).find(el => id === el.id)?.name;
-    if (!currentCategoryName || !currentCategoryId) throw new Error('404 not found');
+    if (!currentTitle || !currentCategoryId) throw new Error('404 not found');
 
     const { data: products, pagination } = type === CategorySlugType.s ?
         await productsService.getBySubcategory({
@@ -48,59 +49,72 @@ export default async function Page({ params }: Props) {
             sort: sortValue,
         });
     if (!products || products.length === 0) throw new Error('404 not found');
-
     return (
         <div className="w-full flex justify-center">
             <div className="max-w-6xl flex m-4 p-4">
+
                 <div className="min-w-44 md:min-w-56">
                     <CategoryNavigation categoriesJSONstring={JSON.stringify(allCategories)} currentCategoryId={currentCategoryId} />
                 </div>
+
                 <div>
-                    <div className="mx-4 flex justify-between">
+                    <div className="mx-4 flex flex-col md:flex-row justify-between">
+
+                        <div className="flex flex-col md:flex-row">
+                            <div className="flex mr-2 my-2 md:my-0">
+                                <span className="mr-2">
+                                    Sort by:
+                                </span>
+                                <SortSelector slug={slug} page={pageNoString} sort={sortKey} />
+                            </div>
+
+                            {pagination &&
+                            <div className="flex">
+                                <span className="mr-2">Page:</span>
+                                <PageSelector pagination={pagination} slug={slug} sort={sortKey} />
+                            </div>}
+                        </div>
+
                         <span className="capitalize text-2xl font-bold tracking-tight">
-                            {currentCategoryName}
+                            {currentTitle}
                         </span>
-                        <SortSelector slug={slug} page={pageNoString} sort={sortKey} />
                     </div>
+
                     <SortablePaginatedResponsiveProductGrid products={products} />
+
                 </div>
             </div>
         </div>
     )
 }
 
-const parseParams = (slugInput: string, pageNoInput: string | undefined, sortInput: string | undefined): [string, string | undefined, string | undefined, string | undefined] => {
+const parseParams = (slugInput: string, pageNoInput: string | undefined, sortInput: string | undefined):
+    [slug: string, pageNoString: string | undefined, sortValue: string | undefined, sortKey: string | undefined] => {
 
     function isInt(string: string) {
         return /^[0-9]*$/.test(string);
     }
 
-    function checkIfValidSortParam(string: string | undefined) {
-        let res = undefined;
-        for (let el of Object.keys(ProductQuerySort)) {
-            if (string === el) {
-                res = ProductQuerySort[el as keyof typeof ProductQuerySort];
-            }
-        }
-        return res;
+    function checkIfValidSortKey(string: string | undefined): string | undefined {
+        return Object.keys(ProductQuerySort).find(key => key === string);
     }
 
     let slug = slugInput;
-    let pageNo = undefined;
+    let pageNoString = undefined;
     let sortValue = undefined;
     let sortKey = undefined;
 
+
     if (pageNoInput) {
         if (isInt(pageNoInput)) {
-            pageNo = pageNoInput;
-            sortValue = checkIfValidSortParam(sortInput);
-            if (sortValue) sortKey = sortInput;
+            pageNoString = pageNoInput;
+            sortKey = checkIfValidSortKey(sortInput);
+            if (sortKey) sortValue = ProductQuerySort[sortKey as keyof typeof ProductQuerySort];
         }
         else {
-            sortValue = checkIfValidSortParam(pageNoInput);
-            if (sortValue) sortKey = sortInput;
+            sortKey = checkIfValidSortKey(pageNoInput);
+            if (sortKey) sortValue = ProductQuerySort[sortKey as keyof typeof ProductQuerySort];
         }
     }
-
-    return [slug, pageNo, sortValue, sortKey];
+    return [slug, pageNoString, sortValue, sortKey];
 }

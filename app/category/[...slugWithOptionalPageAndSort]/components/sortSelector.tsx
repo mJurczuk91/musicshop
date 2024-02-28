@@ -2,6 +2,8 @@
 
 import { ProductQuerySort } from "@/app/(lib)/services/products"
 import { useRouter } from "next/navigation"
+import { generateLink } from "./helpers"
+
 type Props = {
     slug: string,
     page?:string,
@@ -32,12 +34,3 @@ export function SortSelector({slug, page, sort}:Props){
     )
 }
 
-const generateLink = ({slug, page, sort}:Props):string => {
-    if(slug && page && sort){
-        return `/category/${slug}/${page}/${sort}`
-    } else if (slug && page && !sort) {
-        return `/category/${slug}/${page}`
-    } else if(slug && !page && sort){
-        return `/category/${slug}/${sort}`
-    } else return `/category/${slug}`
-}

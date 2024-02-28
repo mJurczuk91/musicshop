@@ -5,7 +5,7 @@ type Props = {
     products: Product[],
 }
 
-export default async function SortablePaginatedResponsiveProductGrid({ products }: Props) {
+export default async function CategoryProductGrid({ products }: Props) {
     return (
         <div>
             <div className="w-full flex justify-center">
