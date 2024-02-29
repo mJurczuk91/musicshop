@@ -1,7 +1,7 @@
 'use client'
 
 import { Product } from "@/app/(lib)/definitions"
-import { CartContext, CartContextType, CartActionTypes } from "@/app/cart/context/cartContext"
+import { CartContext, CartContextType } from "@/app/cart/context/cartContext"
 import { useContext, useEffect, useState } from "react"
 import { AddToCartButton } from "./addToCartButton"
 
