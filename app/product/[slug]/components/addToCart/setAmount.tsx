@@ -10,12 +10,12 @@ type Props = {
 }
 
 export function SetAmount({ product }: Props) {
-    const { cart, addToCart, getProductAmountMinusCart, isProductInCart } = useContext(CartContext) as CartContextType;
+    const { cart, addToCart, getProductAmountMinusCart } = useContext(CartContext) as CartContextType;
     const [counterAmount, setCounterAmount] = useState<number>(1);
     const [message, setMessage] = useState<string | null>(null);
     const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
-    const [isAddToCartDisabled, setIsAddToCartDisabled] = useState<boolean>(false)
-
+    const [isAddToCartDisabled, setIsAddToCartDisabled] = useState<boolean>(isProductAvailable(product))
+    
     const displayTimedMessage = (message: string, ms: number) => {
         setMessage(message);
         if (timer) clearTimeout(timer);
@@ -26,11 +26,13 @@ export function SetAmount({ product }: Props) {
         }, ms))
     }
 
+    function isProductAvailable(product:Product):boolean  {
+        return getProductAmountMinusCart(product) > 0;
+    }
+
     useEffect(() => {
-        if (isProductInCart(product.id)) {
-            if (getProductAmountMinusCart(product) < 1) setIsAddToCartDisabled(true);
-            else setIsAddToCartDisabled(false);
-        }
+        if(isProductAvailable(product)) setIsAddToCartDisabled(false);
+        else setIsAddToCartDisabled(true);
     }, [cart]);
 
     const increaseAmount = () => {
