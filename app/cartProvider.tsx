@@ -1,8 +1,24 @@
 'use client'
-import { useEffect, useReducer } from "react"
-import { cartReducer, CartContext, CartActionTypes } from "./cart/context/cartContext"
-import { } from "./cart/context/cartContext"
+import { createContext, useEffect, useState } from "react"
 import { CartItem, Product } from "./(lib)/definitions"
+
+export type CartContextType = {
+    cart: CartItem[],
+    addToCart: (item: CartItem) => boolean,
+    removeFromCart: (item: CartItem) => boolean,
+    getAmountInCart: (productId: string) => number | undefined,
+    getProductAmountMinusCart: (product: Product) => number,
+    isProductInCart: (productId: string) => boolean,
+}
+
+export const CartContext = createContext<CartContextType>({
+    cart: [] as CartItem[],
+    addToCart: (item: CartItem) => false,
+    removeFromCart: (item: CartItem) => false,
+    getAmountInCart: (productId: string) => undefined,
+    getProductAmountMinusCart: (product: Product) => 1,
+    isProductInCart: (productId: string) => false,
+});
 
 
 type Props = {
@@ -10,71 +26,84 @@ type Props = {
 }
 
 export function CartProvider({ children }: Props) {
-    const [cartState, cartDispatch] = useReducer(cartReducer, null);
+    const [cart, setCart] = useState<CartItem[]>([])
 
     const getAmountInCart = (itemId: string): number | undefined => {
-        const amount = cartState?.find(i => itemId === i.product.id)?.amount;
-        return amount;
+        return cart.find(i => itemId === i.product.id)?.amount;
     }
 
-    const addToCart = (item: CartItem): boolean => {
-        const amountInCart = getAmountInCart(item.product.id);
-        if (amountInCart) {
-            if (amountInCart + item.amount <= item.product.amount) {
-                cartDispatch({
-                    type: CartActionTypes.add,
-                    payload: item,
-                });
-                return true;
+    const addToCart = (newItem: CartItem): boolean => {
+        let foundInCart = false;
+        let addItemSuccess = false;
+        const newCart: CartItem[] = [];
+
+        for (let oldItem of cart) {
+
+            if (oldItem.product.id !== newItem.product.id) {
+                newCart.push(oldItem);
+                continue;
             }
-            return false;
+
+            foundInCart = true;
+            if (oldItem.amount + newItem.amount <= oldItem.product.amount) {
+                newCart.push({
+                    product: oldItem.product,
+                    amount: oldItem.amount + newItem.amount
+                })
+                addItemSuccess = true;
+                continue;
+            }
+
+            newCart.push(oldItem);
         }
-        if (item.amount <= item.product.amount) {
-            cartDispatch({
-                type: CartActionTypes.add,
-                payload: item,
-            });
-            return true;
+
+        if (!foundInCart && newItem.amount <= newItem.product.amount) {
+            newCart.push(newItem);
+            addItemSuccess = true;
         }
-        return false;
+
+        setCart(newCart);
+        return addItemSuccess;
     }
 
-    const removeFromCart = (item:CartItem) => {
-        cartDispatch({
-            type: CartActionTypes.remove,
-            payload: item,
-        });
+    const removeFromCart = (newItem: CartItem): boolean => {
+        const newCart = cart.flatMap(cartItem => {
+            if (cartItem.product.id !== newItem.product.id) return cartItem;
+            if (cartItem.amount - newItem.amount < 1) return [];
+            return {
+                product: cartItem.product,
+                amount: cartItem.amount - newItem.amount,
+            }
+        })
+        setCart(newCart);
         return true;
     }
 
-    const getProductAmountMinusCart = (product:Product):number => {
+    const getProductAmountMinusCart = (product: Product): number => {
         const inCart = getAmountInCart(product.id);
         return inCart ? product.amount - inCart : product.amount;
     }
 
-    const isProductInCart = (productId:string):boolean => {
-        if(cartState?.find(i => i.product.id === productId)) return true;
+    const isProductInCart = (productId: string): boolean => {
+        if (cart.find(i => i.product.id === productId)) return true;
         return false;
     }
 
     useEffect(() => {
         if (localStorage.getItem("cart")) {
-            const payload = JSON.parse(localStorage.getItem("cart")!);
-            cartDispatch({
-                type: "init",
-                payload: payload
-            });
+            const foundState = JSON.parse(localStorage.getItem("cart")!);
+            setCart(foundState);
         }
     }, []);
 
     useEffect(() => {
-        if (JSON.stringify(cartState) !== localStorage.getItem("cart")) {
-            localStorage.setItem("cart", JSON.stringify(cartState));
+        if (JSON.stringify(cart) !== localStorage.getItem("cart")) {
+            localStorage.setItem("cart", JSON.stringify(cart));
         }
-    }, [cartState]);
+    }, [cart]);
 
     return (
-        <CartContext.Provider value={{ cart: cartState, addToCart, removeFromCart, isProductInCart, getAmountInCart, getProductAmountMinusCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, isProductInCart, getAmountInCart, getProductAmountMinusCart }}>
             {children}
         </CartContext.Provider>
     )

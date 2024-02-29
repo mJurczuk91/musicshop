@@ -1,7 +1,7 @@
 'use client'
 
 import { Product } from "@/app/(lib)/definitions"
-import { CartContext, CartContextType } from "@/app/cart/context/cartContext"
+import { CartContext } from "@/app/cartProvider";
 import { useContext, useEffect, useState } from "react"
 import { AddToCartButton } from "./addToCartButton"
 
@@ -10,7 +10,7 @@ type Props = {
 }
 
 export function SetAmount({ product }: Props) {
-    const { cart, addToCart, getProductAmountMinusCart } = useContext(CartContext) as CartContextType;
+    const { cart, addToCart, getProductAmountMinusCart } = useContext(CartContext);
     const [counterAmount, setCounterAmount] = useState<number>(1);
     const [message, setMessage] = useState<string | null>(null);
     const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);

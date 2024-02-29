@@ -1,7 +1,7 @@
 'use client'
 
 import { Product } from "@/app/(lib)/definitions";
-import { CartContext, CartContextType } from "@/app/cart/context/cartContext";
+import { CartContext } from "@/app/cartProvider";
 import { useContext } from "react";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 }
 
 export function Availability({ product }: Props) {
-    const { getProductAmountMinusCart } = useContext(CartContext) as CartContextType;
+    const { getProductAmountMinusCart } = useContext(CartContext);
     return (
         <div className="">
             {product.amount > 0 ?

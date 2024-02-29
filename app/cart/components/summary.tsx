@@ -1,9 +1,9 @@
 'use client'
 import { useContext } from "react";
-import { CartContext, CartContextType } from "../context/cartContext";
+import { CartContext } from "@/app/cartProvider";
 
 export function Summary() {
-    const { cart } = useContext(CartContext) as CartContextType;
+    const { cart } = useContext(CartContext);
     let totalCost = 0;
     let totalItems = 0;
     if (cart) for (let item of cart) {
