@@ -7,11 +7,11 @@ export default function Searchbar() {
         <form onSubmit={() => {
             console.log(input);
         }}>
-            <input className="border border-gray-300 p-2 rounded-l-md focus:outline-none"
+            <input className="p-2 text-darkcyan-900 border-tangerine-500 border rounded-l-md focus:outline-none"
             type="text" placeholder="Search our catalogue" onChange={(e: React.ChangeEvent) => {
                 if (e.target.nodeValue) setInput(e.target.nodeValue.toString());
             }} />
-            <button className="border p-2 rounded-r-md border-gray-300 border-solid bg-white hover:bg-gray-100">SEARCH</button>
+            <button className="p-2 text-darkcyan-900 tracking-tight rounded-r-md border-tangerine-500 border bg-white hover:bg-darkcyan-100">SEARCH</button>
         </form>
     </div>
 }

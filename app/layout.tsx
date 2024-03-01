@@ -19,7 +19,7 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white`}>
+      <body className={`${inter.className} bg-white text-darkcyan-900`}>
         <header>
           <Navbar />
         </header>

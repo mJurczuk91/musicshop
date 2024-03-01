@@ -6,7 +6,7 @@ export default function IconLink({ description, iconUrl, targetUrl }: { descript
             className="flex flex-col items-center mx-2"
         >
             <img src={iconUrl} className="h-auto w-8"></img>
-            <span className="tracking-tighter text-xs">{description}</span>
+            <span className="tracking-tighter text-xs text-white">{description}</span>
         </Link>
     </>
 }
