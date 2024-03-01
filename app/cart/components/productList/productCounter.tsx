@@ -4,8 +4,8 @@ import { useState } from "react"
 import { CartItem } from "@/app/(lib)/definitions"
 
 type Props = {
-    addToCart: (item: CartItem) => boolean,
-    removeFromCart: (item: CartItem) => boolean,
+    addToCart: (item: CartItem) => void,
+    removeFromCart: (item: CartItem) => void,
     item: CartItem,
 }
 
@@ -38,7 +38,7 @@ export function ProductCounter({ addToCart, removeFromCart, item }: Props) {
             amount: 1,
         });
 
-        displayMessage(success, success ? 'Item added' : 'Not enough items in stock')
+        //displayMessage(success, success ? 'Item added' : 'Not enough items in stock')
     }
 
     const removeOne = () => {
@@ -47,11 +47,11 @@ export function ProductCounter({ addToCart, removeFromCart, item }: Props) {
                 product: item.product,
                 amount: 1,
             });
-            displayMessage(true, 'Item removed')
+            //displayMessage(true, 'Item removed')
 
-        } else if (cartActionResult?.message === 'Click again to remove last item') removeFromCart(item);
+        } //else if (cartActionResult?.message === 'Click again to remove last item') removeFromCart(item);
 
-        else displayMessage(false, 'Click again to remove last item')
+        //else displayMessage(false, 'Click again to remove last item')
     }
 
     return (

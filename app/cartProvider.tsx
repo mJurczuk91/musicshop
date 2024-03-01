@@ -1,11 +1,13 @@
 'use client'
-import { createContext, useEffect, useState } from "react"
+import { createContext,useContext, useEffect, useState } from "react"
 import { CartItem, Product } from "./(lib)/definitions"
+import { ToastContext } from "./toastProvider"
+import Toast from "./(ui)/toast/toast"
 
 export type CartContextType = {
     cart: CartItem[],
-    addToCart: (item: CartItem) => boolean,
-    removeFromCart: (item: CartItem) => boolean,
+    addToCart: (item: CartItem) => void,
+    removeFromCart: (item: CartItem) => void,
     getAmountInCart: (productId: string) => number | undefined,
     getProductAmountMinusCart: (product: Product) => number,
     isProductInCart: (productId: string) => boolean,
@@ -13,8 +15,8 @@ export type CartContextType = {
 
 export const CartContext = createContext<CartContextType>({
     cart: [] as CartItem[],
-    addToCart: (item: CartItem) => false,
-    removeFromCart: (item: CartItem) => false,
+    addToCart: (item: CartItem) => {},
+    removeFromCart: (item: CartItem) => {},
     getAmountInCart: (productId: string) => undefined,
     getProductAmountMinusCart: (product: Product) => 1,
     isProductInCart: (productId: string) => false,
@@ -26,13 +28,14 @@ type Props = {
 }
 
 export function CartProvider({ children }: Props) {
+    const {addToast} = useContext(ToastContext);
     const [cart, setCart] = useState<CartItem[]>([])
 
     const getAmountInCart = (itemId: string): number | undefined => {
         return cart.find(i => itemId === i.product.id)?.amount;
     }
 
-    const addToCart = (newItem: CartItem): boolean => {
+    const addToCart = (newItem: CartItem) => {
         let foundInCart = false;
         let addItemSuccess = false;
         const newCart: CartItem[] = [];
@@ -62,11 +65,17 @@ export function CartProvider({ children }: Props) {
             addItemSuccess = true;
         }
 
+        if(addItemSuccess) {
+            addToast({
+                message: `item added ${cart.length}`,
+                success: addItemSuccess
+            })
+        }
+
         setCart(newCart);
-        return addItemSuccess;
     }
 
-    const removeFromCart = (newItem: CartItem): boolean => {
+    const removeFromCart = (newItem: CartItem) => {
         const newCart = cart.flatMap(cartItem => {
             if (cartItem.product.id !== newItem.product.id) return cartItem;
             if (cartItem.amount - newItem.amount < 1) return [];
@@ -76,7 +85,10 @@ export function CartProvider({ children }: Props) {
             }
         })
         setCart(newCart);
-        return true;
+        addToast({
+            message: 'Removed item',
+            success: true,
+        })
     }
 
     const getProductAmountMinusCart = (product: Product): number => {

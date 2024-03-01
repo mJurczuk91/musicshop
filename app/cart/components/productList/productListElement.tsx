@@ -8,8 +8,8 @@ import { RemoveElementButton } from "./removeElementButton"
 
 type Props = {
     item: CartItem,
-    addToCart: (item: CartItem) => boolean,
-    removeFromCart: (item: CartItem) => boolean,
+    addToCart: (item: CartItem) => void,
+    removeFromCart: (item: CartItem) => void,
 }
 
 export function ProductListElement({ item: { product, amount }, addToCart, removeFromCart }: Props) {

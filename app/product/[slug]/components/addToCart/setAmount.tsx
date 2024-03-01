@@ -48,7 +48,7 @@ export function SetAmount({ product }: Props) {
             product,
             amount: counterAmount,
         })
-        displayTimedMessage('Added product to cart', 3000);
+        //displayTimedMessage('Added product to cart', 3000);
     }
 
     return (

@@ -1,7 +1,7 @@
 import { CartItem } from "@/app/(lib)/definitions"
 
 type Props = {
-    removeFromCart: (item:CartItem)=>boolean,
+    removeFromCart: (item:CartItem)=>void,
     item: CartItem,
 }
 

@@ -4,6 +4,7 @@ import '@/app/(ui)/globals.css'
 import Navbar from './(ui)/navbar/navbar'
 import Footer from './(ui)/footer'
 import { CartProvider } from './cartProvider'
+import ToastProvider from './toastProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,9 +24,11 @@ export default function RootLayout({ children }: Props) {
         <header>
           <Navbar />
         </header>
-        <CartProvider>
-          {children}
-        </CartProvider>
+        <ToastProvider>
+          <CartProvider>
+            {children}
+          </CartProvider>
+        </ToastProvider>
         <footer>
           <Footer />
         </footer>
