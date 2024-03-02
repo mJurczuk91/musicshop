@@ -1,7 +1,7 @@
 'use client'
 
 import { Product } from "@/app/(lib)/definitions"
-import { CartContext } from "@/app/cartProvider";
+import { CartContext } from "@/app/providers/cartProvider";
 import { useContext, useEffect, useState } from "react"
 import { AddToCartButton } from "./addToCartButton"
 
@@ -12,26 +12,10 @@ type Props = {
 export function SetAmount({ product }: Props) {
     const { cart, addToCart, getProductAmountMinusCart } = useContext(CartContext);
     const [counterAmount, setCounterAmount] = useState<number>(1);
-    const [message, setMessage] = useState<string | null>(null);
-    const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
-    const [isAddToCartDisabled, setIsAddToCartDisabled] = useState<boolean>(isProductAvailable(product))
-    
-    const displayTimedMessage = (message: string, ms: number) => {
-        setMessage(message);
-        if (timer) clearTimeout(timer);
-
-        setTimer(setTimeout(() => {
-            setMessage(null);
-            setTimer(null);
-        }, ms))
-    }
-
-    function isProductAvailable(product:Product):boolean  {
-        return getProductAmountMinusCart(product) > 0;
-    }
+    const [isAddToCartDisabled, setIsAddToCartDisabled] = useState<boolean>(getProductAmountMinusCart(product) > 0)
 
     useEffect(() => {
-        if(isProductAvailable(product)) setIsAddToCartDisabled(false);
+        if(getProductAmountMinusCart(product) > 0) setIsAddToCartDisabled(false);
         else setIsAddToCartDisabled(true);
     }, [cart]);
 
@@ -48,7 +32,6 @@ export function SetAmount({ product }: Props) {
             product,
             amount: counterAmount,
         })
-        //displayTimedMessage('Added product to cart', 3000);
     }
 
     return (
@@ -76,11 +59,6 @@ export function SetAmount({ product }: Props) {
                     </div>
                 </div>
                 <AddToCartButton addToCart={handleAddToCartClick} disabled={isAddToCartDisabled} />
-            </div>
-            <div className="h-6 w-full text-center">
-                <span className="text-green-700">
-                    {message}
-                </span>
             </div>
         </div>
     )

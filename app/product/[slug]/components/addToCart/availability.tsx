@@ -1,7 +1,7 @@
 'use client'
 
 import { Product } from "@/app/(lib)/definitions";
-import { CartContext } from "@/app/cartProvider";
+import { CartContext } from "@/app/providers/cartProvider";
 import { useContext } from "react";
 
 type Props = {

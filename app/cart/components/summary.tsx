@@ -1,6 +1,6 @@
 'use client'
 import { useContext } from "react";
-import { CartContext } from "@/app/cartProvider";
+import { CartContext } from "@/app/providers/cartProvider";
 
 export function Summary() {
     const { cart } = useContext(CartContext);

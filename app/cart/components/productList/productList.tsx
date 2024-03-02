@@ -1,7 +1,7 @@
 'use client'
 
 import { useContext } from "react"
-import { CartContext } from "@/app/cartProvider";
+import { CartContext } from "@/app/providers/cartProvider";
 import { ProductListElement } from "./productListElement";
 
 export function ProductList(){

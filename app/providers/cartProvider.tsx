@@ -1,8 +1,8 @@
 'use client'
 import { createContext,useContext, useEffect, useState } from "react"
-import { CartItem, Product } from "./(lib)/definitions"
+import { CartItem, Product } from "../(lib)/definitions"
 import { ToastContext } from "./toastProvider"
-import Toast from "./(ui)/toast/toast"
+import Toast from "../(ui)/toast/toast"
 
 export type CartContextType = {
     cart: CartItem[],
