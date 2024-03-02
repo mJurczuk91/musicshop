@@ -26,7 +26,7 @@ export default function CommentDisplay({ comment, abbreviateCommentsLongerThan }
                 {comment.message.length > abbreviateCommentsLongerThan &&
                     <button
                         onClick={() => setIsAbbreviated(!isAbbreviated)}
-                        className="text-blue-400 hover:text-blue-600">
+                        className="text-tangerine-600 hover:text-tangerine-700">
                         {isAbbreviated ? 'Show more' : 'Show less'}
                     </button>}
             </div>

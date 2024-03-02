@@ -36,7 +36,7 @@ export function SetAmount({ product }: Props) {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="w-fit flex m-2 p-2 mb-0 pb-0 select-none">
+            <div className="w-fit flex m-2 p-2 select-none">
                 <div className="w-fit flex">
                     <div className="flex w-12 justify-center items-center p-2 border-2 border-black border-opacity-40">
                         <span>

@@ -53,8 +53,6 @@ export default function ToastProvider({ children }: Props) {
             }
             return newToastList;
         });
-        
-        
     }
 
     const addToast = ({ message, success }: Toast) => {
@@ -64,7 +62,7 @@ export default function ToastProvider({ children }: Props) {
             return toastList.concat({
                 id,
                 toast: {message, success},
-                timer: setTimeout(() => { removeToast(id) }, 2000),
+                timer: setTimeout(() => { removeToast(id) }, 3000),
             })
         });
     }

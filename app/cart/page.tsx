@@ -1,5 +1,3 @@
-'use client'
-
 import { ProductList } from "./components/productList/productList";
 import { Summary } from "./components/summary";
 

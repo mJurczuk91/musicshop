@@ -29,7 +29,7 @@ type Props = {
 
 export function CartProvider({ children }: Props) {
     const {addToast} = useContext(ToastContext);
-    const [cart, setCart] = useState<CartItem[]>([])
+    const [cart, setCart] = useState<CartItem[]>([]);
 
     const getAmountInCart = (itemId: string): number | undefined => {
         return cart.find(i => itemId === i.product.id)?.amount;
@@ -73,6 +73,7 @@ export function CartProvider({ children }: Props) {
         }
 
         setCart(newCart);
+        localStorage.setItem("cart", JSON.stringify(newCart));
     }
 
     const removeFromCart = (newItem: CartItem) => {
@@ -88,7 +89,8 @@ export function CartProvider({ children }: Props) {
         addToast({
             message: 'Removed item',
             success: true,
-        })
+        });
+        localStorage.setItem("cart", JSON.stringify(newCart));
     }
 
     const getProductAmountMinusCart = (product: Product): number => {
@@ -102,17 +104,13 @@ export function CartProvider({ children }: Props) {
     }
 
     useEffect(() => {
-        if (localStorage.getItem("cart")) {
+        if (cart.length === 0 && localStorage.getItem("cart")) {
             const foundState = JSON.parse(localStorage.getItem("cart")!);
-            setCart(foundState);
+            if(foundState.length > 0){
+                setCart(foundState);
+            }
         }
     }, []);
-
-    useEffect(() => {
-        if (JSON.stringify(cart) !== localStorage.getItem("cart")) {
-            localStorage.setItem("cart", JSON.stringify(cart));
-        }
-    }, [cart]);
 
     return (
         <CartContext.Provider value={{ cart, addToCart, removeFromCart, isProductInCart, getAmountInCart, getProductAmountMinusCart }}>
