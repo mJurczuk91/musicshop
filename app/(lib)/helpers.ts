@@ -27,14 +27,18 @@ export function parseCategorySlug(slug: string): {
     id: string,
     name: string,
 } {
-    const [type, id, ...rest] = slug.split('-');
-    return {
-        type: type === 'c' ? CategorySlugType.c : CategorySlugType.s,
-        id,
-        name: rest.reduce((previous, current) => {
-            return previous.concat(` ${current}`);
-        })
-    };
+    try {
+        const [type, id, ...rest] = slug.split('-');
+        return {
+            type: type === 'c' ? CategorySlugType.c : CategorySlugType.s,
+            id,
+            name: rest.reduce((previous, current) => {
+                return previous.concat(` ${current}`);
+            })
+        };
+    } catch(e) {
+        throw new Error('Incorrect slug')
+    }
 }
 
 export function leftPad(input: string, padWith: string, outputStringLength: number): string {

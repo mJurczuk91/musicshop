@@ -8,7 +8,9 @@ type Props = {
 export default function CategoryLink({ category }: Props) {
     const slug = getCategorySlug(category.name, category.id);
     return (
-        <Link href={`/category/${slug}`}>
+        <Link 
+        className=" hover:font-bold"
+        href={`/category/${slug}`}>
             <span className="capitalize">
                 {category.name}
             </span>

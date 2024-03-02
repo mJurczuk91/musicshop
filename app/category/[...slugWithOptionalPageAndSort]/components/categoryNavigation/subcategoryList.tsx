@@ -1,4 +1,4 @@
-import { Category, Subcategory } from "@/app/(lib)/definitions";
+import { Subcategory } from "@/app/(lib)/definitions";
 import SubcategoryLink from "./subcategoryLink";
 
 type Props = {
@@ -15,5 +15,3 @@ export default function SubcategoryList({ subcategories }: Props) {
         })}
     </div>
 }
-
-/**/

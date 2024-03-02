@@ -24,16 +24,18 @@ export default function CategoryNavigation({ categoriesJSONstring, currentCatego
     }
 
     return (
-        <div>
+        <div className="text-md md:text-lg tracking-tight">
             {categories.map(c => {
                 return (
                     <div key={c.id.concat(c.name)}>
-                        <div>
+                        <div className="flex justify-between border-b-2 border-black border-opacity-15">
                             <CategoryLink category={c} />
-                            <ExpandButton expandFunction={toggleExpandCategory} categoryId={c.id} />
+                            <ExpandButton expandFunction={toggleExpandCategory} categoryId={c.id} isExpanded={isCategoryExpanded(c.id)} />
                         </div>
 
-                        <div className={`${isCategoryExpanded(c.id) ? '' : 'hidden'}`}>
+                        <div className={
+                            `${isCategoryExpanded(c.id) ? '' : 'hidden'}
+                            ml-4`}>
                             <SubcategoryList subcategories={c.subcategories} />
                         </div>
                     </div>
