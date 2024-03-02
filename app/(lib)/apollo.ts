@@ -27,6 +27,7 @@ export const { getClient } = registerApolloClient(() => {
     }),
   });
 }); */
+import { HOST } from './services/helpers';
 
 import {
   ApolloClient,
