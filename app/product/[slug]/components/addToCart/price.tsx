@@ -14,7 +14,7 @@ export function Price({ price }: Props) {
             <div>
                 <span 
                 className=" text-sm text-gray-500">
-                    doesn't include shipping
+                    doesn&apos;t include shipping
                 </span>
             </div>
         </div>
