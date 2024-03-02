@@ -6,7 +6,7 @@ import IconLink from "./iconLink";
 
 export default function Navbar() {
     return <>
-        <nav className="bg-slate-50 shadow-md">
+        <nav className="bg-darkcyan-500 shadow-md">
             <div className="hidden md:flex md:flex-col md:items-center md:min-w-full md:justify-center md:shadow-sm">
                 <div className="w-full p-4 max-w-6xl flex justify-between items-center">
                     <div className="flex basis-1/4 justify-start">

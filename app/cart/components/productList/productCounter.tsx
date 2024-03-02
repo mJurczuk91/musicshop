@@ -1,24 +1,56 @@
 'use client'
 
-import { Dispatch } from "react"
-import { CartAction } from "../../context/cartContext"
-import { CartActionTypes } from "../../context/cartContext"
 import { CartItem } from "@/app/(lib)/definitions"
 
 type Props = {
-    dispatch: Dispatch<CartAction>,
+    addToCart: (item: CartItem) => void,
+    removeFromCart: (item: CartItem) => void,
     item: CartItem,
 }
 
-export function ProductCounter({dispatch, item}:Props){
+export function ProductCounter({ addToCart, removeFromCart, item }: Props) {
+
+    const addOne = () => {
+        const success = addToCart({
+            product: item.product,
+            amount: 1,
+        });
+    }
+
+    const removeOne = () => {
+        if (item.amount > 1) {
+            removeFromCart({
+                product: item.product,
+                amount: 1,
+            });
+        }
+    }
+
     return (
         <div>
-            <span>
-                {item.amount}
-            </span>
-            <div className="">
-                <button onClick={()=>{dispatch({type:CartActionTypes.add, payload:{product: item.product, amount: 1}})}}>+</button>
-                <button onClick={()=>{if(item.amount > 1) dispatch({type:CartActionTypes.remove, payload:{product: item.product, amount: 1}})}}>-</button>
+            <div>
+                <div className="flex ">
+                    <div className="flex w-12 justify-center items-center p-2 border-2 border-black border-opacity-40">
+                        <span>
+                            {item.amount}
+                        </span>
+                    </div>
+                    <div className="flex flex-col">
+                        <button
+                            onClick={() => addOne()}
+                            className="px-2 border-black border-opacity-40 border-t-2 border-r-2 border-b-2 font-bold"
+                        >
+                            +
+                        </button>
+
+                        <button
+                            onClick={() => removeOne()}
+                            className="px-2 border-black border-opacity-40 border-b-2 border-r-2 font-bold"
+                        >
+                            -
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     )

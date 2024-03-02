@@ -3,7 +3,8 @@ import { Inter } from 'next/font/google'
 import '@/app/(ui)/globals.css'
 import Navbar from './(ui)/navbar/navbar'
 import Footer from './(ui)/footer'
-import { Providers } from './providers'
+import { CartProvider } from './providers/cartProvider'
+import ToastProvider from './providers/toastProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,13 +20,15 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white`}>
+      <body className={`${inter.className} bg-white text-darkcyan-900`}>
         <header>
           <Navbar />
         </header>
-        <Providers>
-          {children}
-        </Providers>
+        <ToastProvider>
+          <CartProvider>
+            {children}
+          </CartProvider>
+        </ToastProvider>
         <footer>
           <Footer />
         </footer>
