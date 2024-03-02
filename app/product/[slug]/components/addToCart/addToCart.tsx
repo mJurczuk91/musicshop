@@ -9,7 +9,7 @@ type Props = {
 
 export function AddToCart({ product }: Props) {
     return (
-        <div className="w-fit h-56 flex flex-col justify-evenly border-black border-opacity-40 border-2 items-center shadow-lg">
+        <div className="w-fit h-60 min-w-64 flex flex-col justify-evenly border-black border-opacity-40 border-2 items-center shadow-lg">
             <div className="w-full border-black border-opacity-40 border-b-2">
                 <Price price={product.price} />
             </div>
@@ -17,7 +17,7 @@ export function AddToCart({ product }: Props) {
                 <SetAmount product={product} />
             </div>
             <div>
-                <Availability amount={product.amount} />
+                <Availability product={product} />
             </div>
         </div>
     )

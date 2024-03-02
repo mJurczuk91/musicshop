@@ -1,16 +1,15 @@
 'use client'
 
-import { useContext, useEffect, useState } from "react"
-import { CartContext, CartContextType, CartAction, CartActionTypes } from "../../context/cartContext"
+import { useContext } from "react"
+import { CartContext } from "@/app/providers/cartProvider";
 import { ProductListElement } from "./productListElement";
-import { CartItem } from "@/app/(lib)/definitions";
 
 export function ProductList(){
-    const {cart, dispatch} = useContext(CartContext) as CartContextType;
+    const {cart, addToCart, removeFromCart} = useContext(CartContext);
     return (
         <div>
             {!cart && <span>Empty</span>}
-            {cart && cart.map(el => <ProductListElement key={el.product.id} item={el} dispatch={dispatch} />)}
+            {cart && cart.map(el => <ProductListElement key={el.product.id} item={el} addToCart={addToCart} removeFromCart={removeFromCart}/>)}
         </div>
     )
 }
