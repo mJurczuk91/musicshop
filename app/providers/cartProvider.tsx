@@ -67,7 +67,7 @@ export function CartProvider({ children }: Props) {
 
         if(addItemSuccess) {
             addToast({
-                message: `item added ${cart.length}`,
+                message: `${newItem.amount}x ${newItem.product.name} added to cart`,
                 success: addItemSuccess
             })
         }
