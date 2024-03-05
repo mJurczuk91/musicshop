@@ -3,6 +3,7 @@ import client from "../apollo"
 import { gql } from "@apollo/client";
 import { flattenStrapiResponse } from "./helpers";
 import { BlogArticleStub } from "../definitions";
+import { HOST_URL } from "../helpers";
 
 const getPage = async (page = 0, pageSize = 20): Promise<PaginatedData<BlogArticleStub>> => {
   const resp = await client.query({
@@ -57,11 +58,9 @@ const queryArticles = gql`query blogArticles($pagination: PaginationArg, ) {
 }`
 
 const formatArticleFromApiResponse = (article: any): BlogArticleStub => {
-  const host = process.env.HOST;
-  if (!host) throw new Error('HOST ENV VARIABLE NOT SET');
   return {
     title: article.title,
-    image_url: host.concat(article.image.url),
+    image_url: HOST_URL.concat(article.image.url),
     link: '/#',
     synopsis: article.synopsis,
   }

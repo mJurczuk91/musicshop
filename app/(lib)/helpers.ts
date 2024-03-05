@@ -48,3 +48,4 @@ export function leftPad(input: string, padWith: string, outputStringLength: numb
     return result.concat(input);
 }
 
+export const HOST_URL = 'https://www.mjurczuk.pl';

@@ -2,6 +2,7 @@ import client from "../apollo";
 import { gql } from "@apollo/client";
 import { PaginatedData, Product } from "../definitions";
 import { flattenStrapiResponse } from "./helpers";
+import { HOST_URL } from "../helpers";
 
 export enum ProductQuerySort {
   'nameAsc' = "name:asc",
@@ -124,9 +125,7 @@ const formatProductFromFlatResponse = (flat: any): Product => {
 }
 
 const formatImgUrlArray = (imgs: any[]): string[] => {
-  const host = process.env.HOST;
-  if(!host) throw new Error('HOST ENV VARIABLE NOT SET');
-  const imgUrls = imgs.map(i => host.concat(i.url))
+  const imgUrls = imgs.map(i => HOST_URL.concat(i.url))
   // SHUFFLING IMAGES JUST TO MAKE HOME PAGE LOOK BETTER, DELETE THIS LATER
   return imgUrls
     .map(value => ({ value, sort: Math.random() }))

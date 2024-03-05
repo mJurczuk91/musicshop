@@ -34,10 +34,12 @@ import {
   InMemoryCache
 } from '@apollo/client';
 
+import { HOST_URL } from './helpers';
+
 const client = new ApolloClient({
   ssrMode: true,
   link: new HttpLink({
-    uri: process.env.HOST_GRAPHQL,
+    uri: `${HOST_URL}/graphql`,
     headers: {
       authorization: `Bearer ${process.env.API_TOKEN}`,
     },
