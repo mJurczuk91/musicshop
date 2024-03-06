@@ -1,6 +1,8 @@
 'use client'
 
 import { CartItem } from "@/app/(lib)/definitions"
+import { ToastContext } from "@/app/providers/toastProvider"
+import { useContext } from "react"
 
 type Props = {
     addToCart: (item: CartItem) => void,
@@ -9,6 +11,7 @@ type Props = {
 }
 
 export function ProductCounter({ addToCart, removeFromCart, item }: Props) {
+    const {addToast} = useContext(ToastContext);
 
     const addOne = () => {
         const success = addToCart({
@@ -23,7 +26,10 @@ export function ProductCounter({ addToCart, removeFromCart, item }: Props) {
                 product: item.product,
                 amount: 1,
             });
-        }
+        } else addToast({
+            message: 'Press REMOVE button if you are sure you want to remove last item from cart',
+            success: false,
+        })
     }
 
     return (

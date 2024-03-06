@@ -20,7 +20,7 @@ export function Summary() {
                 </div>
                 <div className=" m-2">
                     <span>
-                        Total cost: ${totalCost}
+                        Total cost: ${totalCost.toFixed(2)}
                     </span>
                 </div>
             </div>

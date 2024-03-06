@@ -16,26 +16,34 @@ export function ProductListElement({ item: { product, amount }, addToCart, remov
     return (
         <div className="flex w-full max-w-6xl items-center justify-between border-b-2 border-black border-opacity-10">
 
-            <Link href={`/product/${getProductSlug(product)}`}>
-                <div className=" flex items-center">
-                    <img
-                        className=" h-24"
-                        src={product.imgUrlArray[0]}
-                        alt="product image"
-                    />
-                    <span className="">
-                        {product.name}
-                    </span>
-                </div>
-            </Link>
+            <div className="basis-1/4">
+                <Link href={`/product/${getProductSlug(product)}`}>
+                    <div className=" flex items-center">
+                        <img
+                            className=" h-24"
+                            src={product.imgUrlArray[0]}
+                            alt="product image"
+                        />
+                        <span className="">
+                            {product.name}
+                        </span>
+                    </div>
+                </Link>
+            </div>
 
-            <ProductCounter addToCart={addToCart} removeFromCart={removeFromCart} item={{ product, amount }} />
+            <div className="basis-1/4 flex justify-center">
+                <ProductCounter addToCart={addToCart} removeFromCart={removeFromCart} item={{ product, amount }} />
+            </div>
 
-            <span>
-                ${product.price}
-            </span>
+            <div className="basis-1/4 flex justify-center">
+                <span>
+                    ${product.price}
+                </span>
+            </div>
 
-            <RemoveElementButton removeFromCart={removeFromCart} item={{ product, amount }} />
+            <div className="basis-1/4 flex justify-end">
+                <RemoveElementButton removeFromCart={removeFromCart} item={{ product, amount }} />
+            </div>
         </div>
     )
 }
