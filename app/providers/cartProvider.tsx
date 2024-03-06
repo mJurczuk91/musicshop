@@ -2,7 +2,6 @@
 import { createContext,useContext, useEffect, useState } from "react"
 import { CartItem, Product } from "../(lib)/definitions"
 import { ToastContext } from "./toastProvider"
-import Toast from "../(ui)/toast/toast"
 
 export type CartContextType = {
     cart: CartItem[],
@@ -65,29 +64,28 @@ export function CartProvider({ children }: Props) {
             addItemSuccess = true;
         }
 
-        if(addItemSuccess) {
-            addToast({
-                message: `item added ${cart.length}`,
-                success: addItemSuccess
-            })
-        }
+        const toastMessage = addItemSuccess ? `Added ${newItem.amount}x ${newItem.product.name} to cart` : `Not enough ${newItem.product.name} in stock`;
+        addToast({
+            message: toastMessage,
+            success: addItemSuccess,
+        })
 
         setCart(newCart);
         localStorage.setItem("cart", JSON.stringify(newCart));
     }
 
-    const removeFromCart = (newItem: CartItem) => {
+    const removeFromCart = (itemToRemove: CartItem) => {
         const newCart = cart.flatMap(cartItem => {
-            if (cartItem.product.id !== newItem.product.id) return cartItem;
-            if (cartItem.amount - newItem.amount < 1) return [];
+            if (cartItem.product.id !== itemToRemove.product.id) return cartItem;
+            if (cartItem.amount - itemToRemove.amount < 1) return [];
             return {
                 product: cartItem.product,
-                amount: cartItem.amount - newItem.amount,
+                amount: cartItem.amount - itemToRemove.amount,
             }
         })
         setCart(newCart);
         addToast({
-            message: 'Removed item',
+            message: `Removed ${itemToRemove.amount}x ${itemToRemove.product.name} from cart`,
             success: true,
         });
         localStorage.setItem("cart", JSON.stringify(newCart));

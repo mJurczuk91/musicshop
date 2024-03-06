@@ -12,13 +12,13 @@ export default async function BlogArticleStubs() {
 }
 
 function ArticleStub({ stub }: { stub: BlogArticleStub }) {
-    return <div className="mx-4 mb-2 p-2 h-80 basis-1/3 bg-white shadow-md">
+    return <div className="mx-4 mb-2 p-2 h-60 basis-1/3 bg-white shadow-lg border-darkcyan-100 border">
         <Link href={stub.link}>
             <span className=" my-2 font-bold text-lg">{stub.title}</span>
         </Link>
         <div>
             <div className="float-left">
-            <img className="h-auto w-48" src={stub.image_url} alt="article image"></img>
+            <img className="h-auto w-40 mr-1" src={stub.image_url} alt="article image"></img>
             </div>
             <p className="text-sm">{stub.synopsis}</p>
         </div>

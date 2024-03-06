@@ -1,15 +1,28 @@
+'use client'
+
 import { Toast } from "@/app/providers/toastProvider"
+import { useState } from "react";
 
 type Props = {
-    toast:Toast,
-    remove: ()=>void,
+    message: string,
+    success: boolean,
 }
 
-export default function Toast({ toast:{message, success}, remove}:Props){
+export default function Toast({ message, success }: Props) {
+    const [visible, setVisible] = useState<boolean>(true);
     return (
-        <div className="w-72 h-20 my-2 bg-slate-200 shadow-lg ">
-            <span>{message}</span>
-            <div onClick={() => remove()}>CLICK TO REMOVE</div>
+        <div className={`flex w-96 h-20 my-2 bg-white shadow-lg ${visible ? '' : 'hidden'}`}>
+            <div className={`h-full w-4 min-w-4  ${success ? 'bg-green-600' : 'bg-red-600'}`}></div>
+            <div className="w-full flex items-center justify-between px-2 border-tangerine-500 border-t border-b border-r ">
+                <span>{message}</span>
+                <div className="w-fit h-full flex-col justify-start">
+                    <button
+                        onClick={() => setVisible(visible => !visible)}
+                        className="select-none">
+                        X
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }

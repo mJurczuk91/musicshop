@@ -15,63 +15,27 @@ export const ToastContext = createContext<ToastContextType>({
     addToast: (toast: Toast) => { }
 })
 
-type TimedIdentifiableToast = {
-    toast: Toast,
-    id: number,
-    timer: NodeJS.Timeout,
-}
-
 type Props = {
     children: React.ReactNode,
 }
 
 export default function ToastProvider({ children }: Props) {
-    const [toastList, setToastList] = useState<TimedIdentifiableToast[]>([]);
-    const [id, setId] = useState<number>(0);
-
-    const getId = ():number => {
-        let result = id;
-        setId(id => id+1)
-        return result;
-    }
-
-    const removeToast = (id:number) => {
-/*         setToastList(toastList.map(toast => {
-            if(toast.id === id){
-                clearTimeout(toast.timer);
-            }
-            else return toast;
-        })); */
-        
-        setToastList(toastList => {
-            let newToastList:TimedIdentifiableToast[] = [];
-            for (let toast of toastList){
-                if(toast.id !== id){
-                    newToastList.push(toast);
-                }
-                clearTimeout(toast.timer);
-            }
-            return newToastList;
-        });
-    }
+    const [toastList, setToastList] = useState<Toast[]>([]);
 
     const addToast = ({ message, success }: Toast) => {
-        const id = getId();
-        console.log(id);
         setToastList(toastList => {
-            return toastList.concat({
-                id,
-                toast: {message, success},
-                timer: setTimeout(() => { removeToast(id) }, 3000),
-            })
+            return toastList.concat({message, success});
         });
+        setTimeout(() => {
+            setToastList( toastList => toastList.slice(1));
+        }, 5000);
     }
 
     return (
         <ToastContext.Provider value={{ addToast }}>
             {children}
-            <div className="w-fit h-fit absolute right-3 bottom-3 flex flex-col-reverse">
-                {toastList.map(({toast:{message, success}, id}) => <Toast key={id} toast={{message, success}} remove={() => removeToast(id)} />)}
+            <div className="w-fit h-fit fixed right-3 bottom-3 flex flex-col-reverse">
+                {toastList.map(({message, success}, index) => <Toast key={index} message={message} success={success}/>)}
             </div>
         </ToastContext.Provider>
     )
