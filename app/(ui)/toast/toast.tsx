@@ -4,15 +4,25 @@ import { Toast } from "@/app/providers/toastProvider"
 import { useState } from "react";
 
 type Props = {
-    toast:Toast,
+    message: string,
+    success: boolean,
 }
 
-export default function Toast({ toast:{message, success} }:Props){
+//${success ? 'border-green-600' : 'border-red-600'}
+
+export default function Toast({ message, success }: Props) {
     const [visible, setVisible] = useState<boolean>(true);
     return (
-        <div className={`w-72 h-20 my-2 bg-slate-200 shadow-lg ${visible ? '' : 'hidden'}`}>
-            <span>{message}</span>
-            <div onClick={() => setVisible(visible => !visible)}>CLICK TO REMOVE</div>
+        <div className={`flex w-96 h-20 my-2 bg-white shadow-lg ${visible ? '' : 'hidden'}`}>
+            <div className={`h-full w-4 min-w-4  ${success ? 'bg-green-600' : 'bg-red-600'}`}></div>
+            <div className="w-full flex items-center px-2 border-tangerine-500 border-t border-b border-r ">
+                <button
+                    onClick={() => setVisible(visible => !visible)}
+                    className="select-none absolute right-2 top-2">
+                    X
+                </button>
+                <span>{message}</span>
+            </div>
         </div>
     )
 }

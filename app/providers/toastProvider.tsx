@@ -35,7 +35,7 @@ export default function ToastProvider({ children }: Props) {
         <ToastContext.Provider value={{ addToast }}>
             {children}
             <div className="w-fit h-fit fixed right-3 bottom-3 flex flex-col-reverse">
-                {toastList.map(({message, success}, index) => <Toast key={index} toast={{message, success}} />)}
+                {toastList.map(({message, success}, index) => <Toast key={index} message={message} success={success}/>)}
             </div>
         </ToastContext.Provider>
     )
