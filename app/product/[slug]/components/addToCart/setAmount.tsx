@@ -4,23 +4,29 @@ import { Product } from "@/app/(lib)/definitions"
 import { CartContext } from "@/app/providers/cartProvider";
 import { useContext, useEffect, useState } from "react"
 import { AddToCartButton } from "./addToCartButton"
+import { ToastContext } from "@/app/providers/toastProvider";
 
 type Props = {
     product: Product,
 }
 
 export function SetAmount({ product }: Props) {
+    const { addToast } = useContext(ToastContext);
     const { cart, addToCart, getProductAmountMinusCart } = useContext(CartContext);
     const [counterAmount, setCounterAmount] = useState<number>(1);
     const [isAddToCartDisabled, setIsAddToCartDisabled] = useState<boolean>(getProductAmountMinusCart(product) > 0)
 
     useEffect(() => {
-        if(getProductAmountMinusCart(product) > 0) setIsAddToCartDisabled(false);
+        if (getProductAmountMinusCart(product) > 0) setIsAddToCartDisabled(false);
         else setIsAddToCartDisabled(true);
     }, [cart]);
 
     const increaseAmount = () => {
         if (counterAmount < getProductAmountMinusCart(product)) setCounterAmount(counterAmount + 1);
+        else addToast({
+            message: `Can't increase amount, not enough ${product.name} in stock`,
+            success: false,
+        })
     }
 
     const decreaseAmount = () => {
