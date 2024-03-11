@@ -18,13 +18,12 @@ export default function Searchbar() {
 
     useEffect(() => {
         if (query.length === 0) return;
-        setLoading(true);
         fetch(`/api/search?query=${query}`)
             .then(response => response.json())
             .then(data => {
-                setLoading(false);
                 setData(data);
-            });
+            })
+            .finally(() => setLoading(false));
     }, [query])
 
     return <div className={`${loading ? 'animate-pulse' : ''}`}>
@@ -32,7 +31,9 @@ export default function Searchbar() {
             autoComplete='off'
             className="p-2 text-darkcyan-900 border-tangerine-500 bg-white border-2 rounded-md focus:outline-none"
             type="text" placeholder="Search our catalogue" name="searchField"
-            onFocus={() => setFocus(true)}
+            onFocus={() => {
+                setFocus(true);
+            }}
             onBlur={() => {
                 setTimeout(() => {
                     setFocus(false);
@@ -40,13 +41,14 @@ export default function Searchbar() {
             }}
             onChange={
                 (e: React.ChangeEvent<HTMLInputElement>) => {
-                    if (timer) clearTimeout(timer);
                     const value = e.currentTarget.value;
+                    if(value.length > 0) setLoading(true);
+                    if (timer) clearTimeout(timer);
                     timer = setTimeout(() => {
                         setQuery(value);
                     }, 500)
                 }} />
-        {focus && query.length > 0 &&
+        {focus && query.length > 0 && !loading &&
             <SearchResultList data={data} />
         }
     </div>
