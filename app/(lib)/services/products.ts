@@ -13,8 +13,12 @@ export enum ProductQuerySort {
 }
 
 export const products = {
-  getPage, getById, getByCategory, getBySubcategory
+  getPage, getById, getByCategory, getBySubcategory, getByNamePartial
 }
+
+export const productsSearch = async (name: string) => {
+  return await getByNamePartial({ name: name });
+};
 
 async function getById(productId: string): Promise<Product> {
   const resp = await client.query({
@@ -24,7 +28,7 @@ async function getById(productId: string): Promise<Product> {
   try {
     const flat = { ...flattenStrapiResponse(resp.data).product };
     return formatProductFromFlatResponse(flat);
-  } catch (e){
+  } catch (e) {
     throw new Error('404 not found');
   }
 }
@@ -36,7 +40,7 @@ type NamePartialParams = {
   pageSize?: number,
 }
 
-async function getByNamePartial({ name, page = 0, pageSize = 5, sort = ProductQuerySort.default }: NamePartialParams): Promise<PaginatedData<Product>> {
+async function getByNamePartial({ name, page = 0, pageSize = 5 }: NamePartialParams): Promise<PaginatedData<Product>> {
   const resp = await client.query({
     query: queryProductsByNamePartial,
     variables: {
@@ -44,7 +48,6 @@ async function getByNamePartial({ name, page = 0, pageSize = 5, sort = ProductQu
       pagination: {
         page,
         pageSize,
-        sort,
       }
     }
   });
@@ -108,7 +111,7 @@ async function getPage(page: number = 0, pageSize: number = 20): Promise<Paginat
   return processResponse(resp);
 }
 
-async function processResponse (resp:ApolloQueryResult<any>):Promise<PaginatedData<Product>>{
+async function processResponse(resp: ApolloQueryResult<any>): Promise<PaginatedData<Product>> {
   try {
     const pagination = resp.data.products.meta.pagination;
     const dataArr = resp.data.products.data as any[];
@@ -243,7 +246,7 @@ const queryProductById = gql`query productById($productId: ID) {
   }
 }`
 
-const queryProductsByNamePartial = gql`query productsByNamePartial($name: String, $pagination: PaginationArg) {
+const queryProductsByNamePartial = gql`query productsByNamePartial($name: String, $pagination: PaginationArg ) {
   products(pagination: $pagination, filters: {
     name: {
       containsi: $name
