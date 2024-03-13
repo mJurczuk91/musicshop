@@ -1,14 +1,17 @@
 import { SignJWT } from "jose";
 import { NextRequest, NextResponse } from "next/server";
 import { getJwtSecretKey } from "@/app/(lib)/auth"
+import { getUser } from "@/app/(lib)/services/user";
 
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
+  const user = await getUser(body.email, body.password);
 
-  if (body.email === "test@test.test" && body.password === "a") {
+  if (user) {
     const token = await new SignJWT({
-      username: body.email,
+      id: user.id,
+      name: user.name,
     })
       .setProtectedHeader({ alg: "HS256" })
       .setIssuedAt()
@@ -16,7 +19,7 @@ export async function POST(request: NextRequest) {
       .sign(getJwtSecretKey());
 
     const {value: redirect} = request.cookies.get('redirectAfterLoginUrl') ?? {value: null}
-    console.log(redirect);
+
     const response = NextResponse.json({
       success: true,
       status: 200,
@@ -30,7 +33,7 @@ export async function POST(request: NextRequest) {
       path: "/",
     });
 
-    response.cookies.delete('redirectAfterLoginUrl');
+    redirect && response.cookies.delete('redirectAfterLoginUrl');
 
     return response;
   }
