@@ -65,3 +65,18 @@ export type CartItem = {
     product: Product,
     amount: number,
 }
+
+export type OrderElement = {
+    itemId: string,
+    itemPrice: string,
+    itemName: string,
+    itemImageUrl: string,
+    amount: number,
+}
+
+export type LoginTokenPayload = {
+    id: string,
+    name: string,
+    iat: number,
+    exp: number,
+}

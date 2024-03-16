@@ -21,11 +21,11 @@ export const productsSearch = async (name: string) => {
 };
 
 async function getById(productId: string): Promise<Product> {
+  try {
   const resp = await client.query({
     query: queryProductById,
     variables: { productId },
   });
-  try {
     const flat = { ...flattenStrapiResponse(resp.data).product };
     return formatProductFromFlatResponse(flat);
   } catch (e) {
