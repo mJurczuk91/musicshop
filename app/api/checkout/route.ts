@@ -8,12 +8,20 @@ import { LoginTokenPayload, OrderElement } from "@/app/(lib)/definitions";
 export async function POST(request: NextRequest) {
     const { nextUrl, cookies } = request;
     const { value: token } = cookies.get("token") ?? { value: null };
-    const hasVerifiedToken = token && (await verifyJwtToken(token));
 
+    const hasVerifiedToken = token && (await verifyJwtToken(token));
     if (!hasVerifiedToken) return NextResponse.redirect(nextUrl.basePath.concat('/login'));
 
-    const userInfo = decodeJWT(token) as LoginTokenPayload; // { id: '3', name: 'qweqwe', iat: 1710438151, exp: 1710524551 }
     const order = await request.json() as OrderElement[];
-
-    return NextResponse.json(await orders.create(order, userInfo.id));
+    if(order.length === 0) return NextResponse.json({
+        success: false, 
+        message: "The cart is empty",
+    });
+    
+    const userInfo = decodeJWT(token) as LoginTokenPayload;
+    const createOrderStatus = await orders.create(order, userInfo.id);
+    return NextResponse.json({
+        ...createOrderStatus, 
+        message: createOrderStatus.success ? "Order placed successfuly" : "Something went wrong"
+    });
 }

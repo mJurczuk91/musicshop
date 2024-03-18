@@ -12,14 +12,17 @@ async function create(order:OrderElement[], userId: string):Promise<{success: bo
         const resp = await client.mutate({
             mutation: createOrder,
             variables: {
+              data:{
                 user: userId,
                 products: JSON.stringify(order),
-            }
+              }
+            },
         });
         if(resp.errors) return {success: false};
         return {success: true};
     }
     catch (e){
+      console.log(JSON.stringify(e));
         return {success: false};
     }
 }

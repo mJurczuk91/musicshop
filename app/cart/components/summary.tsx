@@ -1,9 +1,11 @@
 'use client'
 import { useContext } from "react";
 import { CartContext } from "@/app/providers/cartProvider";
+import { useRouter } from "next/navigation";
 
 export function Summary() {
     const { cart } = useContext(CartContext);
+    const router = useRouter();
     let totalCost = 0;
     let totalItems = 0;
     if (cart) for (let item of cart) {
@@ -26,7 +28,7 @@ export function Summary() {
             </div>
             <button
                 disabled={totalItems === 0}
-                onClick={() => console.log('clicked checkout')}
+                onClick={() => router.push('/checkout')}
                 className={`
                         ${totalItems === 0 ? `bg-gray-400 hover:bg-gray-500` : `bg-tangerine-400 hover:bg-tangerine-500`}
                         py-2 px-4 ml-2 h-fit font-bold text-white`}>
