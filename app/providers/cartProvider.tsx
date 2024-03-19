@@ -37,33 +37,41 @@ export function CartProvider({ children }: Props) {
     }
 
     const addToCart = (newItem: CartItem) => {
+        const storage = localStorage.getItem('cart');
+        const oldCart = storage ? JSON.parse(storage) as CartItem[] : null;
+
         let foundInCart = false;
         let addItemSuccess = false;
         const newCart: CartItem[] = [];
 
-        for (let oldItem of cart) {
-
-            if (oldItem.product.id !== newItem.product.id) {
-                newCart.push(oldItem);
-                continue;
-            }
-
-            foundInCart = true;
-            if (oldItem.amount + newItem.amount <= oldItem.product.amount) {
-                newCart.push({
-                    product: oldItem.product,
-                    amount: oldItem.amount + newItem.amount
-                })
-                addItemSuccess = true;
-                continue;
-            }
-
-            newCart.push(oldItem);
-        }
-
-        if (!foundInCart && newItem.amount <= newItem.product.amount) {
+        if((!oldCart || oldCart.length === 0) && newItem.amount <= newItem.product.amount){
             newCart.push(newItem);
             addItemSuccess = true;
+        } else {
+            for (let oldItem of oldCart!) {
+
+                if (oldItem.product.id !== newItem.product.id) {
+                    newCart.push(oldItem);
+                    continue;
+                }
+    
+                foundInCart = true;
+                if (oldItem.amount + newItem.amount <= oldItem.product.amount) {
+                    newCart.push({
+                        product: oldItem.product,
+                        amount: oldItem.amount + newItem.amount
+                    })
+                    addItemSuccess = true;
+                    continue;
+                }
+    
+                newCart.push(oldItem);
+            }
+    
+            if (!foundInCart && newItem.amount <= newItem.product.amount) {
+                newCart.push(newItem);
+                addItemSuccess = true;
+            }
         }
 
         const toastMessage = addItemSuccess ? `Added ${newItem.amount}x ${newItem.product.name} to cart` : `Not enough ${newItem.product.name} in stock`;
@@ -72,25 +80,31 @@ export function CartProvider({ children }: Props) {
             success: addItemSuccess,
         })
 
-        setCart(newCart);
         localStorage.setItem("cart", JSON.stringify(newCart));
+        setCart(newCart);
     }
 
     const removeFromCart = (itemToRemove: CartItem) => {
-        const newCart = cart.flatMap(cartItem => {
-            if (cartItem.product.id !== itemToRemove.product.id) return cartItem;
-            if (cartItem.amount - itemToRemove.amount < 1) return [];
-            return {
-                product: cartItem.product,
-                amount: cartItem.amount - itemToRemove.amount,
-            }
-        })
-        setCart(newCart);
-        addToast({
-            message: `Removed ${itemToRemove.amount}x ${itemToRemove.product.name} from cart`,
-            success: true,
-        });
-        localStorage.setItem("cart", JSON.stringify(newCart));
+        const storage = localStorage.getItem('cart');
+        const oldCart = storage ? JSON.parse(storage) as CartItem[] : null;
+        let message = '';
+        let success = false;
+        if(!oldCart || oldCart.find(item => item.product.id !== itemToRemove.product.id)){
+            message = `${itemToRemove.product.name} not present in cart`
+        } else {
+            const newCart = oldCart.flatMap(cartItem => {
+                if (cartItem.product.id !== itemToRemove.product.id) return cartItem;
+                if (cartItem.amount - itemToRemove.amount < 1) return [];
+                return {
+                    product: cartItem.product,
+                    amount: cartItem.amount - itemToRemove.amount,
+                }
+            })
+            localStorage.setItem("cart", JSON.stringify(newCart));
+            setCart(newCart);
+            message = `Removed ${itemToRemove.amount}x ${itemToRemove.product.name} from cart`;
+        }
+        addToast({message,success});
     }
 
     const getProductAmountMinusCart = (product: Product): number => {
