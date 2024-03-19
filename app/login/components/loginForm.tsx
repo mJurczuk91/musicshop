@@ -25,26 +25,31 @@ export default function LoginForm() {
                     }}
                     validationSchema={loginValidationSchema}
                     onSubmit={(values) => {
-                        fetch('/api/auth/signin', {
-                            method: 'POST',
-                            body: JSON.stringify({ ...values }),
-                        })
-                            .then(res => res.json())
-                            .then(json => {
-                                if (json.success) {
-                                    addToast({
-                                        message: 'Login successful',
-                                        success: true,
-                                    });
-                                    setRedirect(json.redirectUrl);
-                                }
-                                else {
-                                    addToast({
-                                        message: 'Email and/or password incorrect',
-                                        success: false,
-                                    })
-                                }
+                        try{
+                            fetch('/api/auth/signin', {
+                                method: 'POST',
+                                body: JSON.stringify({ ...values }),
                             })
+                                .then(res => res.json())
+                                .then(json => {
+                                    if (json.success) {
+                                        addToast({
+                                            message: 'Login successful',
+                                            success: true,
+                                        });
+                                        setRedirect(json.redirectUrl);
+                                    }
+                                    else {
+                                        addToast({
+                                            message: 'Email and/or password incorrect',
+                                            success: false,
+                                        })
+                                    }
+                                })
+                        }
+                        catch (e){
+                            console.log(JSON.stringify(e));
+                        }
                     }}
                 >
                     {(props) => (
