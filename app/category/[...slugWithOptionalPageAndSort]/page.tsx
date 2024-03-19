@@ -26,14 +26,14 @@ export default async function Page({ params }: Props) {
     const { type, id } = parseCategorySlug(slug);
 
     const currentCategoryId = type === CategorySlugType.c ?
-        allCategories.find(c => c.id === id)?.id
+        allCategories.find(cat=> cat.id === id)?.id
         :
-        allCategories.find(c => c.subcategories.find(s => s.id === id))?.id;
+        allCategories.find(cat=> cat.subcategories.find(subcat=> subcat.id === id))?.id;
 
     const currentTitle = type === CategorySlugType.c ?
-        allCategories.find(c => c.id === id)?.name
+        allCategories.find(cat => cat.id === id)?.name
         :
-        allCategories.flatMap(el => el.subcategories).find(el => id === el.id)?.name;
+        allCategories.flatMap(cat => cat.subcategories).find(subcat => id === subcat.id)?.name;
     if (!currentTitle || !currentCategoryId) throw new Error('404 not found');
 
     const { data: products, pagination } = type === CategorySlugType.s ?

@@ -1,6 +1,5 @@
-import Link from "next/link";
 import Logo from "./logo";
-import Searchbar from "./searchbar";
+import Searchbar from "./searchbar/searchbar";
 import CategoryMenu from "./categoryMenu";
 import IconLink from "./iconLink";
 

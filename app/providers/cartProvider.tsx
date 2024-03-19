@@ -10,6 +10,7 @@ export type CartContextType = {
     getAmountInCart: (productId: string) => number | undefined,
     getProductAmountMinusCart: (product: Product) => number,
     isProductInCart: (productId: string) => boolean,
+    clearCart: ()=>void,
 }
 
 export const CartContext = createContext<CartContextType>({
@@ -19,6 +20,7 @@ export const CartContext = createContext<CartContextType>({
     getAmountInCart: (productId: string) => undefined,
     getProductAmountMinusCart: (product: Product) => 1,
     isProductInCart: (productId: string) => false,
+    clearCart: ()=>{},
 });
 
 
@@ -101,6 +103,10 @@ export function CartProvider({ children }: Props) {
         return false;
     }
 
+    const clearCart = () => {
+        setCart([] as CartItem[]);
+    }
+
     useEffect(() => {
         if (cart.length === 0 && localStorage.getItem("cart")) {
             const foundState = JSON.parse(localStorage.getItem("cart")!);
@@ -111,7 +117,7 @@ export function CartProvider({ children }: Props) {
     }, []);
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, isProductInCart, getAmountInCart, getProductAmountMinusCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, isProductInCart, getAmountInCart, getProductAmountMinusCart, clearCart }}>
             {children}
         </CartContext.Provider>
     )

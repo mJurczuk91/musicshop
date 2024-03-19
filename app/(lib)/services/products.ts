@@ -1,5 +1,5 @@
 import client from "../apollo";
-import { gql } from "@apollo/client";
+import { ApolloQueryResult, gql } from "@apollo/client";
 import { PaginatedData, Product } from "../definitions";
 import { flattenStrapiResponse } from "./helpers";
 import { HOST_URL } from "../helpers";
@@ -13,27 +13,55 @@ export enum ProductQuerySort {
 }
 
 export const products = {
-  getPage, getById, getByCategory, getBySubcategory
+  getPage, getById, getByCategory, getBySubcategory, getByNamePartial
 }
 
+export const productsSearch = async (name: string) => {
+  return await getByNamePartial({ name: name });
+};
+
 async function getById(productId: string): Promise<Product> {
+  try {
   const resp = await client.query({
     query: queryProductById,
     variables: { productId },
   });
-
-  const flat = { ...flattenStrapiResponse(resp.data).product };
-  return formatProductFromFlatResponse(flat);
+    const flat = { ...flattenStrapiResponse(resp.data).product };
+    return formatProductFromFlatResponse(flat);
+  } catch (e) {
+    throw new Error('404 not found');
+  }
 }
 
-type CategoryQueryParams = {
-  categoryId:string,
+type NamePartialParams = {
+  name: string,
   sort?: string,
   page?: number,
   pageSize?: number,
 }
 
-async function getByCategory({categoryId, page = 0, pageSize= 20, sort = ProductQuerySort.default}:CategoryQueryParams):Promise<PaginatedData<Product>> {
+async function getByNamePartial({ name, page = 0, pageSize = 5 }: NamePartialParams): Promise<PaginatedData<Product>> {
+  const resp = await client.query({
+    query: queryProductsByNamePartial,
+    variables: {
+      name,
+      pagination: {
+        page,
+        pageSize,
+      }
+    }
+  });
+  return processResponse(resp);
+}
+
+type CategoryQueryParams = {
+  categoryId: string,
+  sort?: string,
+  page?: number,
+  pageSize?: number,
+}
+
+async function getByCategory({ categoryId, page = 0, pageSize = 20, sort = ProductQuerySort.default }: CategoryQueryParams): Promise<PaginatedData<Product>> {
   const resp = await client.query({
     query: queryProductsByCategory,
     variables: {
@@ -45,25 +73,17 @@ async function getByCategory({categoryId, page = 0, pageSize= 20, sort = Product
       sort,
     }
   });
-  const dataArr = resp.data.products.data as any[];
-  const products = dataArr.map(product => {
-    const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
-    return formatProductFromFlatResponse(flat.product);
-  });
-  return {
-    data: products,
-    pagination: resp.data.products.meta.pagination,
-  }
+  return processResponse(resp);
 }
 
 type SubcategoryQueryParams = {
-  subcategoryId:string,
+  subcategoryId: string,
   sort?: string,
   page?: number,
   pageSize?: number,
 }
 
-async function getBySubcategory({subcategoryId, page = 0, pageSize= 20, sort = ProductQuerySort.default}:SubcategoryQueryParams):Promise<PaginatedData<Product>> {
+async function getBySubcategory({ subcategoryId, page = 0, pageSize = 20, sort = ProductQuerySort.default }: SubcategoryQueryParams): Promise<PaginatedData<Product>> {
   const resp = await client.query({
     query: queryProductsBySubcategory,
     variables: {
@@ -75,15 +95,7 @@ async function getBySubcategory({subcategoryId, page = 0, pageSize= 20, sort = P
       sort,
     }
   });
-  const dataArr = resp.data.products.data as any[];
-  const products = dataArr.map(product => {
-    const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
-    return formatProductFromFlatResponse(flat.product);
-  });
-  return {
-    data: products,
-    pagination: resp.data.products.meta.pagination,
-  }
+  return processResponse(resp);
 }
 
 async function getPage(page: number = 0, pageSize: number = 20): Promise<PaginatedData<Product>> {
@@ -96,14 +108,23 @@ async function getPage(page: number = 0, pageSize: number = 20): Promise<Paginat
       }
     }
   });
-  const dataArr = resp.data.products.data as any[];
-  const products = dataArr.map(product => {
-    const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
-    return formatProductFromFlatResponse(flat.product);
-  })
-  return {
-    data: products,
-    pagination: resp.data.products.meta.pagination,
+  return processResponse(resp);
+}
+
+async function processResponse(resp: ApolloQueryResult<any>): Promise<PaginatedData<Product>> {
+  try {
+    const pagination = resp.data.products.meta.pagination;
+    const dataArr = resp.data.products.data as any[];
+    const products = dataArr.map(product => {
+      const flat = flattenStrapiResponse({ product: { ...product.attributes, id: product.id } });
+      return formatProductFromFlatResponse(flat.product);
+    });
+    return {
+      data: products,
+      pagination,
+    }
+  } catch (e) {
+    throw new Error("404 not found");
   }
 }
 
@@ -225,7 +246,7 @@ const queryProductById = gql`query productById($productId: ID) {
   }
 }`
 
-/* const queryProductsByNamePartial = gql`query productsByNamePartial($name: String, $pagination: PaginationArg) {
+const queryProductsByNamePartial = gql`query productsByNamePartial($name: String, $pagination: PaginationArg ) {
   products(pagination: $pagination, filters: {
     name: {
       containsi: $name
@@ -273,7 +294,7 @@ const queryProductById = gql`query productById($productId: ID) {
       }
     }
   }
-}` */
+}`
 
 const queryProductsByCategory = gql`query productsByCategorySort($categoryId: ID, $pagination: PaginationArg, $sort:[String]) {
   products(
