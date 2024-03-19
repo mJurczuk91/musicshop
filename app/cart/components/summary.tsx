@@ -13,6 +13,7 @@ export function Summary() {
         totalItems += item.amount;
     }
     return (
+        cart.length > 0 &&
         <div className={`max-w-6xl flex justify-center items-center`}>
             <div className=" text-right">
                 <div className=" m-2">
@@ -30,8 +31,8 @@ export function Summary() {
                 disabled={totalItems === 0}
                 onClick={() => router.push('/checkout')}
                 className={`
-                        ${totalItems === 0 ? `bg-gray-400 hover:bg-gray-500` : `bg-tangerine-400 hover:bg-tangerine-500`}
-                        py-2 px-4 ml-2 h-fit font-bold text-white`}>
+                    ${totalItems === 0 ? `bg-gray-400 hover:bg-gray-500` : `bg-tangerine-400 hover:bg-tangerine-500`}
+                    py-2 px-4 ml-2 h-fit font-bold text-white`}>
                 Checkout
             </button>
         </div>

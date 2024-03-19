@@ -20,13 +20,15 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white text-darkcyan-900`}>
+      <body className={`${inter.className} bg-white text-darkcyan-900 flex flex-col h-screen`}>
         <header>
           <Navbar />
         </header>
         <ToastProvider>
           <CartProvider>
-            {children}
+            <div className='flex-1'>
+              {children}
+            </div>
           </CartProvider>
         </ToastProvider>
         <footer>
