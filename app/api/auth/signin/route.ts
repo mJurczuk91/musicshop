@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       success: true,
       status: 200,
       headers: {"content-type": "application/json",},
-      redirectUrl: redirect ? redirect : `${request.nextUrl.origin}/account`,
+      redirectUrl: redirect ? redirect : `/account`,
     })
 
     response.cookies.set({

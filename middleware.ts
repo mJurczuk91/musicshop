@@ -12,7 +12,11 @@ export async function middleware(request:NextRequest) {
     return NextResponse.redirect(new URL(`${request.nextUrl.origin}/account`))
   };
 
-  if (!hasVerifiedToken && !isLoginPage) {
+  if (
+    !hasVerifiedToken && 
+    nextUrl.href.includes('/account') || 
+    nextUrl.href.includes('/checkout')
+  ) {
     const searchParams = new URLSearchParams(nextUrl.searchParams);
     searchParams.set("next", nextUrl.pathname);
     const response = NextResponse.redirect(
@@ -20,12 +24,17 @@ export async function middleware(request:NextRequest) {
     );
     response.cookies.set({
         name: 'redirectAfterLoginUrl',
-        value: url,
+        value: nextUrl.pathname,
     });
     response.cookies.delete("token");
     return response;
   }
 
+  if(!url.includes('/login') && request.cookies.has('redirectAfterLoginUrl')){
+    const response = NextResponse.next();
+    response.cookies.delete("redirectAfterLoginUrl");
+    return response;
+  }
+
   return NextResponse.next();
 }
-export const config = { matcher: ["/account", "/checkout", "/login"] };

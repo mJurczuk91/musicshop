@@ -4,11 +4,16 @@ import { loginValidationSchema } from '../../(lib)/validationSchemas/loginValida
 import { useRouter } from 'next/navigation'
 import TextInput from './textInput'
 import { ToastContext } from "@/app/providers/toastProvider"
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 
 export default function LoginForm() {
     const { addToast } = useContext(ToastContext);
     const router = useRouter();
+    const [redirect, setRedirect] = useState<string>('');
+
+    useEffect(() => {
+        router.push(redirect);
+    },[redirect])
 
     return (
         <div className='w-full flex justify-center'>
@@ -30,8 +35,8 @@ export default function LoginForm() {
                                     addToast({
                                         message: 'Login successful',
                                         success: true,
-                                    })
-                                    router.push(encodeURI(json.redirectUrl));
+                                    });
+                                    setRedirect(json.redirectUrl);
                                 }
                                 else {
                                     addToast({
@@ -39,7 +44,7 @@ export default function LoginForm() {
                                         success: false,
                                     })
                                 }
-                            });
+                            })
                     }}
                 >
                     {(props) => (
