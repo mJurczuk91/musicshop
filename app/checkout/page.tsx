@@ -2,44 +2,28 @@
 
 import { useContext } from "react"
 import { CartContext } from "../providers/cartProvider"
-import { ToastContext } from "../providers/toastProvider"
+import ConfirmCheckout from "./components/confirmCheckout"
+import CheckoutItemTile from "./components/checkoutItemTile"
 
 export default function Page() {
-    const { cart, clearCart } = useContext(CartContext)
-    const { addToast } = useContext(ToastContext);
-
-    const handleOrderPlaced = (success: boolean, message: string) => {
-        if (success) clearCart();
-        addToast({message, success});
-    }
-
-    const handleClick = () => {
-        fetch('/api/checkout', {
-            method: 'POST',
-            body: JSON.stringify(cart.map(item => {
-                return {
-                    itemId: item.product.id,
-                    itemPrice: item.product.price,
-                    itemName: item.product.name,
-                    itemImageUrl: item.product.imgUrlArray[0],
-                    amount: item.amount,
-                }
-            })),
-        })
-        .then(response => response.json() as Promise<{success:boolean, message:string}>)
-        .then(json => handleOrderPlaced(json.success, json.message));
-    }
+    const { cart } = useContext(CartContext)
 
     return (
-        <div>
-            <button
-                disabled={cart.length === 0}
-                onClick={handleClick}
-                className={`
-                        ${cart.length === 0 ? `bg-gray-400 hover:bg-gray-500` : `bg-tangerine-400 hover:bg-tangerine-500`}
-                        py-2 px-4 ml-2 h-fit font-bold text-white`}>
-                Confirm purchase
-            </button>
+        <div className="flex flex-col w-full items-center">
+            <p className="text-3xl tracking-tight font-bold m-4">Checkout</p>
+
+            <div>
+                {cart.length === 0 ?
+                    <p>
+                        Cart is empty, pick something to buy first.
+                    </p>
+                    :
+                    cart.map( item => <CheckoutItemTile key={item.product.id} item={item} />)
+                }
+            </div>
+
+            {cart.length > 0 && <ConfirmCheckout />}
+
         </div>
     )
 }
