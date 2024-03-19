@@ -89,7 +89,7 @@ export function CartProvider({ children }: Props) {
         const oldCart = storage ? JSON.parse(storage) as CartItem[] : null;
         let message = '';
         let success = false;
-        if(!oldCart || !oldCart.find(item => item.product.id !== itemToRemove.product.id)){
+        if(!oldCart || !oldCart.find(item => item.product.id === itemToRemove.product.id)){
             message = `${itemToRemove.product.name} not present in cart`
         } else {
             const newCart = oldCart.flatMap(cartItem => {
