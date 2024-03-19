@@ -105,6 +105,7 @@ export function CartProvider({ children }: Props) {
 
     const clearCart = () => {
         setCart([] as CartItem[]);
+        localStorage.removeItem('cart');
     }
 
     useEffect(() => {
