@@ -9,14 +9,8 @@ export default function Page() {
                     CART
                 </span>
             </div>
-            <div>
-                <p>
-                    cart is currently empty.
-                </p>
-            </div>
             <div className="w-full h-full flex flex-col justify-center items-center">
                 <div className="w-full max-w-6xl flex flex-col items-center">
-
                     <div className="w-full">
                         <ProductList />
                     </div>
