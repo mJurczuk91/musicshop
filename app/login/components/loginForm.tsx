@@ -5,15 +5,13 @@ import { useRouter } from 'next/navigation'
 import TextInput from './textInput'
 import { ToastContext } from "@/app/providers/toastProvider"
 import { useContext, useEffect, useState } from "react"
+import { useSearchParams } from 'next/navigation'
 
 export default function LoginForm() {
     const { addToast } = useContext(ToastContext);
     const router = useRouter();
-    const [redirect, setRedirect] = useState<string>('');
-
-    useEffect(() => {
-        router.push(redirect);
-    },[redirect])
+    const searchParams = useSearchParams();
+    const redirect = searchParams.get('redirect');
 
     return (
         <div className='w-full flex justify-center'>
@@ -36,7 +34,11 @@ export default function LoginForm() {
                                         message: 'Login successful',
                                         success: true,
                                     });
-                                    setRedirect(json.redirectUrl);
+                                    router.push(redirect ? 
+                                        decodeURI(redirect)
+                                        :
+                                        '/account'
+                                    );
                                 }
                                 else {
                                     addToast({

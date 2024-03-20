@@ -1,4 +1,4 @@
-import { decodeJWT, verifyJwtToken } from "@/app/(lib)/auth";
+import { decodeJWT, verifyJwtToken } from "@/app/(lib)/auth/auth";
 import { NextRequest, NextResponse } from "next/server";
 import { orders } from "@/app/(lib)/services/orders";
 import { LoginTokenPayload, OrderElement } from "@/app/(lib)/definitions";
