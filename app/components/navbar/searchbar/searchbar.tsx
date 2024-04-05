@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import SearchResultList from "./searchResultList";
+import SearchResult from "./searchResult";
 import { Product } from "@/app/(lib)/definitions";
+import SearchResultLoading from "./searchResultLoading";
 
 type Props = {
     children: React.ReactNode,
@@ -13,6 +14,7 @@ export default function Searchbar() {
     const [data, setData] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [focus, setFocus] = useState<boolean>(false);
+    const [searchFieldEmpty, setSearchFieldEmpty] = useState<boolean>(true);
 
     let timer: NodeJS.Timeout | null = null
 
@@ -23,13 +25,22 @@ export default function Searchbar() {
             .then(data => {
                 setData(data);
             })
-            .finally(() => setLoading(false));
-    }, [query])
+            .finally(
+                () => {
+                    setTimeout(() => setLoading(false), 200);
+                }
+            );
+        return () => {
+            if (timer) {
+                clearTimeout(timer);
+            }
+        }
+    }, [query]);
 
-    return <div className={`${loading ? 'animate-pulse' : ''}`}>
+    return <div className="w-full max-w-xs md:max-w-xs lg:max-w-sm">
         <input 
             autoComplete='off'
-            className="p-2 text-darkcyan-900 border-tangerine-500 bg-white border-2 rounded-md focus:outline-none"
+            className="p-2 w-full text-darkcyan-900 border-tangerine-500 bg-white border-2 rounded-md focus:outline-none"
             type="text" placeholder="Search our catalogue" name="searchField"
             onFocus={() => {
                 setFocus(true);
@@ -42,14 +53,31 @@ export default function Searchbar() {
             onChange={
                 (e: React.ChangeEvent<HTMLInputElement>) => {
                     const value = e.currentTarget.value;
-                    if(value.length > 0) setLoading(true);
-                    if (timer) clearTimeout(timer);
+                    if(value.length === 0){
+                        setSearchFieldEmpty(true);
+                    } else {
+                        setLoading(true);
+                        setSearchFieldEmpty(false)
+                    }
+                    if (timer) {
+                        clearTimeout(timer);
+                    }
                     timer = setTimeout(() => {
                         setQuery(value);
                     }, 500)
                 }} />
-        {focus && query.length > 0 && !loading &&
-            <SearchResultList data={data} />
-        }
+            <div className={`absolute flex flex-col ${focus && !searchFieldEmpty ? 'visible' : 'invisible'}`}>
+                {loading ? 
+                <div className="w-full flex items-center">
+                    <SearchResultLoading /> 
+                </div>
+                :
+                data.length === 0 ?
+                    <SearchResult />
+                    :
+                    data.map(product => <SearchResult key={product.id} product={product} />)}
+            </div>
     </div>
 }
+
+//<SearchResultList data={data} />

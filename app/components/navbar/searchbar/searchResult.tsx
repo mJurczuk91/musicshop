@@ -8,7 +8,7 @@ type Props = {
 
 export default function SearchResult({ product }: Props) {
     return (
-        <div className="w-80 h-fit p-2 bg-white border-tangerine-500 border-t border-x last-of-type:border-b">
+        <div className="w-80 h-16 p-2 bg-white border-tangerine-500 border-t border-x last-of-type:border-b">
             {product ?
                 <Link
                 href={`/product/${getProductSlug(product)}`}>
