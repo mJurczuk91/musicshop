@@ -23,28 +23,28 @@ export default async function Page({ params }: Props) {
     const pageNo = pageNoString ? parseInt(pageNoString) : 0;
 
     const allCategories = (await categories.getAll()).data;
-    const { type, id } = parseCategorySlug(slug);
+    const { type:categoryType, id:categoryId } = parseCategorySlug(slug);
 
-    const currentCategoryId = type === CategorySlugType.c ?
-        allCategories.find(cat=> cat.id === id)?.id
+    const currentCategoryId = categoryType === CategorySlugType.c ?
+        allCategories.find(cat=> cat.id === categoryId)?.id
         :
-        allCategories.find(cat=> cat.subcategories.find(subcat=> subcat.id === id))?.id;
+        allCategories.find(cat=> cat.subcategories.find(subcat=> subcat.id === categoryId))?.id;
 
-    const currentTitle = type === CategorySlugType.c ?
-        allCategories.find(cat => cat.id === id)?.name
+    const currentTitle = categoryType === CategorySlugType.c ?
+        allCategories.find(cat => cat.id === categoryId)?.name
         :
-        allCategories.flatMap(cat => cat.subcategories).find(subcat => id === subcat.id)?.name;
+        allCategories.flatMap(cat => cat.subcategories).find(subcat => categoryId === subcat.id)?.name;
     if (!currentTitle || !currentCategoryId) throw new Error('404 not found');
 
-    const { data: products, pagination } = type === CategorySlugType.s ?
+    const { data: products, pagination } = categoryType === CategorySlugType.s ?
         await productsService.getBySubcategory({
-            subcategoryId: id,
+            subcategoryId: categoryId,
             page: pageNo,
             sort: sortValue,
         })
         :
         await productsService.getByCategory({
-            categoryId: id,
+            categoryId: categoryId,
             page: pageNo,
             sort: sortValue,
         });
