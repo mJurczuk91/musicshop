@@ -4,7 +4,7 @@ import { loginValidationSchema } from '../../(lib)/validationSchemas/loginValida
 import { useRouter } from 'next/navigation'
 import TextInput from './textInput'
 import { ToastContext } from "@/app/providers/toastProvider"
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { useSearchParams } from 'next/navigation'
 
 export default function LoginForm() {
@@ -46,6 +46,9 @@ export default function LoginForm() {
                                         success: false,
                                     })
                                 }
+                            })
+                            .finally(() => {
+                                router.refresh();
                             })
                     }}
                 >
