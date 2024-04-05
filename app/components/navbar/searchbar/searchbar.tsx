@@ -37,7 +37,7 @@ export default function Searchbar() {
         }
     }, [query]);
 
-    return <div className="w-full max-w-xs md:max-w-xs lg:max-w-sm">
+    return <div className="w-full max-w-sm">
         <input 
             autoComplete='off'
             className="p-2 w-full text-darkcyan-900 border-tangerine-500 bg-white border-2 rounded-md focus:outline-none"
@@ -66,7 +66,7 @@ export default function Searchbar() {
                         setQuery(value);
                     }, 500)
                 }} />
-            <div className={`absolute flex flex-col ${focus && !searchFieldEmpty ? 'visible' : 'invisible'}`}>
+            <div className={`absolute w-full flex flex-col ${focus && !searchFieldEmpty ? 'visible' : 'invisible'}`}>
                 {loading ? 
                 <div className="w-full flex items-center">
                     <SearchResultLoading /> 

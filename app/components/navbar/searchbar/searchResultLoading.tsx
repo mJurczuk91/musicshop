@@ -1,6 +1,6 @@
 export default function SearchResultLoading() {
     return (
-        <div className="w-80 h-16 p-2 bg-white border-tangerine-500 border-t border-x last-of-type:border-b">
+        <div className="w-full max-w-sm h-16 p-2 bg-white border-tangerine-500 border-t border-x last-of-type:border-b">
             <div className="w-full h-full flex justify-between items-center px-8">
                 <p>Loading...</p>
                 <div role="status">
