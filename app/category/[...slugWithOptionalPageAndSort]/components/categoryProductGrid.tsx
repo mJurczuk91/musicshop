@@ -1,5 +1,5 @@
 import {  Product } from "@/app/(lib)/definitions";
-import ProductMiniature from "@/app/(ui)/productMiniature";
+import ProductMiniature from "@/app/components/productMiniature";
 
 type Props = {
     products: Product[],

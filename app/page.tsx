@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Bestsellers from "./(ui)/bestsellers";
-import BlogArticleStubs from "./(ui)/blogArticleStubs";
-import CategoryGrid from "./(ui)/categoryGrid";
-import OffersOfTheWeek from "./(ui)/offersOfTheWeek";
+import Bestsellers from "./components/bestsellers";
+import BlogArticleStubs from "./components/blogArticleStubs";
+import CategoryGrid from "./components/categoryGrid";
+import OffersOfTheWeek from "./components/offersOfTheWeek";
 
 export default function Home() {
   return (
