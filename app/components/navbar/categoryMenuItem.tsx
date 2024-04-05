@@ -7,7 +7,7 @@ type Props = {
 }
 
 export default function CategoryMenuItem({ category }: Props) {
-    return <div className="group">
+    return <div className="group text-sm md:text-base">
         <Link className="mx-4 capitalize text-white border-tangerine-500 group-hover:border-b-2" href={`/category/${getCategorySlug(category.name, category.id)}`}>
             {category.name}
         </Link>
