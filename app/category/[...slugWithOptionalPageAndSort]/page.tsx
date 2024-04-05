@@ -52,11 +52,6 @@ export default async function Page({ params }: Props) {
     return (
         <div className="w-full flex justify-center">
             <div className="max-w-6xl flex m-4 p-4">
-
-                <div className="min-w-44 md:min-w-56">
-                    <CategoryNavigation categoriesJSONstring={JSON.stringify(allCategories)} currentCategoryId={currentCategoryId} />
-                </div>
-
                 <div>
                     <div className="mx-4 flex flex-col md:flex-row justify-between">
 
