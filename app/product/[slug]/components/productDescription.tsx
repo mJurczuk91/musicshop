@@ -1,13 +1,11 @@
 type Props = {
-    name: string,
     description: string,
 }
 
-export default function ProductDescription({name, description}:Props){
+export default function ProductDescription({description}:Props){
     return (
-        <div className="mx-4 py-2">
-            <span className="text-xl capitalize">{name}</span>
-            <p className="py-2">{description}</p>
+        <div className="px-4">
+            <p className="py-2 text-sm tracking-tight">{description}</p>
         </div>
     )
 }
