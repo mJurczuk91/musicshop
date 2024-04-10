@@ -14,8 +14,8 @@ export default function LoginForm() {
     const redirect = searchParams.get('redirect');
 
     return (
-        <div className='w-full flex justify-center'>
-            <div className='max-w-6xl w-1/4 min-w-fit p-4 shadow-lg my-16 border-darkcyan-500 rounded-md border-2'>
+        <div className='w-full h-full flex justify-center items-center'>
+            <div className='max-w-6xl w-1/4 min-w-fit h-fit p-4 shadow-lg my-16 border-darkcyan-500 rounded-md border-2'>
                 <Formik
                     initialValues={{
                         email: '',
