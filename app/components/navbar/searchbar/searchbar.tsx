@@ -14,8 +14,6 @@ export default function Searchbar() {
     const [focus, setFocus] = useState<boolean>(false);
     const [searchFieldEmpty, setSearchFieldEmpty] = useState<boolean>(true);
 
-    
-
     useEffect(() => {
         if (query.length === 0) return;
         fetch(`/api/search?query=${query}`)
@@ -77,5 +75,3 @@ export default function Searchbar() {
             </div>
     </div>
 }
-
-//<SearchResultList data={data} />

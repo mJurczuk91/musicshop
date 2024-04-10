@@ -17,7 +17,7 @@ export default async function OrderHistory({user}:Props) {
                 <p className="text-lg font-bold tracking-tight">
                     Order history:
                 </p>
-                {noOrders && <p>You haven't placed any orders yet.</p>}
+                {noOrders && <p>You haven&apos;t placed any orders yet.</p>}
                 {!noOrders && 
                 <div>
                     {
