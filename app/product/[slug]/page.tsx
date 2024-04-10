@@ -20,18 +20,18 @@ export default async function Page({ params: { slug } }: Props) {
             <ProductBreadcrumbs product={product} />
             <div className="flex flex-col w-full items-center">
                 
-
                 <div className="flex flex-col lg:flex-row w-full max-w-6xl items-center">
-                    <div className="">
+                    <div className="flex-1">
                         <ImageSelector imgUrlArr={product.imgUrlArray} />
                     </div>
-                    <AddToCart product={product} />
+                    <div className="flex-1">
+                        <AddToCart product={product} />
+                    </div>
                 </div>
 
                 <TabMenu elements={[
                     { title: 'details', jsx: <ProductDetails details={product.details} /> },
                     { title: 'comments', jsx: <ProductCommentsSection productId={id} /> },
-                    { title: 'description', jsx: <ProductDescription description={product.description} name={product.name} /> },
                 ]} />
             </div>
         </div>

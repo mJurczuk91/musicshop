@@ -74,6 +74,13 @@ export type OrderElement = {
     amount: number,
 }
 
+export type OrderHistoryEntry = {
+    products: OrderElement[],
+    createdAt: string,
+    user: User,
+    id: string,
+}
+
 export type LoginTokenPayload = {
     id: string,
     name: string,

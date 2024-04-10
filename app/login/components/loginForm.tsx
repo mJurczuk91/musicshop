@@ -4,20 +4,18 @@ import { loginValidationSchema } from '../../(lib)/validationSchemas/loginValida
 import { useRouter } from 'next/navigation'
 import TextInput from './textInput'
 import { ToastContext } from "@/app/providers/toastProvider"
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
+import { useSearchParams } from 'next/navigation'
 
 export default function LoginForm() {
     const { addToast } = useContext(ToastContext);
     const router = useRouter();
-    const [redirect, setRedirect] = useState<string>('');
-
-    useEffect(() => {
-        router.push(redirect);
-    },[redirect])
+    const searchParams = useSearchParams();
+    const redirect = searchParams.get('redirect');
 
     return (
-        <div className='w-full flex justify-center'>
-            <div className='max-w-6xl w-1/4 min-w-fit p-4 shadow-lg my-16 border-darkcyan-500 rounded-md border-2'>
+        <div className='w-full h-full flex justify-center items-center'>
+            <div className='max-w-6xl w-1/4 min-w-fit h-fit p-4 shadow-lg my-16 border-darkcyan-500 rounded-md border-2'>
                 <Formik
                     initialValues={{
                         email: '',
@@ -36,7 +34,11 @@ export default function LoginForm() {
                                         message: 'Login successful',
                                         success: true,
                                     });
-                                    setRedirect(json.redirectUrl);
+                                    router.push(redirect ? 
+                                        decodeURI(redirect)
+                                        :
+                                        '/account'
+                                    );
                                 }
                                 else {
                                     addToast({
@@ -44,6 +46,9 @@ export default function LoginForm() {
                                         success: false,
                                     })
                                 }
+                            })
+                            .finally(() => {
+                                router.refresh();
                             })
                     }}
                 >

@@ -1,6 +1,5 @@
 'use client'
 
-import { Toast } from "@/app/providers/toastProvider"
 import { useState } from "react";
 
 type Props = {

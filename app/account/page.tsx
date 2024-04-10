@@ -1,7 +1,10 @@
-export default function Page(){
+import ProtecedRoute from "../(lib)/auth/protectedRoute"
+import InnerPage from "./components/innerPage"
+export default function Page() {
+
     return (
-        <div>
-            EY YO ITS THE ACCOUNT PAGE
-        </div>
+        <ProtecedRoute redirectRelativePath="/account">
+            <InnerPage />
+        </ProtecedRoute>
     )
 }

@@ -1,16 +1,16 @@
 import { expect, test, describe, it } from 'vitest';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import Bestsellers from '../app/(ui)/bestsellers';
-import BlogArticleStubs from '../app/(ui)/blogArticleStubs';
+import Bestsellers from '../app/components/bestsellers';
+import BlogArticleStubs from '../app/components/blogArticleStubs';
 import { products } from '../mocks/data/mockProducts'
 import { blogArticles } from '../mocks/data/mockBlogArticles'
 import { categories } from '../mocks/data/mockCategories';
-import ProductMiniature from '../app/(ui)/productMiniature';
-import CategoryMenuItem from '../app/(ui)/navbar/categoryMenuItem';
-import CategoryMenu from '../app/(ui)/navbar/categoryMenu';
-import CategoryGrid from '../app/(ui)/categoryGrid';
-import OffersOfTheWeek from '../app/(ui)/offersOfTheWeek';
+import ProductMiniature from '../app/components/productMiniature';
+import CategoryMenuItem from '../app/components/navbar/categoryMenuItem';
+import CategoryMenu from '../app/components/navbar/categoryMenu';
+import CategoryGrid from '../app/components/categoryGrid';
+import OffersOfTheWeek from '../app/components/offersOfTheWeek';
 
 
 describe('product miniature', () => {

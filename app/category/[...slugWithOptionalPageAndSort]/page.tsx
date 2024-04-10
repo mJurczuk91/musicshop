@@ -23,43 +23,40 @@ export default async function Page({ params }: Props) {
     const pageNo = pageNoString ? parseInt(pageNoString) : 0;
 
     const allCategories = (await categories.getAll()).data;
-    const { type, id } = parseCategorySlug(slug);
+    const { type: categoryType, id: categoryId } = parseCategorySlug(slug);
 
-    const currentCategoryId = type === CategorySlugType.c ?
-        allCategories.find(cat=> cat.id === id)?.id
+    const currentCategoryId = categoryType === CategorySlugType.c ?
+        allCategories.find(cat => cat.id === categoryId)?.id
         :
-        allCategories.find(cat=> cat.subcategories.find(subcat=> subcat.id === id))?.id;
+        allCategories.find(cat => cat.subcategories.find(subcat => subcat.id === categoryId))?.id;
 
-    const currentTitle = type === CategorySlugType.c ?
-        allCategories.find(cat => cat.id === id)?.name
+    const currentTitle = categoryType === CategorySlugType.c ?
+        allCategories.find(cat => cat.id === categoryId)?.name
         :
-        allCategories.flatMap(cat => cat.subcategories).find(subcat => id === subcat.id)?.name;
+        allCategories.flatMap(cat => cat.subcategories).find(subcat => categoryId === subcat.id)?.name;
     if (!currentTitle || !currentCategoryId) throw new Error('404 not found');
 
-    const { data: products, pagination } = type === CategorySlugType.s ?
+    const { data: products, pagination } = categoryType === CategorySlugType.s ?
         await productsService.getBySubcategory({
-            subcategoryId: id,
+            subcategoryId: categoryId,
             page: pageNo,
             sort: sortValue,
         })
         :
         await productsService.getByCategory({
-            categoryId: id,
+            categoryId: categoryId,
             page: pageNo,
             sort: sortValue,
         });
     if (!products || products.length === 0) throw new Error('404 not found');
     return (
         <div className="w-full flex justify-center">
-            <div className="max-w-6xl flex m-4 p-4">
-
-                <div className="min-w-44 md:min-w-56">
-                    <CategoryNavigation categoriesJSONstring={JSON.stringify(allCategories)} currentCategoryId={currentCategoryId} />
-                </div>
-
+            <div className="max-w-6xl flex m-4 mt-0 p-4">
                 <div>
                     <div className="mx-4 flex flex-col md:flex-row justify-between">
-
+                        <span className="capitalize text-2xl font-bold tracking-tight">
+                            {currentTitle}
+                        </span>
                         <div className="flex flex-col md:flex-row">
                             <div className="flex mr-2 my-2 md:my-0">
                                 <span className="mr-2">
@@ -69,19 +66,19 @@ export default async function Page({ params }: Props) {
                             </div>
 
                             {pagination &&
-                            <div className="flex">
-                                <span className="mr-2">Page:</span>
-                                <PageSelector pagination={pagination} slug={slug} sort={sortKey} />
-                            </div>}
+                                <div className="flex">
+                                    <span className="mr-2">Page:</span>
+                                    <PageSelector pagination={pagination} slug={slug} sort={sortKey} />
+                                </div>}
                         </div>
-
-                        <span className="capitalize text-2xl font-bold tracking-tight">
-                            {currentTitle}
-                        </span>
                     </div>
 
                     <SortablePaginatedResponsiveProductGrid products={products} />
-
+                    {pagination &&
+                        <div className="flex">
+                            <span className="ml-6 md:ml-4">Page:</span>
+                            <PageSelector pagination={pagination} slug={slug} sort={sortKey} />
+                        </div>}
                 </div>
             </div>
         </div>
