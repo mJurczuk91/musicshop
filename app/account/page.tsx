@@ -1,14 +1,10 @@
 import ProtecedRoute from "../(lib)/auth/protectedRoute"
-import LogoutButton from "./components/logoutButton"
-
+import InnerPage from "./components/innerPage"
 export default function Page() {
 
     return (
         <ProtecedRoute redirectRelativePath="/account">
-            <div>
-                EY YO ITS THE ACCOUNT PAGE
-                <LogoutButton />
-            </div>
+            <InnerPage />
         </ProtecedRoute>
     )
 }

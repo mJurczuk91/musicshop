@@ -18,7 +18,7 @@ export default async function ProtecedRoute({ children, redirectRelativePath }: 
     };
 
     return (
-        <div>
+        <div className='h-full'>
             {children}
         </div>
     )
