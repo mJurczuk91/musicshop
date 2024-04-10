@@ -5,9 +5,7 @@ import SearchResult from "./searchResult";
 import { Product } from "@/app/(lib)/definitions";
 import SearchResultLoading from "./searchResultLoading";
 
-type Props = {
-    children: React.ReactNode,
-}
+let timer: NodeJS.Timeout | null = null
 
 export default function Searchbar() {
     const [query, setQuery] = useState<string>('');
@@ -16,7 +14,7 @@ export default function Searchbar() {
     const [focus, setFocus] = useState<boolean>(false);
     const [searchFieldEmpty, setSearchFieldEmpty] = useState<boolean>(true);
 
-    let timer: NodeJS.Timeout | null = null
+    
 
     useEffect(() => {
         if (query.length === 0) return;
@@ -66,7 +64,7 @@ export default function Searchbar() {
                         setQuery(value);
                     }, 500)
                 }} />
-            <div className={`absolute w-full flex flex-col ${focus && !searchFieldEmpty ? 'visible' : 'invisible'}`}>
+            <div className={`absolute w-full max-w-sm flex flex-col ${focus && !searchFieldEmpty ? 'visible' : 'invisible'}`}>
                 {loading ? 
                 <div className="w-full flex items-center">
                     <SearchResultLoading /> 
