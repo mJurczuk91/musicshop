@@ -3,7 +3,7 @@ import client from "../apollo"
 import { gql } from "@apollo/client";
 import { flattenStrapiResponse } from "./helpers";
 import { BlogArticleStub } from "../definitions";
-import { HOST_URL } from "../helpers";
+import { HOST_URL } from "../globals";
 
 const getPage = async (page = 0, pageSize = 20): Promise<PaginatedData<BlogArticleStub>> => {
   const resp = await client.query({

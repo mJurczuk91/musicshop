@@ -34,7 +34,7 @@ import {
   InMemoryCache
 } from '@apollo/client';
 
-import { HOST_URL } from './helpers';
+import { HOST_URL } from './globals';
 
 const client = new ApolloClient({
   ssrMode: true,

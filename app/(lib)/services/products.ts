@@ -2,7 +2,7 @@ import client from "../apollo";
 import { ApolloQueryResult, gql } from "@apollo/client";
 import { PaginatedData, Product } from "../definitions";
 import { flattenStrapiResponse } from "./helpers";
-import { HOST_URL } from "../helpers";
+import { HOST_URL } from "../globals";
 
 export enum ProductQuerySort {
   'nameAsc' = "name:asc",
