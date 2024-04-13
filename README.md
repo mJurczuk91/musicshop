@@ -18,24 +18,25 @@ Should you wish to check out the 'account' subsection, which, of course, needs a
 ## What are its most important features?
 
 1. It uses Strapi for its backend, where administrator could add products and manage sale history.
- - Any information needed from backend is transferred using GraphQL.
- - Data is secure, being transferred over https and using password.
+    - Any information needed from backend is transferred using GraphQL.
+    - Data is secure, being transferred over https and using password.
 
 2. User login is similiarly secured, user credentials are being kept on backend database and retrieved through strapi/graphql.
 
 3. Cart, checkout, product pages, product categories listing:
- - those functionalities are implemented,
- - they all work as one would expect of an online store
+    - those functionalities are implemented,
+    - they all work as one would expect of an online store
 
 ## What technologies did you use?
 
-- React / Next.js
-- TypeScript
-- Strapi / graphQL
+    - React / Next.js
+    - TypeScript
+    - Tailwind CSS
+    - Strapi / graphQL
 
 ## Running the app
 
 1. Create .env.local file in the root folder. Following variables are needed:
- - API_TOKEN: access token for STRAPI,
- - JWT_SECRET: secret key for JWT,
- - HOST_URL IS SET IN (LIB)/GLOBALS as a variable, because otherwise vercel was not reading it.
+    - API_TOKEN: access token for STRAPI,
+    - JWT_SECRET: secret key for JWT,
+    - HOST_URL IS SET IN (LIB)/GLOBALS as a variable, because otherwise vercel was not reading it.
