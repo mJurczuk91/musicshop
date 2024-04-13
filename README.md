@@ -23,7 +23,7 @@ Should you wish to check out the 'account' subsection, which, of course, needs a
 
 2. User login is similiarly secured, user credentials are being kept on backend database and retrieved through strapi/graphql.
 
-3. Cart, checkout, product pages, product categories listing:
+3. Cart, search, checkout, product pages, product categories listing:
     - those functionalities are implemented,
     - they all work as one would expect of an online store
 
