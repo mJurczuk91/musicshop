@@ -22,7 +22,7 @@ export default function ProductMiniature({ product }: Props) {
             </div>
             <div className="w-full mt-2 text-center">
                 <p className="mb-4">{description_short}</p>
-                <span className="font-bold">{product.price}</span>
+                <span className="font-bold">${product.price}</span>
             </div>
         </div>
     </Link>
