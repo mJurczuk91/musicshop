@@ -11,9 +11,11 @@ type Props = {
 export function AddToCart({ product }: Props) {
     return (
         <div>
-            <span className="px-4 text-2xl font-bold capitalize">
-                {product.name}
-            </span>
+            <div className="mt-8 mx-4">
+                <span className="px-4 text-2xl font-bold capitalize">
+                    {product.name}
+                </span>
+            </div>
             <Price price={product.price} />
             <Availability product={product} />
             <SetAmount product={product} />

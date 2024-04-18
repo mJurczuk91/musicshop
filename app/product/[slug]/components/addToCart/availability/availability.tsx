@@ -12,7 +12,7 @@ type Props = {
 export function Availability({ product }: Props) {
     const { getProductAmountMinusCart } = useContext(CartContext);
     return (
-        <div className="flex flex-col px-4 items-left">
+        <div className="flex flex-col px-4 mx-4 my-2 items-left">
             {product.amount < 1 &&
                 <AvailabilityMessage success={false} message="Product not available" />
             }

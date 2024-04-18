@@ -16,7 +16,7 @@ export default async function Page({ params: { slug } }: Props) {
     const id = slug.split('-')[0];
     const product = await products.getById(id);
     return (
-        <div>
+        <div className="my-4">
             <ProductBreadcrumbs product={product} />
             <div className="flex flex-col w-full items-center">
                 

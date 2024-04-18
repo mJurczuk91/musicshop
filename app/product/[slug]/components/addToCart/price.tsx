@@ -4,7 +4,7 @@ type Props = {
 
 export function Price({ price }: Props) {
     return (
-        <div className="flex flex-col items-left px-4">
+        <div className="flex flex-col items-left mx-4 my-2 px-4">
             <div className="flex items-center">
                 <span
                 className="text-xl font-bold text-tangerine-500">
