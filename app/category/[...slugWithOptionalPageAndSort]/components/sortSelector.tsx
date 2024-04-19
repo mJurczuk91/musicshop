@@ -28,7 +28,7 @@ export function SortSelector({slug, page, sort}:Props){
                 <option value={'nameDesc' as keyof typeof ProductQuerySort}>Name, descending</option>
                 <option value={'priceAsc' as keyof typeof ProductQuerySort}>Price, ascending</option>
                 <option value={'priceDesc' as keyof typeof ProductQuerySort}>Price, descending</option>
-                <option value={'default' as keyof typeof ProductQuerySort}>Default</option>
+                <option value={'default' as keyof typeof ProductQuerySort}>Relevance</option>
             </select>
         </div>
     )
