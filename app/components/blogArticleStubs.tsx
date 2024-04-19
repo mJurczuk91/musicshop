@@ -12,9 +12,9 @@ export default async function BlogArticleStubs() {
 }
 
 function ArticleStub({ stub }: { stub: BlogArticleStub }) {
-    return <div className="mx-4 mb-2 p-2 basis-1/3 bg-white shadow-lg border-darkcyan-100 border w-full h-fit flex odd:flex-row-reverse">
+    return <div className="mx-4 mb-2 p-2 basis-1/3 bg-white shadow-lg border-darkcyan-100 border w-full flex-col lg:flex md:odd:flex-row-reverse">
         <div className="flex justify-center p-8 basis-1/2 w-full">
-            <img className="h-auto w-64" src={stub.image_url} alt="article image"></img>
+            <img className="w-64" src={stub.image_url} alt="article image"></img>
         </div>
         <div className="flex flex-col justify-center p-8 basis-1/2 w-full">
             <span className=" my-2 font-bold text-lg">{stub.title}</span>
