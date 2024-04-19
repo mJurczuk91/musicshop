@@ -3,7 +3,6 @@ import ImageSelector from "./components/imageSelector";
 import ProductCommentsSection from "./components/productCommentsSection";
 import ProductDetails from "./components/productDetails";
 import TabMenu from "./components/tabMenu";
-import ProductDescription from "./components/productDescription";
 import { products } from "@/app/(lib)/services/products";
 import { AddToCart } from "./components/addToCart/addToCart";
 

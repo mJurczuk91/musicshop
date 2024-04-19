@@ -4,7 +4,7 @@ type Props = {
 
 export default function ProductDescription({description}:Props){
     return (
-        <div className="px-4 m-4">
+        <div className="px-4 mx-4">
             <p className="py-2 text-sm tracking-tight">{description}</p>
         </div>
     )
