@@ -15,7 +15,7 @@ type Props = {
 export function ProductListElement({ item: { product, amount }, addToCart, removeFromCart }: Props) {
     return (
         <div className="flex flex-col w-full p-8 lg:p-16 max-w-xl items-center justify-between border-b-2 border-black border-opacity-10">
-            <div className="flex w-full items-center justify-between">
+            <div className="flex w-full items-center justify-between mb-6">
                 <img
                     className="h-28"
                     src={product.imgUrlArray[0]}
