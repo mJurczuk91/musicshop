@@ -8,19 +8,15 @@ type FooterColumnLink = {
 export default function Footer() {
     const footerColumns = [
         {
-            title: 'E-Shop',
+            title: 'My links',
             links: [
                 {
-                    name: 'Special offers',
-                    url: '/#'
+                    name: 'This projects github page', 
+                    url: 'https://github.com/mJurczuk91/musicshop',
                 },
                 {
-                    name: 'Shipping rates & policies',
-                    url: '/#'
-                },
-                {
-                    name: 'Returns',
-                    url: '/#'
+                    name: 'My other projects',
+                    url: 'https://github.com/mJurczuk91',
                 },
             ]
         },
@@ -29,28 +25,28 @@ export default function Footer() {
             links: [
                 {
                     name: 'Log in',
-                    url: '/#'
+                    url: '/login',
                 },
                 {
-                    name: 'Register',
-                    url: '/#'
-                },
-                {
-                    name: 'Your orders',
-                    url: '/#'
+                    name: 'Account page',
+                    url: '/account',
                 },
             ]
         },
         {
-            title: 'Stationary shop',
+            title: 'Fake links that lead to main page',
             links: [
                 {
-                    name: 'Location',
-                    url: '/#'
+                    name: 'Privacy policy',
+                    url: '/',
                 },
                 {
                     name: 'Jobs',
-                    url: '/#'
+                    url: '/',
+                },
+                {
+                    name: 'Location',
+                    url: '/',
                 },
             ]
         },
