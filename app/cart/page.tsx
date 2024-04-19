@@ -14,7 +14,7 @@ export default function Page() {
                     <div className="w-full">
                         <ProductList />
                     </div>
-                    <div className="w-full">
+                    <div className="w-full my-8">
                         <Summary />
                     </div>
                 </div>
