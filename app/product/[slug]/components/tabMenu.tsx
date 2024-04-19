@@ -14,7 +14,7 @@ export default function TabMenu({ elements }: Props) {
                     return (
                         <button
                             key={title.concat('button')}
-                            className={`capitalize p-2 mx-2 ${title === selectedItem ? 'font-bold border-orange-500 border-b-2' : ''} hover:font-bold hover:border-orange-500 hover:border-b-2`}
+                            className={`capitalize p-2 m-2 text-xl ${title === selectedItem ? 'font-bold border-orange-500 border-b-2' : ''} hover:font-bold hover:border-orange-500 hover:border-b-2`}
                             onClick={() => { setSelectedItem(title) }}
                         >
                             {title}
@@ -28,10 +28,6 @@ export default function TabMenu({ elements }: Props) {
                         key={title.concat('content')}
                         className={`${selectedItem === title ? '' : 'hidden'} w-full max-w-6xl`}
                     >
-                        <div className='w-full border-gray-500 border-b-2 text-center mt-2'>
-                            <span className="text-2xl tracking-tight font-bold capitalize">{title}</span>
-                        </div>
-
                         <div>
                             {jsx}
                         </div>

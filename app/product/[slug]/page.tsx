@@ -30,8 +30,8 @@ export default async function Page({ params: { slug } }: Props) {
                 </div>
 
                 <TabMenu elements={[
-                    { title: 'details', jsx: <ProductDetails details={product.details} /> },
                     { title: 'comments', jsx: <ProductCommentsSection productId={id} /> },
+                    { title: 'details', jsx: <ProductDetails details={product.details} /> },
                 ]} />
             </div>
         </div>
