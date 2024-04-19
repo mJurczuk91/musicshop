@@ -11,7 +11,7 @@ type Props = {
 }
 
 export function ProductCounter({ addToCart, removeFromCart, item }: Props) {
-    const {addToast} = useContext(ToastContext);
+    const { addToast } = useContext(ToastContext);
 
     const addOne = () => {
         const success = addToCart({
@@ -33,9 +33,8 @@ export function ProductCounter({ addToCart, removeFromCart, item }: Props) {
     }
 
     return (
-        <div>
-            <div>
-                <div className="flex ">
+            <div className="flex w-full justify-start my-4">
+                <div className="flex">
                     <div className="flex w-12 justify-center items-center p-2 border-2 border-black border-opacity-40">
                         <span>
                             {item.amount}
@@ -58,6 +57,5 @@ export function ProductCounter({ addToCart, removeFromCart, item }: Props) {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
