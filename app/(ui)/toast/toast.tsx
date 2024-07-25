@@ -18,7 +18,7 @@ export default function Toast({ message, success }: Props) {
                     <button
                         onClick={() => setVisible(visible => !visible)}
                         className="select-none">
-                        X
+                        &#x2715;
                     </button>
                 </div>
             </div>
